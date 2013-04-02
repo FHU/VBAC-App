@@ -10,12 +10,14 @@
 #import "PPRevealSideViewController.h"
 #import "MenuViewController.h"
 #import "HospitalsViewController.h"
+#import "FilterViewController.h"
 
-@interface HospitalsRootViewController : UIViewController <UISearchBarDelegate>
+@interface HospitalsRootViewController : UIViewController <UISearchBarDelegate, HospitalsDelegate>
 
 @property (strong, nonatomic) MenuViewController *menuViewController;
 @property (strong, nonatomic) IBOutlet UINavigationController *navigationController;
 @property (strong, nonatomic) IBOutlet HospitalsViewController *hospitalsViewController;
+@property (strong, nonatomic) FilterViewController *filterViewController;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *viewSegmentedControl;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 

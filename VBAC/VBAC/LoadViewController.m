@@ -50,6 +50,10 @@
     MenuViewController *menu = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
     HomeRootViewController *home = [[HomeRootViewController alloc] initWithMenu:menu NibName:@"HomeRootViewController" bundle:nil];
     
+    CGRect window = [[UIScreen mainScreen] bounds];
+    [menu.view setFrame:window];
+    [home.view setFrame:window];
+        
     [self.revealSideViewController popViewControllerWithNewCenterController:home animated:YES];
 }
 

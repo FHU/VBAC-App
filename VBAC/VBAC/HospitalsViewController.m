@@ -29,8 +29,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    [self loadTableView];
-    [self loadScrollView];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
+    
+    [self loadTableView];
+//    [self loadScrollView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,16 +47,18 @@
 
 #pragma mark - Custom methods
 
-- (void)loadTableView {
-    //Bring tableView to the front
-    [self.view bringSubviewToFront:_tableView];
-    [self.view bringSubviewToFront:_mapView];
+- (void)loadTableView {    
+    //Hide the scroll view
+    [_scrollView setHidden:YES];
+    
+    //Scroll to the "first" cell
+    [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
 - (void)loadScrollView {
-    //Bring scrollView to the front
-    [self.view bringSubviewToFront:_scrollView];
-    
+    //Show the scroll view
+    [_scrollView setHidden:NO];
+        
     int numberOfPages = 10;
     
     _scrollViewContent = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width * numberOfPages, self.view.frame.size.height)];
@@ -64,7 +72,7 @@
         HospitalSlideViewController *slide = [[HospitalSlideViewController alloc] initWithNibName:@"HospitalSlideViewController" bundle:nil];
         
         //Position the slide after the previous slide
-        [slide.view setFrame:CGRectMake(position * count, 0, slide.view.frame.size.width, slide.view.frame.size.height)];
+        [slide.view setFrame:CGRectMake(position * count, 0, slide.view.frame.size.width, self.view.frame.size.height)];
         [slide.view updateConstraints];
         
         //Add the slide to the scrollView
@@ -78,10 +86,47 @@
     [_scrollView addSubview:_scrollViewContent];    
 }
 
+- (IBAction)openFilter:(id)sender {
+    [_delegate openFilter];
+}
+
+#pragma mark - MKMapViewDelegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    } else {
+        MKPinAnnotationView *annotationView = nil;
+        
+        annotationView = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"buildingMarker"];
+        
+        if (nil == annotationView) {
+            annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"buildingMarker"];
+        }
+        
+        annotationView.pinColor = MKPinAnnotationColorRed;
+        annotationView.canShowCallout = YES;
+        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        
+        return annotationView;
+    }
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0)
+        cell.backgroundColor = [UIColor clearColor];
+    else
+        cell.backgroundColor = [UIColor whiteColor];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -102,30 +147,16 @@
         cell = [self hospitalCell];
     }
     
-#warning Placeholder data
-    switch (indexPath.row) {
-        case 0:
-            break;
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        case 4:
-            break;
-        case 5:
-            break;
-        case 6:
-            break;
-        case 7:
-            break;
-        case 8:
-            break;
-        case 9:
-            break;
-        default:
-            break;
+    //Filter cell
+    if (indexPath.row == 0) {
+        [cell.hospitalLabel removeFromSuperview];
+        [cell.distanceLabel removeFromSuperview];
+        [cell.percentLabel removeFromSuperview];
+        [cell.divider removeFromSuperview];
+    }
+    //Other cells
+    else {
+        [cell.filterButton removeFromSuperview];
     }
     
     return cell;
@@ -135,13 +166,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */    
+    [_delegate pushDetailForHospital];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

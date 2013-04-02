@@ -25,6 +25,7 @@
     [[UISegmentedControl appearance] setBackgroundImage:[[UIImage imageNamed:@"segment_selected.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
     
     LoadViewController *viewController = [[LoadViewController alloc] initWithNibName:@"LoadViewController" bundle:nil];
+    [viewController.view setFrame:self.window.frame];
     
     //Set up the PPRevealSideViewController as the root view controller of the application
     _revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:viewController];

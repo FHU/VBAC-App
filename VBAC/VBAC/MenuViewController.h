@@ -20,6 +20,14 @@
 @interface MenuViewController : UIViewController
 
 //@property (assign, nonatomic) id<MenuDelegate> delegate;
+@property (strong, nonatomic) IBOutlet UIButton *homeButton;
+@property (strong, nonatomic) IBOutlet UIButton *searchButton;
+@property (strong, nonatomic) IBOutlet UIButton *favoritesButton;
+@property (strong, nonatomic) IBOutlet UIButton *faqButton;
+@property (strong, nonatomic) IBOutlet UILabel *homeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *searchLabel;
+@property (strong, nonatomic) IBOutlet UILabel *favoritesLabel;
+@property (strong, nonatomic) IBOutlet UILabel *faqLabel;
 @property double offset;
 @property BOOL isDisplayed;
 

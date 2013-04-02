@@ -13,5 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *hospitalLabel;
 @property (strong, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (strong, nonatomic) IBOutlet UILabel *percentLabel;
+@property (strong, nonatomic) IBOutlet UIButton *filterButton;
+@property (strong, nonatomic) IBOutlet UIView *divider;
 
 @end

@@ -32,8 +32,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+        
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
+    
+    CGRect window = [[UIScreen mainScreen] bounds];
+    double height = window.size.height / 4;
+    
+    [_homeButton setFrame:CGRectMake(0, 0, _homeButton.frame.size.width, height)];
+    [_searchButton setFrame:CGRectMake(0, _homeButton.frame.origin.y + height, _searchButton.frame.size.width, height)];
+    [_favoritesButton setFrame:CGRectMake(0, _searchButton.frame.origin.y + height, _favoritesButton.frame.size.width, height)];
+    [_faqButton setFrame:CGRectMake(0, _favoritesButton.frame.origin.y + height, _faqButton.frame.size.width, height)];
+    
+    [_homeLabel setFrame:CGRectMake(0, _homeLabel.frame.origin.y, _homeLabel.frame.size.width, _homeLabel.frame.size.height)];
+    [_searchLabel setFrame:CGRectMake(0, _homeLabel.frame.origin.y + height, _searchLabel.frame.size.width, _homeLabel.frame.size.height)];
+    [_favoritesLabel setFrame:CGRectMake(0, _searchLabel.frame.origin.y + height, _favoritesLabel.frame.size.width, _homeLabel.frame.size.height)];
+    [_faqLabel setFrame:CGRectMake(0, _favoritesLabel.frame.origin.y + height, _faqLabel.frame.size.width, _faqLabel.frame.size.height)];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

@@ -7,6 +7,7 @@
 //
 
 #import "HospitalsRootViewController.h"
+#import "DetailViewController.h"
 
 @interface HospitalsRootViewController ()
 
@@ -35,6 +36,8 @@
     [menu addTarget:self action:@selector(openMenu:) forControlEvents:UIControlEventTouchUpInside];
     
     _hospitalsViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menu];
+    
+    [_hospitalsViewController setDelegate:self];
     
     //Remove search bar background
     for (UIView *subview in _searchBar.subviews) {
@@ -120,6 +123,22 @@
     
     //Perform search
     
+}
+
+#pragma mark - HospitalsDelegate
+
+- (void)pushDetailForHospital {
+    DetailViewController *dvc = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:dvc animated:YES];
+}
+
+- (void)openFilter {
+    if (!_filterViewController) {
+        _filterViewController = [[FilterViewController alloc] initWithNibName:@"FilterViewController" bundle:nil];
+    }
+    
+    [self.navigationController presentViewController:_filterViewController animated:YES completion:nil];
 }
 
 @end

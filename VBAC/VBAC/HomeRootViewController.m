@@ -30,6 +30,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    CGRect window = [[UIScreen mainScreen] bounds];
+    [self.view setFrame:window];
+    
     //Replace menu button
     UIButton *menu = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 44)];
     [menu setImage:[UIImage imageNamed:@"menu.png"] forState:UIControlStateNormal];
@@ -40,6 +43,7 @@
     //Add home view controller
     [_homeViewController setDelegate:self];
     [_navigationController.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
+
     [self.view addSubview:_navigationController.view];
 }
 
