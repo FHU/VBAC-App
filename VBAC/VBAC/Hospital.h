@@ -7,16 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface Hospital : NSObject
+@interface Hospital : NSObject <MKAnnotation>
 
-@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *state;
 @property (strong, nonatomic) NSString *location;
 @property (strong, nonatomic) NSString *year;
 @property double number;
 @property double rate;
+@property (readonly, nonatomic) CLLocationCoordinate2D coordinate;
 
-- (id)initWithName:(NSString *)name State:(NSString *)state Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year;
+- (id)initWithTitle:(NSString *)title State:(NSString *)state Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year;
 
 @end

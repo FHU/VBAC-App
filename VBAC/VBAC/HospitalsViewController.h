@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "PPRevealSideViewController.h"
+#import "Dataset.h"
 #import "HospitalCell.h"
 
 @protocol HospitalsDelegate <NSObject>
@@ -18,9 +19,10 @@
 
 @end
 
-@interface HospitalsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, MKMapViewDelegate>
+@interface HospitalsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate>
 
 @property (assign, nonatomic) id<HospitalsDelegate> delegate;
+@property (strong, nonatomic) Dataset *dataset;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;

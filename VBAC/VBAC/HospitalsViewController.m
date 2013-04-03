@@ -8,6 +8,7 @@
 
 #import "HospitalsViewController.h"
 #import "HospitalSlideViewController.h"
+#import "Hospital.h"
 
 @interface HospitalsViewController ()
 
@@ -39,6 +40,10 @@
     [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -51,12 +56,12 @@
     //Hide the scroll view
     [_scrollView setHidden:YES];
     
-    /*
     //Add annotations to map view
     for (Hospital *h in _dataset.hospitals) {
         [_mapView addAnnotation:h];
     }
-    */
+    
+    [_tableView reloadData];
     
     //Scroll to the "first" cell
     [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
@@ -103,13 +108,10 @@
     if ([annotation isKindOfClass:[MKUserLocation class]]) {
         return nil;
     } else {
-        MKPinAnnotationView *annotationView = nil;
+        MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"buildingMarker"];
         
-        annotationView = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"buildingMarker"];
-        
-        if (nil == annotationView) {
+        if (!annotationView)
             annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"buildingMarker"];
-        }
         
         annotationView.pinColor = MKPinAnnotationColorRed;
         annotationView.canShowCallout = YES;
@@ -119,8 +121,22 @@
     }
 }
 
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    if (![view.annotation isKindOfClass:[MKUserLocation class]]) {
+        Hospital *h = (Hospital *)view.annotation;
+        
+        //Offset coordinate for portrait view
+        CLLocationCoordinate2D offset = h.coordinate;        
+    }
+}
+
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    
+    if (![view.annotation isKindOfClass:[MKUserLocation class]]) {
+        Hospital *b = (Hospital *)view.annotation;
+        
+//        [_delegate selectedBuilding:b];
+    }
 }
 
 #pragma mark - UITableViewDataSource

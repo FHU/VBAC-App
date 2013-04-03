@@ -15,11 +15,12 @@
 
 @implementation HospitalsRootViewController
 
-- (id)initWithMenu:(MenuViewController *)menu NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithDataset:(Dataset *)dataset Menu:(MenuViewController *)menu NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        _dataset = dataset;
         _menuViewController = menu;
     }
     return self;
@@ -38,6 +39,7 @@
     _hospitalsViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menu];
     
     [_hospitalsViewController setDelegate:self];
+    [_hospitalsViewController setDataset:_dataset];
     
     //Remove search bar background
     for (UIView *subview in _searchBar.subviews) {
@@ -47,13 +49,7 @@
         }
     }
     [_searchBar setDelegate:self];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-                                   initWithTarget:self
-                                   action:@selector(dismissKeyboard)];
-    
-    [self.view addGestureRecognizer:tap];
-    
+        
     [_navigationController.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:_navigationController.view];
 }
@@ -109,11 +105,17 @@
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    //Replace the right bar button item with a close button
+    UIButton *close = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 71, 31)];
+    [close setImage:[UIImage imageNamed:@"close.png"] forState:UIControlStateNormal];
+    [close addTarget:self action:@selector(dismissKeyboard) forControlEvents:UIControlEventTouchUpInside];
     
+    _hospitalsViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:close];
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
-    
+    //Put back the segmented controller
+    _hospitalsViewController.navigationItem.rightBarButtonItem = _rightBarButtonItem;
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
@@ -132,6 +134,8 @@
 #pragma mark - HospitalsDelegate
 
 - (void)pushDetailForHospital {
+    [self dismissKeyboard];
+    
     DetailViewController *dvc = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     
     [self.navigationController pushViewController:dvc animated:YES];

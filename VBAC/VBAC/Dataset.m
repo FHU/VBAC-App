@@ -17,13 +17,11 @@
 
 - (id)init {
     self = [super init];
-    
     if (self) {
         _dataFilePath = [[NSBundle mainBundle] pathForResource:@"vbac" ofType:@"xml"];
         
         [self refresh];
     }
-    
     return self;
 }
 
@@ -52,7 +50,7 @@
         NSString *year = [self extractFromXmlElement:hospital forName:@"year"].stringValue;
         
         //Create Speaker object
-        Hospital *h = [[Hospital alloc] initWithName:name State:state Location:location Number:vbacNumber Rate:vbacRate Year:year];
+        Hospital *h = [[Hospital alloc] initWithTitle:name State:state Location:location Number:vbacNumber Rate:vbacRate Year:year];
         
         //Add to array
         [hospitals addObject:h];

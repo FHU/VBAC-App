@@ -57,6 +57,8 @@
 		AFC9258216F4233C003D7AE6 /* HospitalsRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9258016F4233B003D7AE6 /* HospitalsRootViewController.m */; };
 		AFC9258316F4233C003D7AE6 /* HospitalsRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC9258116F4233B003D7AE6 /* HospitalsRootViewController.xib */; };
 		AFDC9FFA170BB9CF00E88C4E /* vbac.xml in Resources */ = {isa = PBXBuildFile; fileRef = AFDC9FF9170BB9CF00E88C4E /* vbac.xml */; };
+		AFDCA000170BC1BB00E88C4E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFDC9FFD170BC1BB00E88C4E /* SVProgressHUD.bundle */; };
+		AFDCA001170BC1BB00E88C4E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDC9FFF170BC1BB00E88C4E /* SVProgressHUD.m */; };
 		AFDEEEEB16F3B05D002435F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDEEEEA16F3B05D002435F2 /* UIKit.framework */; };
 		AFDEEEED16F3B05D002435F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDEEEEC16F3B05D002435F2 /* Foundation.framework */; };
 		AFDEEEEF16F3B05D002435F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDEEEEE16F3B05D002435F2 /* CoreGraphics.framework */; };
@@ -147,6 +149,9 @@
 		AFC9258016F4233B003D7AE6 /* HospitalsRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalsRootViewController.m; sourceTree = "<group>"; };
 		AFC9258116F4233B003D7AE6 /* HospitalsRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalsRootViewController.xib; sourceTree = "<group>"; };
 		AFDC9FF9170BB9CF00E88C4E /* vbac.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = vbac.xml; sourceTree = "<group>"; };
+		AFDC9FFD170BC1BB00E88C4E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		AFDC9FFE170BC1BB00E88C4E /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		AFDC9FFF170BC1BB00E88C4E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		AFDEEEE716F3B05D002435F2 /* VBAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VBAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDEEEEA16F3B05D002435F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFDEEEEC16F3B05D002435F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -260,6 +265,16 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		AFDC9FFC170BC1BB00E88C4E /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC9FFD170BC1BB00E88C4E /* SVProgressHUD.bundle */,
+				AFDC9FFE170BC1BB00E88C4E /* SVProgressHUD.h */,
+				AFDC9FFF170BC1BB00E88C4E /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		AFDEEEDE16F3B05D002435F2 = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +374,7 @@
 				AFE2E77916F69DC10032E3F7 /* ALScrollViewPaging */,
 				AF681D84170BB488001FFAE7 /* GDataXML */,
 				AFDEEF0E16F3B18B002435F2 /* PPRevealSideViewController */,
+				AFDC9FFC170BC1BB00E88C4E /* SVProgressHUD */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -480,6 +496,7 @@
 				AF98A4D4170BAB8D00ACF5A9 /* FAQViewController.xib in Resources */,
 				AF98A4D9170BABB600ACF5A9 /* FAQRootViewController.xib in Resources */,
 				AFDC9FFA170BB9CF00E88C4E /* vbac.xml in Resources */,
+				AFDCA000170BC1BB00E88C4E /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +527,7 @@
 				AF681D63170BB321001FFAE7 /* Dataset.m in Sources */,
 				AF681D89170BB488001FFAE7 /* GDataXMLElement-Extras.m in Sources */,
 				AF681D8A170BB488001FFAE7 /* GDataXMLNode.m in Sources */,
+				AFDCA001170BC1BB00E88C4E /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

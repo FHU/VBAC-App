@@ -7,9 +7,9 @@
 //
 
 #import "LoadViewController.h"
+#import "SVProgressHUD.h"
 #import "MenuViewController.h"
 #import "HomeRootViewController.h"
-#import "Dataset.h"
 
 @interface LoadViewController ()
 
@@ -33,15 +33,19 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    //Load data
-    Dataset *dataset = [[Dataset alloc] init];
+    [SVProgressHUD show];
     
-    for (int count = 0; count < dataset.hospitals.count; count++) {
+    //Load data
+    _dataset = [[Dataset alloc] init];
+    
+    for (int count = 0; count < _dataset.hospitals.count; count++) {
         NSLog(@"Hospital %i", count + 1);
     }
     
+    [SVProgressHUD dismiss];
+    
     //Go home
-//    [self goToHome];
+    [self goToHome];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,17 +56,9 @@
 
 #pragma mark - Custom methods
 
-- (void)vbacUpdated {
-    [self goToHome];
-}
-
-- (void)errorDownloading {
-    
-}
-
 - (void)goToHome {
-    MenuViewController *menu = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
-    HomeRootViewController *home = [[HomeRootViewController alloc] initWithMenu:menu NibName:@"HomeRootViewController" bundle:nil];
+    MenuViewController *menu = [[MenuViewController alloc] initWithDataset:_dataset NibName:@"MenuViewController" bundle:nil];
+    HomeRootViewController *home = [[HomeRootViewController alloc] initWithDataset:_dataset Menu:menu NibName:@"HomeRootViewController" bundle:nil];
     
     CGRect window = [[UIScreen mainScreen] bounds];
     [menu.view setFrame:window];

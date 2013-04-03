@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "PPRevealSideViewController.h"
+#import "Dataset.h"
 
 @interface LoadViewController : UIViewController
+
+@property (strong, nonatomic) Dataset *dataset;
 
 @end
