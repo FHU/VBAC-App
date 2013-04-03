@@ -27,6 +27,19 @@
 		AF5EFA8B17078B4A00C54360 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5EFA8917078B4A00C54360 /* back@2x.png */; };
 		AF5EFA8D17078EE400C54360 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5EFA8C17078EE400C54360 /* map@2x.png */; };
 		AF5EFA8F17078F7800C54360 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5EFA8E17078F7800C54360 /* map.png */; };
+		AF681D60170BB316001FFAE7 /* Hospital.m in Sources */ = {isa = PBXBuildFile; fileRef = AF681D5F170BB316001FFAE7 /* Hospital.m */; };
+		AF681D63170BB321001FFAE7 /* Dataset.m in Sources */ = {isa = PBXBuildFile; fileRef = AF681D62170BB321001FFAE7 /* Dataset.m */; };
+		AF681D89170BB488001FFAE7 /* GDataXMLElement-Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AF681D86170BB488001FFAE7 /* GDataXMLElement-Extras.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF681D8A170BB488001FFAE7 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = AF681D88170BB488001FFAE7 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF681D8C170BB4C0001FFAE7 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF681D8B170BB4C0001FFAE7 /* libxml2.2.dylib */; };
+		AF98A4CA170BAA9100ACF5A9 /* findhospital.png in Resources */ = {isa = PBXBuildFile; fileRef = AF98A4C8170BAA9100ACF5A9 /* findhospital.png */; };
+		AF98A4CB170BAA9100ACF5A9 /* findhospital@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF98A4C9170BAA9100ACF5A9 /* findhospital@2x.png */; };
+		AF98A4CE170BAAA000ACF5A9 /* whatisvbac.png in Resources */ = {isa = PBXBuildFile; fileRef = AF98A4CC170BAAA000ACF5A9 /* whatisvbac.png */; };
+		AF98A4CF170BAAA000ACF5A9 /* whatisvbac@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF98A4CD170BAAA000ACF5A9 /* whatisvbac@2x.png */; };
+		AF98A4D3170BAB8D00ACF5A9 /* FAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF98A4D1170BAB8C00ACF5A9 /* FAQViewController.m */; };
+		AF98A4D4170BAB8D00ACF5A9 /* FAQViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF98A4D2170BAB8C00ACF5A9 /* FAQViewController.xib */; };
+		AF98A4D8170BABB600ACF5A9 /* FAQRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF98A4D6170BABB600ACF5A9 /* FAQRootViewController.m */; };
+		AF98A4D9170BABB600ACF5A9 /* FAQRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF98A4D7170BABB600ACF5A9 /* FAQRootViewController.xib */; };
 		AFC7F06E170A87530071E5C2 /* filter.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC7F06C170A87530071E5C2 /* filter.png */; };
 		AFC7F06F170A87530071E5C2 /* filter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC7F06D170A87530071E5C2 /* filter@2x.png */; };
 		AFC7F073170A88A40071E5C2 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC7F071170A88A40071E5C2 /* FilterViewController.m */; };
@@ -43,6 +56,7 @@
 		AFC9257E16F422A2003D7AE6 /* HomeRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC9257C16F422A2003D7AE6 /* HomeRootViewController.xib */; };
 		AFC9258216F4233C003D7AE6 /* HospitalsRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9258016F4233B003D7AE6 /* HospitalsRootViewController.m */; };
 		AFC9258316F4233C003D7AE6 /* HospitalsRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC9258116F4233B003D7AE6 /* HospitalsRootViewController.xib */; };
+		AFDC9FFA170BB9CF00E88C4E /* vbac.xml in Resources */ = {isa = PBXBuildFile; fileRef = AFDC9FF9170BB9CF00E88C4E /* vbac.xml */; };
 		AFDEEEEB16F3B05D002435F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDEEEEA16F3B05D002435F2 /* UIKit.framework */; };
 		AFDEEEED16F3B05D002435F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDEEEEC16F3B05D002435F2 /* Foundation.framework */; };
 		AFDEEEEF16F3B05D002435F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDEEEEE16F3B05D002435F2 /* CoreGraphics.framework */; };
@@ -66,7 +80,6 @@
 		AFF23128170675020043EB8D /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF23126170675020043EB8D /* info.png */; };
 		AFF23129170675020043EB8D /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF23127170675020043EB8D /* info@2x.png */; };
 		AFF2312B17067B500043EB8D /* bars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF2312A17067B500043EB8D /* bars@2x.png */; };
-		AFF2312D17068A9C0043EB8D /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF2312C17068A9B0043EB8D /* circle.png */; };
 		AFF2312F17068CC00043EB8D /* mother.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFF2312E17068CC00043EB8D /* mother.jpg */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +106,25 @@
 		AF5EFA8917078B4A00C54360 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		AF5EFA8C17078EE400C54360 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
 		AF5EFA8E17078F7800C54360 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		AF681D5E170BB316001FFAE7 /* Hospital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hospital.h; sourceTree = "<group>"; };
+		AF681D5F170BB316001FFAE7 /* Hospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hospital.m; sourceTree = "<group>"; };
+		AF681D61170BB321001FFAE7 /* Dataset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dataset.h; sourceTree = "<group>"; };
+		AF681D62170BB321001FFAE7 /* Dataset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dataset.m; sourceTree = "<group>"; };
+		AF681D85170BB488001FFAE7 /* GDataXMLElement-Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLElement-Extras.h"; sourceTree = "<group>"; };
+		AF681D86170BB488001FFAE7 /* GDataXMLElement-Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLElement-Extras.m"; sourceTree = "<group>"; };
+		AF681D87170BB488001FFAE7 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		AF681D88170BB488001FFAE7 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		AF681D8B170BB4C0001FFAE7 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		AF98A4C8170BAA9100ACF5A9 /* findhospital.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findhospital.png; sourceTree = "<group>"; };
+		AF98A4C9170BAA9100ACF5A9 /* findhospital@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findhospital@2x.png"; sourceTree = "<group>"; };
+		AF98A4CC170BAAA000ACF5A9 /* whatisvbac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatisvbac.png; sourceTree = "<group>"; };
+		AF98A4CD170BAAA000ACF5A9 /* whatisvbac@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whatisvbac@2x.png"; sourceTree = "<group>"; };
+		AF98A4D0170BAB8C00ACF5A9 /* FAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQViewController.h; sourceTree = "<group>"; };
+		AF98A4D1170BAB8C00ACF5A9 /* FAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQViewController.m; sourceTree = "<group>"; };
+		AF98A4D2170BAB8C00ACF5A9 /* FAQViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQViewController.xib; sourceTree = "<group>"; };
+		AF98A4D5170BABB600ACF5A9 /* FAQRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQRootViewController.h; sourceTree = "<group>"; };
+		AF98A4D6170BABB600ACF5A9 /* FAQRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQRootViewController.m; sourceTree = "<group>"; };
+		AF98A4D7170BABB600ACF5A9 /* FAQRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQRootViewController.xib; sourceTree = "<group>"; };
 		AFC7F06C170A87530071E5C2 /* filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter.png; sourceTree = "<group>"; };
 		AFC7F06D170A87530071E5C2 /* filter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filter@2x.png"; sourceTree = "<group>"; };
 		AFC7F070170A88A40071E5C2 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
@@ -114,6 +146,7 @@
 		AFC9257F16F4233B003D7AE6 /* HospitalsRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalsRootViewController.h; sourceTree = "<group>"; };
 		AFC9258016F4233B003D7AE6 /* HospitalsRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalsRootViewController.m; sourceTree = "<group>"; };
 		AFC9258116F4233B003D7AE6 /* HospitalsRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalsRootViewController.xib; sourceTree = "<group>"; };
+		AFDC9FF9170BB9CF00E88C4E /* vbac.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = vbac.xml; sourceTree = "<group>"; };
 		AFDEEEE716F3B05D002435F2 /* VBAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VBAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDEEEEA16F3B05D002435F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFDEEEEC16F3B05D002435F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -146,7 +179,6 @@
 		AFF23126170675020043EB8D /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		AFF23127170675020043EB8D /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
 		AFF2312A17067B500043EB8D /* bars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bars@2x.png"; sourceTree = "<group>"; };
-		AFF2312C17068A9B0043EB8D /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		AFF2312E17068CC00043EB8D /* mother.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mother.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF681D8C170BB4C0001FFAE7 /* libxml2.2.dylib in Frameworks */,
 				AF0F402616F4D97400A9B534 /* QuartzCore.framework in Frameworks */,
 				AFC9256E16F3D0C3003D7AE6 /* MapKit.framework in Frameworks */,
 				AFDEEEEB16F3B05D002435F2 /* UIKit.framework in Frameworks */,
@@ -166,6 +199,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF681D84170BB488001FFAE7 /* GDataXML */ = {
+			isa = PBXGroup;
+			children = (
+				AF681D85170BB488001FFAE7 /* GDataXMLElement-Extras.h */,
+				AF681D86170BB488001FFAE7 /* GDataXMLElement-Extras.m */,
+				AF681D87170BB488001FFAE7 /* GDataXMLNode.h */,
+				AF681D88170BB488001FFAE7 /* GDataXMLNode.m */,
+			);
+			path = GDataXML;
+			sourceTree = "<group>";
+		};
 		AFC9255B16F3CB17003D7AE6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,11 +220,12 @@
 				AF0F401A16F4C78200A9B534 /* barbg@2x.png */,
 				AF0F401116F42A6600A9B534 /* bars.png */,
 				AFF2312A17067B500043EB8D /* bars@2x.png */,
-				AFF2312C17068A9B0043EB8D /* circle.png */,
 				AFC7F075170A8BCF0071E5C2 /* close.png */,
 				AFC7F076170A8BCF0071E5C2 /* close@2x.png */,
 				AFC7F06C170A87530071E5C2 /* filter.png */,
 				AFC7F06D170A87530071E5C2 /* filter@2x.png */,
+				AF98A4C8170BAA9100ACF5A9 /* findhospital.png */,
+				AF98A4C9170BAA9100ACF5A9 /* findhospital@2x.png */,
 				AFF23122170674350043EB8D /* heart.png */,
 				AFF23123170674350043EB8D /* heart@2x.png */,
 				AF39436616F76E1A004EF6DD /* home.png */,
@@ -197,8 +242,22 @@
 				AF39436D16F77166004EF6DD /* search@2x.png */,
 				AF0F402D16F510D900A9B534 /* segment_normal@2x.png */,
 				AF0F402F16F5117100A9B534 /* segment_selected@2x.png */,
+				AF98A4CC170BAAA000ACF5A9 /* whatisvbac.png */,
+				AF98A4CD170BAAA000ACF5A9 /* whatisvbac@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		AFDC9FFB170BC18D00E88C4E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC9FF9170BB9CF00E88C4E /* vbac.xml */,
+				AF681D61170BB321001FFAE7 /* Dataset.h */,
+				AF681D62170BB321001FFAE7 /* Dataset.m */,
+				AF681D5E170BB316001FFAE7 /* Hospital.h */,
+				AF681D5F170BB316001FFAE7 /* Hospital.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		AFDEEEDE16F3B05D002435F2 = {
@@ -221,6 +280,7 @@
 		AFDEEEE916F3B05D002435F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF681D8B170BB4C0001FFAE7 /* libxml2.2.dylib */,
 				AF0F402516F4D97400A9B534 /* QuartzCore.framework */,
 				AFC9256D16F3D0C3003D7AE6 /* MapKit.framework */,
 				AFDEEEEA16F3B05D002435F2 /* UIKit.framework */,
@@ -233,6 +293,7 @@
 		AFDEEEF016F3B05D002435F2 /* VBAC */ = {
 			isa = PBXGroup;
 			children = (
+				AFDC9FFB170BC18D00E88C4E /* Data */,
 				AFDEEEF916F3B05D002435F2 /* AppDelegate.h */,
 				AFDEEEFA16F3B05D002435F2 /* AppDelegate.m */,
 				AFC9257516F42205003D7AE6 /* LoadViewController.h */,
@@ -265,6 +326,12 @@
 				AFC7F070170A88A40071E5C2 /* FilterViewController.h */,
 				AFC7F071170A88A40071E5C2 /* FilterViewController.m */,
 				AFC7F072170A88A40071E5C2 /* FilterViewController.xib */,
+				AF98A4D5170BABB600ACF5A9 /* FAQRootViewController.h */,
+				AF98A4D6170BABB600ACF5A9 /* FAQRootViewController.m */,
+				AF98A4D7170BABB600ACF5A9 /* FAQRootViewController.xib */,
+				AF98A4D0170BAB8C00ACF5A9 /* FAQViewController.h */,
+				AF98A4D1170BAB8C00ACF5A9 /* FAQViewController.m */,
+				AF98A4D2170BAB8C00ACF5A9 /* FAQViewController.xib */,
 				AFC9255B16F3CB17003D7AE6 /* Images */,
 				AFDEEF0D16F3B18B002435F2 /* Libraries */,
 				AFDEEEF116F3B05D002435F2 /* Supporting Files */,
@@ -290,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE2E77916F69DC10032E3F7 /* ALScrollViewPaging */,
+				AF681D84170BB488001FFAE7 /* GDataXML */,
 				AFDEEF0E16F3B18B002435F2 /* PPRevealSideViewController */,
 			);
 			path = Libraries;
@@ -394,7 +462,6 @@
 				AFF23128170675020043EB8D /* info.png in Resources */,
 				AFF23129170675020043EB8D /* info@2x.png in Resources */,
 				AFF2312B17067B500043EB8D /* bars@2x.png in Resources */,
-				AFF2312D17068A9C0043EB8D /* circle.png in Resources */,
 				AFF2312F17068CC00043EB8D /* mother.jpg in Resources */,
 				AF5EFA87170788E300C54360 /* DetailViewController.xib in Resources */,
 				AF5EFA8A17078B4A00C54360 /* back.png in Resources */,
@@ -406,6 +473,13 @@
 				AFC7F074170A88A40071E5C2 /* FilterViewController.xib in Resources */,
 				AFC7F077170A8BCF0071E5C2 /* close.png in Resources */,
 				AFC7F078170A8BCF0071E5C2 /* close@2x.png in Resources */,
+				AF98A4CA170BAA9100ACF5A9 /* findhospital.png in Resources */,
+				AF98A4CB170BAA9100ACF5A9 /* findhospital@2x.png in Resources */,
+				AF98A4CE170BAAA000ACF5A9 /* whatisvbac.png in Resources */,
+				AF98A4CF170BAAA000ACF5A9 /* whatisvbac@2x.png in Resources */,
+				AF98A4D4170BAB8D00ACF5A9 /* FAQViewController.xib in Resources */,
+				AF98A4D9170BABB600ACF5A9 /* FAQRootViewController.xib in Resources */,
+				AFDC9FFA170BB9CF00E88C4E /* vbac.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +504,12 @@
 				AFE2E78016F6C0500032E3F7 /* HospitalSlideViewController.m in Sources */,
 				AF5EFA86170788E300C54360 /* DetailViewController.m in Sources */,
 				AFC7F073170A88A40071E5C2 /* FilterViewController.m in Sources */,
+				AF98A4D3170BAB8D00ACF5A9 /* FAQViewController.m in Sources */,
+				AF98A4D8170BABB600ACF5A9 /* FAQRootViewController.m in Sources */,
+				AF681D60170BB316001FFAE7 /* Hospital.m in Sources */,
+				AF681D63170BB321001FFAE7 /* Dataset.m in Sources */,
+				AF681D89170BB488001FFAE7 /* GDataXMLElement-Extras.m in Sources */,
+				AF681D8A170BB488001FFAE7 /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +588,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VBAC/VBAC-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "VBAC/VBAC-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -519,6 +600,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VBAC/VBAC-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "VBAC/VBAC-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

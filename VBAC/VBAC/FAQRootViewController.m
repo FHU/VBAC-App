@@ -1,20 +1,18 @@
 //
-//  HomeRootViewController.m
+//  FAQRootViewController.m
 //  VBAC
 //
-//  Created by Richard Simpson on 3/15/13.
+//  Created by Richard Simpson on 4/2/13.
 //  Copyright (c) 2013 Bobcat Strike. All rights reserved.
 //
 
-#import "HomeRootViewController.h"
-#import "HospitalsRootViewController.h"
 #import "FAQRootViewController.h"
 
-@interface HomeRootViewController ()
+@interface FAQRootViewController ()
 
 @end
 
-@implementation HomeRootViewController
+@implementation FAQRootViewController
 
 - (id)initWithMenu:(MenuViewController *)menu NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,12 +37,12 @@
     [menu setImage:[UIImage imageNamed:@"menu.png"] forState:UIControlStateNormal];
     [menu addTarget:self action:@selector(openMenu:) forControlEvents:UIControlEventTouchUpInside];
     
-    _homeViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menu];
+    _faqViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menu];
     
     //Add home view controller
-    [_homeViewController setDelegate:self];
+//    [_faqViewController setDelegate:self];
     [_navigationController.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
-
+    
     [self.view addSubview:_navigationController.view];
 }
 
@@ -61,20 +59,6 @@
         _menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
     
     [self.revealSideViewController pushViewController:_menuViewController onDirection:PPRevealSideDirectionLeft withOffset:_menuViewController.offset animated:YES];
-}
-
-#pragma mark - HomeViewDelegate
-
-- (void)openHospitals {
-    HospitalsRootViewController *hrvc = [[HospitalsRootViewController alloc] initWithMenu:_menuViewController NibName:@"HospitalsRootViewController" bundle:nil];
-    
-    [self.revealSideViewController popViewControllerWithNewCenterController:hrvc animated:YES];
-}
-
-- (void)openFAQ {
-    FAQRootViewController *frvc = [[FAQRootViewController alloc] initWithMenu:_menuViewController NibName:@"FAQRootViewController" bundle:nil];
-    
-    [self.revealSideViewController popViewControllerWithNewCenterController:frvc animated:YES];
 }
 
 @end

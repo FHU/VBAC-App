@@ -1,0 +1,25 @@
+<rss version="2.0">
+<channel>
+	<title>VBAC</title>
+	<link></link>
+	<description></description>
+	<language>en-us</language>
+	<pubDate>4/2/2013 4:40:00 PM</pubDate>
+	<hospital>
+		<name></name>
+		<state></state>
+		<location></location>
+		<vbacNumber></vbacNumber>
+		<vbacRate></vbacRate>
+		<year></year>
+	</hospital>
+	<hospital>
+		<name></name>
+		<state></state>
+		<location></location>
+		<vbacNumber></vbacNumber>
+		<vbacRate></vbacRate>
+		<year></year>
+	</hospital>
+</channel>
+</rss>

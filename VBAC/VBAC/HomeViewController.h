@@ -11,6 +11,7 @@
 @protocol HomeViewDelegate <NSObject>
 
 - (void)openHospitals;
+- (void)openFAQ;
 
 @end
 
@@ -19,5 +20,6 @@
 @property (assign, nonatomic) id<HomeViewDelegate> delegate;
 
 - (IBAction)openHospitals:(id)sender;
+- (IBAction)openFAQ:(id)sender;
 
 @end

@@ -10,6 +10,7 @@
 #import "MenuViewController.h"
 #import "HomeRootViewController.h"
 #import "HospitalsRootViewController.h"
+#import "FAQRootViewController.h"
 
 @interface MenuViewController ()
 
@@ -66,22 +67,33 @@
 #pragma mark - Custom methods
 
 - (void)goToHome:(id)sender {
-//    [_delegate goToHome];
     HomeRootViewController *home = [[HomeRootViewController alloc] initWithMenu:self NibName:@"HomeRootViewController" bundle:nil];
     
     [self.revealSideViewController popViewControllerWithNewCenterController:home animated:YES];
 }
 
 - (void)goToSearch:(id)sender {
-//    [_delegate goToSearch];
+    HospitalsRootViewController *hospitals = [[HospitalsRootViewController alloc] initWithMenu:self NibName:@"HospitalsRootViewController" bundle:nil];
+    
+    [self.revealSideViewController popViewControllerWithNewCenterController:hospitals animated:YES];
+    
+    _isDisplayed = NO;
+    
+    [self performSelector:@selector(beginEditing:) withObject:hospitals afterDelay:0.5];
+}
+
+- (void)beginEditing:(HospitalsRootViewController *)hospitals {
+    [hospitals beginEditing];
 }
 
 - (void)goToFavorites:(id)sender {
-//    [_delegate goToFavorites];
+    
 }
 
 - (void)goToFAQ:(id)sender {
-//    [_delegate goToFAQ];
+    FAQRootViewController *faq = [[FAQRootViewController alloc] initWithMenu:self NibName:@"FAQRootViewController" bundle:nil];
+    
+    [self.revealSideViewController popViewControllerWithNewCenterController:faq animated:YES];
 }
 
 @end

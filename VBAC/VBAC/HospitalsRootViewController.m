@@ -90,6 +90,10 @@
     }
 }
 
+- (void)beginEditing {
+    [self.searchBar becomeFirstResponder];
+}
+
 - (void)dismissKeyboard {
     [self.searchBar resignFirstResponder];
 }

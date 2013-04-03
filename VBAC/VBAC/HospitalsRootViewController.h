@@ -24,5 +24,6 @@
 - (id)initWithMenu:(MenuViewController *)menu NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 - (IBAction)openMenu:(id)sender;
 - (IBAction)changeViewType:(id)sender;
+- (void)beginEditing;
 
 @end

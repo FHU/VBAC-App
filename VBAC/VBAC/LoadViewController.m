@@ -9,6 +9,7 @@
 #import "LoadViewController.h"
 #import "MenuViewController.h"
 #import "HomeRootViewController.h"
+#import "Dataset.h"
 
 @interface LoadViewController ()
 
@@ -33,9 +34,14 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     //Load data
+    Dataset *dataset = [[Dataset alloc] init];
+    
+    for (int count = 0; count < dataset.hospitals.count; count++) {
+        NSLog(@"Hospital %i", count + 1);
+    }
     
     //Go home
-    [self goToHome];
+//    [self goToHome];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +51,14 @@
 }
 
 #pragma mark - Custom methods
+
+- (void)vbacUpdated {
+    [self goToHome];
+}
+
+- (void)errorDownloading {
+    
+}
 
 - (void)goToHome {
     MenuViewController *menu = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];

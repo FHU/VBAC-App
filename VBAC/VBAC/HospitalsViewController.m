@@ -51,6 +51,13 @@
     //Hide the scroll view
     [_scrollView setHidden:YES];
     
+    /*
+    //Add annotations to map view
+    for (Hospital *h in _dataset.hospitals) {
+        [_mapView addAnnotation:h];
+    }
+    */
+    
     //Scroll to the "first" cell
     [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }

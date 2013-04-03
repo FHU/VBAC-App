@@ -1,18 +1,18 @@
 //
-//  HomeViewController.m
+//  FAQViewController.m
 //  VBAC
 //
-//  Created by Richard Simpson on 3/15/13.
+//  Created by Richard Simpson on 4/2/13.
 //  Copyright (c) 2013 Bobcat Strike. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "FAQViewController.h"
 
-@interface HomeViewController ()
+@interface FAQViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation FAQViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,16 +33,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Custom methods
-
-- (IBAction)openHospitals:(id)sender {
-    [_delegate openHospitals];
-}
-
-- (IBAction)openFAQ:(id)sender {
-    [_delegate openFAQ];
 }
 
 @end
