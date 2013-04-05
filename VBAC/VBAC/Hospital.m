@@ -10,7 +10,7 @@
 
 @implementation Hospital
 
-- (id)initWithTitle:(NSString *)title State:(NSString *)state Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year {
+- (id)initWithTitle:(NSString *)title State:(NSString *)state Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year isFavorite:(BOOL)isFavorite {
     self = [super init];
     if (self) {
         _title = title;
@@ -19,6 +19,7 @@
         _number = number;
         _rate = rate;
         _year = year;
+        _isFavorite = isFavorite;
         
         if ([_title isEqualToString:@""])
             _title = @"Untitled";

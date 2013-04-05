@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PPRevealSideViewController.h"
+#import "Dataset.h"
 
 @class ViewController;
 

@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "PPRevealSideViewController.h"
-#import "Dataset.h"
 #import "MenuViewController.h"
 #import "HospitalsViewController.h"
 #import "FilterViewController.h"
 
 @interface HospitalsRootViewController : UIViewController <UISearchBarDelegate, HospitalsDelegate>
 
-@property (strong, nonatomic) Dataset *dataset;
+@property (strong, nonatomic) NSArray *hospitals;
 @property (strong, nonatomic) MenuViewController *menuViewController;
 @property (strong, nonatomic) IBOutlet UINavigationController *navigationController;
 @property (strong, nonatomic) IBOutlet HospitalsViewController *hospitalsViewController;
@@ -24,7 +23,7 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *viewSegmentedControl;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 
-- (id)initWithDataset:(Dataset *)dataset Menu:(MenuViewController *)menu NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
+- (id)initWithHospitals:(NSArray *)hospitals Menu:(MenuViewController *)menu NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 - (IBAction)openMenu:(id)sender;
 - (IBAction)changeViewType:(id)sender;
 - (void)beginEditing;

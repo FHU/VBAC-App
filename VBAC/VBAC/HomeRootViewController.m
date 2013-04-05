@@ -16,12 +16,12 @@
 
 @implementation HomeRootViewController
 
-- (id)initWithDataset:(Dataset *)dataset Menu:(MenuViewController *)menu NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithHospitals:(NSArray *)hospitals Menu:(MenuViewController *)menu NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _dataset = dataset;
+        _hospitals = hospitals;
         _menuViewController = menu;
     }
     return self;
@@ -59,7 +59,7 @@
 
 - (IBAction)openMenu:(id)sender {
     if (!_menuViewController)
-        _menuViewController = [[MenuViewController alloc] initWithDataset:_dataset NibName:@"MenuViewController" bundle:nil];
+        _menuViewController = [[MenuViewController alloc] initWithHospitals:_hospitals NibName:@"MenuViewController" bundle:nil];
     
     [self.revealSideViewController pushViewController:_menuViewController onDirection:PPRevealSideDirectionLeft withOffset:_menuViewController.offset animated:YES];
 }
@@ -67,7 +67,7 @@
 #pragma mark - HomeViewDelegate
 
 - (void)openHospitals {
-    HospitalsRootViewController *hrvc = [[HospitalsRootViewController alloc] initWithDataset:_dataset Menu:_menuViewController NibName:@"HospitalsRootViewController" bundle:nil];
+    HospitalsRootViewController *hrvc = [[HospitalsRootViewController alloc] initWithHospitals:_hospitals Menu:_menuViewController NibName:@"HospitalsRootViewController" bundle:nil];
     
     [self.revealSideViewController popViewControllerWithNewCenterController:hrvc animated:YES];
 }

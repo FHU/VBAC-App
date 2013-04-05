@@ -12,8 +12,9 @@
 @interface Dataset : NSObject
 
 @property (strong, nonatomic) NSString *dataFilePath;
-@property (strong, nonatomic) NSMutableArray *hospitals;
+@property (strong, nonatomic) NSArray *hospitals;
 
-- (void)refresh;
++ (NSArray *)loadHospitalData;
++ (void)saveHospitalData:(NSArray *)hospitals;
 
 @end

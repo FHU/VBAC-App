@@ -8,6 +8,7 @@
 
 #import "HospitalsRootViewController.h"
 #import "DetailViewController.h"
+#import "Dataset.h"
 
 @interface HospitalsRootViewController ()
 
@@ -15,13 +16,18 @@
 
 @implementation HospitalsRootViewController
 
-- (id)initWithDataset:(Dataset *)dataset Menu:(MenuViewController *)menu NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithHospitals:(NSArray *)hospitals Menu:(MenuViewController *)menu NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _dataset = dataset;
+        _hospitals = hospitals;
         _menuViewController = menu;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(saveData)
+                                                     name:@"SAVE_HOSPITAL_DATA"
+                                                   object:nil];
     }
     return self;
 }
@@ -39,7 +45,7 @@
     _hospitalsViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menu];
     
     [_hospitalsViewController setDelegate:self];
-    [_hospitalsViewController setDataset:_dataset];
+    [_hospitalsViewController setHospitals:_hospitals];
     
     //Remove search bar background
     for (UIView *subview in _searchBar.subviews) {
@@ -58,6 +64,8 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Custom methods
@@ -92,6 +100,10 @@
 
 - (void)dismissKeyboard {
     [self.searchBar resignFirstResponder];
+}
+
+- (void)saveData {
+    [Dataset saveHospitalData:_hospitals];
 }
 
 #pragma mark - UISearchBarDelegate
@@ -142,6 +154,8 @@
 }
 
 - (void)openFilter {
+    [self dismissKeyboard];
+    
     if (!_filterViewController) {
         _filterViewController = [[FilterViewController alloc] initWithNibName:@"FilterViewController" bundle:nil];
     }

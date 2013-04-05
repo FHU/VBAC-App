@@ -46,6 +46,10 @@
 		AFC7F074170A88A40071E5C2 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC7F072170A88A40071E5C2 /* FilterViewController.xib */; };
 		AFC7F077170A8BCF0071E5C2 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC7F075170A8BCF0071E5C2 /* close.png */; };
 		AFC7F078170A8BCF0071E5C2 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC7F076170A8BCF0071E5C2 /* close@2x.png */; };
+		AFC8BC85170F312C0049797B /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC8BC83170F312C0049797B /* favorite.png */; };
+		AFC8BC86170F312C0049797B /* favorite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC8BC84170F312C0049797B /* favorite@2x.png */; };
+		AFC8BC89170F31340049797B /* unfavorite.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC8BC87170F31340049797B /* unfavorite.png */; };
+		AFC8BC8A170F31340049797B /* unfavorite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC8BC88170F31340049797B /* unfavorite@2x.png */; };
 		AFC9255D16F3CB17003D7AE6 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC9255C16F3CB17003D7AE6 /* menu.png */; };
 		AFC9256B16F3CD2F003D7AE6 /* HospitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9256916F3CD2F003D7AE6 /* HospitalsViewController.m */; };
 		AFC9256C16F3CD2F003D7AE6 /* HospitalsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC9256A16F3CD2F003D7AE6 /* HospitalsViewController.xib */; };
@@ -134,6 +138,10 @@
 		AFC7F072170A88A40071E5C2 /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		AFC7F075170A8BCF0071E5C2 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		AFC7F076170A8BCF0071E5C2 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		AFC8BC83170F312C0049797B /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
+		AFC8BC84170F312C0049797B /* favorite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite@2x.png"; sourceTree = "<group>"; };
+		AFC8BC87170F31340049797B /* unfavorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfavorite.png; sourceTree = "<group>"; };
+		AFC8BC88170F31340049797B /* unfavorite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unfavorite@2x.png"; sourceTree = "<group>"; };
 		AFC9255C16F3CB17003D7AE6 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		AFC9256816F3CD2F003D7AE6 /* HospitalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalsViewController.h; sourceTree = "<group>"; };
 		AFC9256916F3CD2F003D7AE6 /* HospitalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalsViewController.m; sourceTree = "<group>"; };
@@ -227,6 +235,8 @@
 				AFF2312A17067B500043EB8D /* bars@2x.png */,
 				AFC7F075170A8BCF0071E5C2 /* close.png */,
 				AFC7F076170A8BCF0071E5C2 /* close@2x.png */,
+				AFC8BC83170F312C0049797B /* favorite.png */,
+				AFC8BC84170F312C0049797B /* favorite@2x.png */,
 				AFC7F06C170A87530071E5C2 /* filter.png */,
 				AFC7F06D170A87530071E5C2 /* filter@2x.png */,
 				AF98A4C8170BAA9100ACF5A9 /* findhospital.png */,
@@ -247,6 +257,8 @@
 				AF39436D16F77166004EF6DD /* search@2x.png */,
 				AF0F402D16F510D900A9B534 /* segment_normal@2x.png */,
 				AF0F402F16F5117100A9B534 /* segment_selected@2x.png */,
+				AFC8BC87170F31340049797B /* unfavorite.png */,
+				AFC8BC88170F31340049797B /* unfavorite@2x.png */,
 				AF98A4CC170BAAA000ACF5A9 /* whatisvbac.png */,
 				AF98A4CD170BAAA000ACF5A9 /* whatisvbac@2x.png */,
 			);
@@ -497,6 +509,10 @@
 				AF98A4D9170BABB600ACF5A9 /* FAQRootViewController.xib in Resources */,
 				AFDC9FFA170BB9CF00E88C4E /* vbac.xml in Resources */,
 				AFDCA000170BC1BB00E88C4E /* SVProgressHUD.bundle in Resources */,
+				AFC8BC85170F312C0049797B /* favorite.png in Resources */,
+				AFC8BC86170F312C0049797B /* favorite@2x.png in Resources */,
+				AFC8BC89170F31340049797B /* unfavorite.png in Resources */,
+				AFC8BC8A170F31340049797B /* unfavorite@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

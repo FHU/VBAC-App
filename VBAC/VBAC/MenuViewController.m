@@ -18,12 +18,12 @@
 
 @implementation MenuViewController
 
-- (id)initWithDataset:(Dataset *)dataset NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithHospitals:(NSArray *)hospitals NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _dataset = dataset;
+        _hospitals = hospitals;
         
         _offset = 150.0;
         _isDisplayed = NO;
@@ -69,13 +69,13 @@
 #pragma mark - Custom methods
 
 - (void)goToHome:(id)sender {
-    HomeRootViewController *home = [[HomeRootViewController alloc] initWithDataset:_dataset Menu:self NibName:@"HomeRootViewController" bundle:nil];
+    HomeRootViewController *home = [[HomeRootViewController alloc] initWithHospitals:_hospitals Menu:self NibName:@"HomeRootViewController" bundle:nil];
     
     [self.revealSideViewController popViewControllerWithNewCenterController:home animated:YES];
 }
 
 - (void)goToSearch:(id)sender {
-    HospitalsRootViewController *hospitals = [[HospitalsRootViewController alloc] initWithDataset:_dataset Menu:self NibName:@"HospitalsRootViewController" bundle:nil];
+    HospitalsRootViewController *hospitals = [[HospitalsRootViewController alloc] initWithHospitals:_hospitals Menu:self NibName:@"HospitalsRootViewController" bundle:nil];
     
     [self.revealSideViewController popViewControllerWithNewCenterController:hospitals animated:YES];
     

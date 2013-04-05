@@ -13,5 +13,6 @@
 @interface LoadViewController : UIViewController
 
 @property (strong, nonatomic) Dataset *dataset;
+@property (strong, nonatomic) NSArray *hospitals;
 
 @end

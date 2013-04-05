@@ -57,7 +57,7 @@
     [_scrollView setHidden:YES];
     
     //Add annotations to map view
-    for (Hospital *h in _dataset.hospitals) {
+    for (Hospital *h in _hospitals) {
         [_mapView addAnnotation:h];
     }
     
@@ -70,25 +70,29 @@
 - (void)loadScrollView {
     //Show the scroll view
     [_scrollView setHidden:NO];
-        
-    int numberOfPages = 10;
     
-    _scrollViewContent = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width * numberOfPages, self.view.frame.size.height)];
+    _scrollViewContent = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width * _hospitals.count, self.view.frame.size.height)];
     [_scrollViewContent setBackgroundColor:[UIColor blackColor]];
     
-    int count;
+    int count = 0;
     double position = self.view.frame.size.width;
     
-    for (count = 0; count < numberOfPages; count++) {
+    _hospitalSlides = [[NSMutableArray alloc] init];
+    
+    for (Hospital *h in _hospitals) {
         //Create a slide
-        HospitalSlideViewController *slide = [[HospitalSlideViewController alloc] initWithNibName:@"HospitalSlideViewController" bundle:nil];
-        
+        HospitalSlideViewController *slide = [[HospitalSlideViewController alloc] initWithHospital:h NibName:@"HospitalSlideViewController" bundle:nil];
+//        [slide.favoriteButton addTarget:self action:@selector(toggleFavorite) forControlEvents:UIControlEventTouchUpInside];
+
         //Position the slide after the previous slide
         [slide.view setFrame:CGRectMake(position * count, 0, slide.view.frame.size.width, self.view.frame.size.height)];
         [slide.view updateConstraints];
         
         //Add the slide to the scrollView
         [_scrollViewContent addSubview:slide.view];
+        [_hospitalSlides addObject:slide];
+        
+        count++;
     }
         
     //Set up scroll view using auto layout

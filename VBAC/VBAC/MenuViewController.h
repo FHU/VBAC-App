@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Dataset.h"
 
 @protocol MenuDelegate <NSObject>
 
@@ -20,7 +19,7 @@
 
 @interface MenuViewController : UIViewController
 
-@property (strong, nonatomic) Dataset *dataset;
+@property (strong, nonatomic) NSArray *hospitals;
 @property (strong, nonatomic) IBOutlet UIButton *homeButton;
 @property (strong, nonatomic) IBOutlet UIButton *searchButton;
 @property (strong, nonatomic) IBOutlet UIButton *favoritesButton;
@@ -32,7 +31,7 @@
 @property double offset;
 @property BOOL isDisplayed;
 
-- (id)initWithDataset:(Dataset *)dataset NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
+- (id)initWithHospitals:(NSArray *)hospitals NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 - (IBAction)goToHome:(id)sender;
 - (IBAction)goToSearch:(id)sender;
 - (IBAction)goToFavorites:(id)sender;

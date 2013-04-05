@@ -36,9 +36,9 @@
     [SVProgressHUD show];
     
     //Load data
-    _dataset = [[Dataset alloc] init];
+    _hospitals = [Dataset loadHospitalData];
     
-    for (int count = 0; count < _dataset.hospitals.count; count++) {
+    for (int count = 0; count < _hospitals.count; count++) {
         NSLog(@"Hospital %i", count + 1);
     }
     
@@ -57,8 +57,8 @@
 #pragma mark - Custom methods
 
 - (void)goToHome {
-    MenuViewController *menu = [[MenuViewController alloc] initWithDataset:_dataset NibName:@"MenuViewController" bundle:nil];
-    HomeRootViewController *home = [[HomeRootViewController alloc] initWithDataset:_dataset Menu:menu NibName:@"HomeRootViewController" bundle:nil];
+    MenuViewController *menu = [[MenuViewController alloc] initWithHospitals:_hospitals NibName:@"MenuViewController" bundle:nil];
+    HomeRootViewController *home = [[HomeRootViewController alloc] initWithHospitals:_hospitals Menu:menu NibName:@"HomeRootViewController" bundle:nil];
     
     CGRect window = [[UIScreen mainScreen] bounds];
     [menu.view setFrame:window];

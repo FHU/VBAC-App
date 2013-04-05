@@ -1,25 +1,22 @@
-<rss version="2.0">
+<?xml version="1.0"?>
 <channel>
 	<title>VBAC</title>
-	<link></link>
-	<description></description>
-	<language>en-us</language>
-	<pubDate>4/2/2013 4:40:00 PM</pubDate>
 	<hospital>
-		<name></name>
-		<state></state>
+		<name>Hospital 1</name>
+		<state>Tennessee</state>
 		<location></location>
-		<vbacNumber></vbacNumber>
-		<vbacRate></vbacRate>
-		<year></year>
+		<vbacNumber>45</vbacNumber>
+		<vbacRate>10</vbacRate>
+		<year>2012</year>
+        <isFavorite>0</isFavorite>
 	</hospital>
 	<hospital>
-		<name></name>
-		<state></state>
+		<name>Hospital 2</name>
+		<state>Arkansas</state>
 		<location></location>
-		<vbacNumber></vbacNumber>
-		<vbacRate></vbacRate>
-		<year></year>
+		<vbacNumber>10</vbacNumber>
+		<vbacRate>20</vbacRate>
+		<year>2005</year>
+        <isFavorite>0</isFavorite>
 	</hospital>
 </channel>
-</rss>

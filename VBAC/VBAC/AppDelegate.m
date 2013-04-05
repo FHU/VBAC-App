@@ -19,29 +19,14 @@
     
     //Customize Navigation Bars
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"barbg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"barbg_flat.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)] forBarMetrics:UIBarMetricsDefault];
     
     [[UINavigationBar appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
-      [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0],
-      UITextAttributeTextColor,
-      [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
-      UITextAttributeTextShadowColor,
-      [NSValue valueWithUIOffset:UIOffsetMake(0, -1)],
-      UITextAttributeTextShadowOffset,
-      [UIFont fontWithName:@"AvenirNext-Medium" size:20.0],
-      UITextAttributeFont,
-      nil]];
-        
-//    [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"barbg_flat.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)] forBarMetrics:UIBarMetricsDefault];
+      [UIFont fontWithName:@"Avenir-Heavy" size:20.0], UITextAttributeFont, nil]];
     
     [[UISegmentedControl appearance] setBackgroundImage:[[UIImage imageNamed:@"segment_normal.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [[UISegmentedControl appearance] setBackgroundImage:[[UIImage imageNamed:@"segment_selected.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
-    
-    [[UISegmentedControl appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"AvenirNext-Medium" size:18.0], UITextAttributeFont, nil] forState:UIControlStateNormal];
-    
-    [[UISegmentedControl appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"AvenirNext-Medium" size:18.0], UITextAttributeFont, nil] forState:UIControlStateSelected];
-    
-    UIFont *f = [UIFont fontWithName:@"" size:22];
     
     LoadViewController *viewController = [[LoadViewController alloc] initWithNibName:@"LoadViewController" bundle:nil];
     [viewController.view setFrame:self.window.frame];

@@ -19,7 +19,8 @@
 @property double number;
 @property double rate;
 @property (readonly, nonatomic) CLLocationCoordinate2D coordinate;
+@property BOOL isFavorite;
 
-- (id)initWithTitle:(NSString *)title State:(NSString *)state Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year;
+- (id)initWithTitle:(NSString *)title State:(NSString *)state Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year isFavorite:(BOOL)isFavorite;
 
 @end
