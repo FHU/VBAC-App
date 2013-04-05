@@ -11,9 +11,11 @@
 #import "PPRevealSideViewController.h"
 #import "HospitalCell.h"
 
+@class Hospital;
+
 @protocol HospitalsDelegate <NSObject>
 
-- (void)pushDetailForHospital;
+- (void)pushDetailForHospital:(Hospital*) h;
 - (void)openFilter;
 
 @end
@@ -32,5 +34,6 @@
 - (void)loadTableView;
 - (void)loadScrollView;
 - (IBAction)openFilter:(id)sender;
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation;
 
 @end

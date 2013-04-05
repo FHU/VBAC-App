@@ -34,6 +34,8 @@
     [back addTarget:self action:@selector(backToHospitals) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:back];
+    
+    _hospitalNameLabel.text = _hospital.title;
 }
 
 - (void)didReceiveMemoryWarning

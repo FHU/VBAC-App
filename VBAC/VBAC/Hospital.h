@@ -13,6 +13,7 @@
 @interface Hospital : NSObject <MKAnnotation>
 
 @property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *subtitle;
 @property (strong, nonatomic) NSString *state;
 @property (strong, nonatomic) NSString *location;
 @property (strong, nonatomic) NSString *year;

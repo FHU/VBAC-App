@@ -145,10 +145,12 @@
 
 #pragma mark - HospitalsDelegate
 
-- (void)pushDetailForHospital {
+- (void)pushDetailForHospital: (Hospital *) hospital {
     [self dismissKeyboard];
     
     DetailViewController *dvc = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    
+    dvc.hospital = hospital;
     
     [self.navigationController pushViewController:dvc animated:YES];
 }

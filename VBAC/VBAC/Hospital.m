@@ -20,6 +20,7 @@
         _rate = rate;
         _year = year;
         _isFavorite = isFavorite;
+        _subtitle = [NSString stringWithFormat:@"%f%%", rate];
         
         if ([_title isEqualToString:@""])
             _title = @"Untitled";

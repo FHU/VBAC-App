@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">11G63</string>
+		<string key="IBDocument.SystemVersion">12D78</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1138.51</string>
-		<string key="IBDocument.HIToolboxVersion">569.00</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">2083</string>
@@ -47,7 +47,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrameSize">{280, 120}</string>
 								<reference key="NSSuperview" ref="535249332"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="783920792"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -61,7 +60,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{230, 0}, {50, 50}}</string>
 								<reference key="NSSuperview" ref="535249332"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1050719449"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -99,7 +97,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{230, 0}, {50, 50}}</string>
 								<reference key="NSSuperview" ref="535249332"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="819571962"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -124,7 +121,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{10, 10}, {212, 42}}</string>
 								<reference key="NSSuperview" ref="535249332"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="707679147"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -140,11 +136,11 @@
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
 									<string key="name">Avenir-Heavy</string>
 									<string key="family">Avenir</string>
-									<int key="traits">0</int>
+									<int key="traits">2</int>
 									<double key="pointSize">17</double>
 								</object>
-								<object class="NSFont" key="IBUIFont" id="942558026">
-									<string key="NSName">Helvetica</string>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Avenir-Heavy</string>
 									<double key="NSSize">17</double>
 									<int key="NSfFlags">16</int>
 								</object>
@@ -156,7 +152,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{10, 70}, {260, 42}}</string>
 								<reference key="NSSuperview" ref="535249332"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="839029705"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
@@ -175,7 +170,11 @@
 									<int key="traits">0</int>
 									<double key="pointSize">17</double>
 								</object>
-								<reference key="IBUIFont" ref="942558026"/>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Avenir-Medium</string>
+									<double key="NSSize">17</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 								<double key="preferredMaxLayoutWidth">260</double>
 							</object>
@@ -184,8 +183,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{10, 120}, {260, 334}}</string>
 								<reference key="NSSuperview" ref="535249332"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -198,7 +195,6 @@
 						</array>
 						<string key="NSFrame">{{20, 20}, {280, 464}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="512246161"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
@@ -214,7 +210,6 @@
 				</array>
 				<string key="NSFrame">{{0, 64}, {320, 504}}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="535249332"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -1058,66 +1053,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">191</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">HospitalSlideViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">toggleFavorites:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">toggleFavorites:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">toggleFavorites:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="addressLabel">UILabel</string>
-						<string key="favoriteButton">UIButton</string>
-						<string key="panelView">UIView</string>
-						<string key="titleLabel">UILabel</string>
-						<string key="unfavoriteButton">UIButton</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="addressLabel">
-							<string key="name">addressLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="favoriteButton">
-							<string key="name">favoriteButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="panelView">
-							<string key="name">panelView</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="titleLabel">
-							<string key="name">titleLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="unfavoriteButton">
-							<string key="name">unfavoriteButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/HospitalSlideViewController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSLayoutConstraint</string>
-					<string key="superclassName">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NSLayoutConstraint.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

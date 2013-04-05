@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Hospital.h"
 
 @interface DetailViewController : UIViewController
+
+@property (strong, nonatomic) Hospital *hospital;
+@property (weak, nonatomic) IBOutlet UILabel *hospitalNameLabel;
 
 @end

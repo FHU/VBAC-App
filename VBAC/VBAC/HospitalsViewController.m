@@ -32,7 +32,11 @@
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
+    //self.mapView.delegate = self;
+
+    
     [self loadTableView];
+    
 //    [self loadScrollView];
 }
 
@@ -60,7 +64,7 @@
     for (Hospital *h in _hospitals) {
         [_mapView addAnnotation:h];
     }
-    
+        
     [_tableView reloadData];
     
     //Scroll to the "first" cell
@@ -108,6 +112,12 @@
 
 #pragma mark - MKMapViewDelegate
 
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 15000, 15000);
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+}
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     if ([annotation isKindOfClass:[MKUserLocation class]]) {
         return nil;
@@ -131,17 +141,74 @@
         Hospital *h = (Hospital *)view.annotation;
         
         //Offset coordinate for portrait view
-        CLLocationCoordinate2D offset = h.coordinate;        
+        CLLocationCoordinate2D offset = h.coordinate;
+        
     }
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     if (![view.annotation isKindOfClass:[MKUserLocation class]]) {
-        Hospital *b = (Hospital *)view.annotation;
+        Hospital *h = (Hospital *)view.annotation;
+        h.title = @"Kenan";
+        [_delegate pushDetailForHospital: h];
         
-//        [_delegate selectedBuilding:b];
+//      [_delegate selectedBuilding:b];
     }
 }
+
+/*-(void) geocode {
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    
+    NSString *addressString = [NSString stringWithFormat:@"%@ %@ %@ %@",
+                               _address.text,
+                               _city.text,
+                               _state.text,
+                               _zip.text];
+    
+    [geocoder geocodeAddressString:addressString
+                 completionHandler:^(NSArray *placemarks, NSError *error) {
+                     
+                     if (error) {
+                         NSLog(@"Geocode failed with error: %@", error);
+                         return;
+                     }
+                     
+                     if (placemarks && placemarks.count > 0)
+                     {
+                         CLPlacemark *placemark = placemarks[0];
+                         
+                         CLLocation *location = placemark.location;
+                         _coords = location.coordinate;
+                         _coords = location.coordinate;
+                         
+                         [self showMap];
+                     }
+                 }];
+}
+
+
+-(void)showMap
+{
+    NSDictionary *address = @{
+                              (NSString *)kABPersonAddressStreetKey: _address.text,
+                              (NSString *)kABPersonAddressCityKey: _city.text,
+                              (NSString *)kABPersonAddressStateKey: _state.text,
+                              (NSString *)kABPersonAddressZIPKey: _zip.text
+                              };
+    
+    MKPlacemark *place = [[MKPlacemark alloc]
+                          initWithCoordinate:_coords
+                          addressDictionary:address];
+    
+    MKMapItem *mapItem = [[MKMapItem alloc]initWithPlacemark:place];
+    
+    NSDictionary *options = @{
+                              MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving
+                              };
+    
+    [mapItem openInMapsWithLaunchOptions:options];
+}*/
 
 #pragma mark - UITableViewDataSource
 
@@ -156,8 +223,10 @@
         cell.backgroundColor = [UIColor whiteColor];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // msut add 1 for filter row
+    return _hospitals.count+1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -184,6 +253,10 @@
     //Other cells
     else {
         [cell.filterButton removeFromSuperview];
+        Hospital *h = [_hospitals objectAtIndex: indexPath.row-1];
+        cell.hospitalLabel.text = h.title;
+        // TO DO: Format floats to 1 or 0 decimal places
+        cell.percentLabel.text = [NSString stringWithFormat: @"%f%%", h.rate];
     }
     
     return cell;
@@ -193,7 +266,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [_delegate pushDetailForHospital];
+    // must subtract 1 due to filter row.
+    Hospital * selectedHospital = [_hospitals objectAtIndex:indexPath.row-1];
+    
+    [_delegate pushDetailForHospital: selectedHospital];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
