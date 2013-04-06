@@ -149,7 +149,7 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     if (![view.annotation isKindOfClass:[MKUserLocation class]]) {
         Hospital *h = (Hospital *)view.annotation;
-        h.title = @"Kenan";
+        //h.title = @"Kenan";
         [_delegate pushDetailForHospital: h];
         
 //      [_delegate selectedBuilding:b];
@@ -256,7 +256,7 @@
         Hospital *h = [_hospitals objectAtIndex: indexPath.row-1];
         cell.hospitalLabel.text = h.title;
         // TO DO: Format floats to 1 or 0 decimal places
-        cell.percentLabel.text = [NSString stringWithFormat: @"%f%%", h.rate];
+        cell.percentLabel.text = [NSString stringWithFormat: @"%0.1f%%", h.rate];
     }
     
     return cell;
