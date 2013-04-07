@@ -10,30 +10,37 @@
 #import <MapKit/MapKit.h>
 #import "PPRevealSideViewController.h"
 #import "HospitalCell.h"
+#import "FilterViewController.h"
 
 @class Hospital;
 
 @protocol HospitalsDelegate <NSObject>
 
-- (void)pushDetailForHospital:(Hospital*) h;
-- (void)openFilter;
+- (void)pushDetailForHospital:(Hospital *)h;
+- (void)openFilter:(FilterViewController *)fvc;
 
 @end
 
-@interface HospitalsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate>
+@interface HospitalsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate, FilterDelegate>
 
 @property (assign, nonatomic) id<HospitalsDelegate> delegate;
 @property (strong, nonatomic) NSArray *hospitals;
+@property (strong, nonatomic) NSMutableArray *searchResults;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UILabel *noHospitalsLabel;
+@property (strong, nonatomic) FilterViewController *filterViewController;
 @property (strong, nonatomic) UIView *scrollViewContent;
 @property (strong, nonatomic) IBOutlet HospitalCell *hospitalCell;
 @property (strong, nonatomic) NSMutableArray *hospitalSlides;
+@property (strong, nonatomic) MKUserLocation *userLocation;
+@property BOOL loadWithNearby;
 
 - (void)loadTableView;
 - (void)loadScrollView;
 - (IBAction)openFilter:(id)sender;
-- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation;
+- (void)performSearchNearby;
+- (void)performSearchWithText:(NSString *)text;
 
 @end

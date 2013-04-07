@@ -30,14 +30,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    _searchResults = [[NSMutableArray alloc] init];
+    
+    if (_loadWithNearby)
+        [self performSearchNearby];
+    
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
-    //self.mapView.delegate = self;
-
-    
-    [self loadTableView];
-    
-//    [self loadScrollView];
+    [self loadTableView];    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -86,8 +86,7 @@
     for (Hospital *h in _hospitals) {
         //Create a slide
         HospitalSlideViewController *slide = [[HospitalSlideViewController alloc] initWithHospital:h NibName:@"HospitalSlideViewController" bundle:nil];
-//        [slide.favoriteButton addTarget:self action:@selector(toggleFavorite) forControlEvents:UIControlEventTouchUpInside];
-
+        
         //Position the slide after the previous slide
         [slide.view setFrame:CGRectMake(position * count, 0, slide.view.frame.size.width, self.view.frame.size.height)];
         [slide.view updateConstraints];
@@ -98,7 +97,13 @@
         
         count++;
     }
-        
+    
+    if (_hospitalSlides.count == 0) {
+        return;
+    } else {
+        [_noHospitalsLabel removeFromSuperview];
+    }
+    
     //Set up scroll view using auto layout
     _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     [_scrollView setContentSize:CGSizeMake(_scrollViewContent.frame.size.width, _scrollView.frame.size.height)];
@@ -107,7 +112,86 @@
 }
 
 - (IBAction)openFilter:(id)sender {
-    [_delegate openFilter];
+    if (!_filterViewController) {
+        _filterViewController = [[FilterViewController alloc] initWithNibName:@"FilterViewController" bundle:nil];
+        [_filterViewController setDelegate:self];
+    }
+    
+    [_delegate openFilter:_filterViewController];
+}
+
+- (void)performSearchNearby {
+    //Start by removing everything from the array
+    [_searchResults removeAllObjects];
+    
+    //Add all hospitals within 50 miles
+    for (Hospital *h in _hospitals) {
+        if ([h distanceFromLocation:_userLocation] <= 50.0) {
+            [_searchResults addObject:h];
+        }
+    }
+    
+    if (_searchResults.count == 0)
+        NSLog(@"No nearby hospitals on record");
+    
+    //Reload tableView
+    [_tableView reloadData];
+}
+
+- (void)performSearchWithText:(NSString *)text {
+    //Start by removing everything from the array
+    [_searchResults removeAllObjects];
+    
+    //Add all hospitals that match the search
+    if (text.length > 0) {
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"title contains[cd] %@", text];
+        
+        _searchResults = [[_hospitals filteredArrayUsingPredicate:pred] mutableCopy];
+    }
+    
+    if (_searchResults.count == 0)
+        NSLog(@"No hospitals were found matching the search \"%@\" ", text);
+    
+    for (Hospital *h in _searchResults) {
+        NSLog(@"%@", h.title);
+    }
+    
+    //Reload tableView
+    [_tableView reloadData];
+}
+
+#pragma mark - FilterDelegate
+
+- (void)resetFilter {
+    
+}
+
+- (void)filterWithSortOption:(int)option Rate:(double)rate Distance:(double)distance {
+    NSMutableArray *filteredSearchResults = [[NSMutableArray alloc] init];
+    
+    //Add hospitals that match specified rate and distance
+    for (Hospital *h in _searchResults) {
+        if (h.rate >= rate)
+            if ([h distanceFromLocation:_userLocation] <= distance)
+                [filteredSearchResults addObject:h];
+    }
+    
+    //Sorting options
+    switch (option) {
+        case 0:
+            //Sort by distance
+            break;
+        case 1:
+            //Sort by rate
+            break;
+        case 2:
+            //Sort by title
+            break;
+        default:
+            break;
+    }
+    
+    //Use the filteredSearchResults array for the tableView
 }
 
 #pragma mark - MKMapViewDelegate
@@ -115,7 +199,10 @@
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 15000, 15000);
-    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    [mapView setRegion:[mapView regionThatFits:region] animated:YES];
+    
+    //Save user location for filtering purposes
+    _userLocation = userLocation;
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
@@ -142,21 +229,19 @@
         
         //Offset coordinate for portrait view
         CLLocationCoordinate2D offset = h.coordinate;
-        
     }
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     if (![view.annotation isKindOfClass:[MKUserLocation class]]) {
         Hospital *h = (Hospital *)view.annotation;
-        //h.title = @"Kenan";
-        [_delegate pushDetailForHospital: h];
         
-//      [_delegate selectedBuilding:b];
+        [_delegate pushDetailForHospital:h];
     }
 }
 
-/*-(void) geocode {
+/*
+- (void)geocode {
     
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     
@@ -188,7 +273,7 @@
 }
 
 
--(void)showMap
+- (void)showMap
 {
     NSDictionary *address = @{
                               (NSString *)kABPersonAddressStreetKey: _address.text,
@@ -208,7 +293,8 @@
                               };
     
     [mapItem openInMapsWithLaunchOptions:options];
-}*/
+}
+*/
 
 #pragma mark - UITableViewDataSource
 
@@ -225,8 +311,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // msut add 1 for filter row
-    return _hospitals.count+1;
+    //Add 1 to account for the filter cell at position 0
+    return _hospitals.count + 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -253,10 +339,11 @@
     //Other cells
     else {
         [cell.filterButton removeFromSuperview];
-        Hospital *h = [_hospitals objectAtIndex: indexPath.row-1];
+        
+        Hospital *h = [_hospitals objectAtIndex:indexPath.row - 1]; //Subtract 1 to account for the filter cell
         cell.hospitalLabel.text = h.title;
-        // TO DO: Format floats to 1 or 0 decimal places
-        cell.percentLabel.text = [NSString stringWithFormat: @"%0.1f%%", h.rate];
+        cell.distanceLabel.text = [NSString stringWithFormat:@"%.2f miles away", [h distanceFromLocation:_userLocation]];
+        cell.percentLabel.text = h.getRate;
     }
     
     return cell;
@@ -266,10 +353,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // must subtract 1 due to filter row.
-    Hospital * selectedHospital = [_hospitals objectAtIndex:indexPath.row-1];
+    //Subtract 1 to account for the filter cell
+    Hospital *h = [_hospitals objectAtIndex:indexPath.row - 1];
     
-    [_delegate pushDetailForHospital: selectedHospital];
+    //Tell delegate to push the detail view
+    [_delegate pushDetailForHospital:h];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

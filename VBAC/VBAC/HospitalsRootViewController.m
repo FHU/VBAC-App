@@ -28,6 +28,8 @@
                                                  selector:@selector(saveData)
                                                      name:@"SAVE_HOSPITAL_DATA"
                                                    object:nil];
+        
+        _loadWithNearby = NO;
     }
     return self;
 }
@@ -44,8 +46,12 @@
     
     _hospitalsViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menu];
     
+    [_viewSegmentedControl setBackgroundImage:[[UIImage imageNamed:@"segment_normal.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [_viewSegmentedControl setBackgroundImage:[[UIImage imageNamed:@"segment_selected.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+    
     [_hospitalsViewController setDelegate:self];
     [_hospitalsViewController setHospitals:_hospitals];
+    [_hospitalsViewController setLoadWithNearby:_loadWithNearby];
     
     //Remove search bar background
     for (UIView *subview in _searchBar.subviews) {
@@ -75,7 +81,7 @@
     
     if (!_menuViewController)
         _menuViewController = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
-    
+        
     [self.revealSideViewController pushViewController:_menuViewController onDirection:PPRevealSideDirectionLeft withOffset:_menuViewController.offset animated:YES];
 }
 
@@ -106,6 +112,10 @@
     [Dataset saveHospitalData:_hospitals];
 }
 
+- (void)performSearchNearby {
+    [_hospitalsViewController performSearchNearby];
+}
+
 #pragma mark - UISearchBarDelegate
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
@@ -130,17 +140,12 @@
     _hospitalsViewController.navigationItem.rightBarButtonItem = _rightBarButtonItem;
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    //Search while text is being entered
-    
-}
-
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {    
     //Dismiss keyboard
     [self.searchBar resignFirstResponder];
     
     //Perform search
-    
+    [_hospitalsViewController performSearchWithText:searchBar.text];
 }
 
 #pragma mark - HospitalsDelegate
@@ -155,14 +160,10 @@
     [self.navigationController pushViewController:dvc animated:YES];
 }
 
-- (void)openFilter {
+- (void)openFilter:(FilterViewController *)fvc {
     [self dismissKeyboard];
     
-    if (!_filterViewController) {
-        _filterViewController = [[FilterViewController alloc] initWithNibName:@"FilterViewController" bundle:nil];
-    }
-    
-    [self.navigationController presentViewController:_filterViewController animated:YES completion:nil];
+    [self.navigationController presentViewController:fvc animated:YES completion:nil];
 }
 
 @end

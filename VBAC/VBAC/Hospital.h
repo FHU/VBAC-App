@@ -23,5 +23,7 @@
 @property BOOL isFavorite;
 
 - (id)initWithTitle:(NSString *)title State:(NSString *)state Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year isFavorite:(BOOL)isFavorite;
+- (NSString *)getRate;
+- (double)distanceFromLocation:(MKUserLocation *)location;
 
 @end

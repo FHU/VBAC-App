@@ -10,6 +10,7 @@
 #import "MenuViewController.h"
 #import "HomeRootViewController.h"
 #import "HospitalsRootViewController.h"
+#import "FavoritesRootViewController.h"
 #import "FAQRootViewController.h"
 
 @interface MenuViewController ()
@@ -89,7 +90,9 @@
 }
 
 - (void)goToFavorites:(id)sender {
+    FavoritesRootViewController *favorites = [[FavoritesRootViewController alloc] initWithHospitals:_hospitals Menu:self NibName:@"FavoritesRootViewController" bundle:nil];
     
+    [self.revealSideViewController popViewControllerWithNewCenterController:favorites animated:YES];
 }
 
 - (void)goToFAQ:(id)sender {

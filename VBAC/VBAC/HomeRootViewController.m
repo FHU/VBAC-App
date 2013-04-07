@@ -46,8 +46,8 @@
     [_homeViewController setDelegate:self];
     [_navigationController.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
 
-    UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo_blue_shadow"] ];
-    [self.navigationController.navigationBar.topItem setTitleView:titleView];
+//    UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo_blue_shadow"] ];
+//    [self.navigationController.navigationBar.topItem setTitleView:titleView];
     
     [self.view addSubview:_navigationController.view];
 }
@@ -71,6 +71,7 @@
 
 - (void)openHospitals {
     HospitalsRootViewController *hrvc = [[HospitalsRootViewController alloc] initWithHospitals:_hospitals Menu:_menuViewController NibName:@"HospitalsRootViewController" bundle:nil];
+    hrvc.loadWithNearby = YES;
     
     [self.revealSideViewController popViewControllerWithNewCenterController:hrvc animated:YES];
 }

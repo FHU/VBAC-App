@@ -40,6 +40,10 @@
 		AF98A4D4170BAB8D00ACF5A9 /* FAQViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF98A4D2170BAB8C00ACF5A9 /* FAQViewController.xib */; };
 		AF98A4D8170BABB600ACF5A9 /* FAQRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF98A4D6170BABB600ACF5A9 /* FAQRootViewController.m */; };
 		AF98A4D9170BABB600ACF5A9 /* FAQRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF98A4D7170BABB600ACF5A9 /* FAQRootViewController.xib */; };
+		AFC1DEFA17110A8500A0D501 /* FavoritesRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC1DEF817110A8400A0D501 /* FavoritesRootViewController.m */; };
+		AFC1DEFB17110A8500A0D501 /* FavoritesRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC1DEF917110A8400A0D501 /* FavoritesRootViewController.xib */; };
+		AFC1DEFF17110A9200A0D501 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC1DEFD17110A9100A0D501 /* FavoritesViewController.m */; };
+		AFC1DF0017110A9200A0D501 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC1DEFE17110A9200A0D501 /* FavoritesViewController.xib */; };
 		AFC7F06E170A87530071E5C2 /* filter.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC7F06C170A87530071E5C2 /* filter.png */; };
 		AFC7F06F170A87530071E5C2 /* filter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC7F06D170A87530071E5C2 /* filter@2x.png */; };
 		AFC7F073170A88A40071E5C2 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC7F071170A88A40071E5C2 /* FilterViewController.m */; };
@@ -137,6 +141,12 @@
 		AF98A4D5170BABB600ACF5A9 /* FAQRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQRootViewController.h; sourceTree = "<group>"; };
 		AF98A4D6170BABB600ACF5A9 /* FAQRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQRootViewController.m; sourceTree = "<group>"; };
 		AF98A4D7170BABB600ACF5A9 /* FAQRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQRootViewController.xib; sourceTree = "<group>"; };
+		AFC1DEF717110A8300A0D501 /* FavoritesRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesRootViewController.h; sourceTree = "<group>"; };
+		AFC1DEF817110A8400A0D501 /* FavoritesRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesRootViewController.m; sourceTree = "<group>"; };
+		AFC1DEF917110A8400A0D501 /* FavoritesRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesRootViewController.xib; sourceTree = "<group>"; };
+		AFC1DEFC17110A9100A0D501 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		AFC1DEFD17110A9100A0D501 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		AFC1DEFE17110A9200A0D501 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		AFC7F06C170A87530071E5C2 /* filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter.png; sourceTree = "<group>"; };
 		AFC7F06D170A87530071E5C2 /* filter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filter@2x.png"; sourceTree = "<group>"; };
 		AFC7F070170A88A40071E5C2 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
@@ -371,6 +381,12 @@
 				AFC7F070170A88A40071E5C2 /* FilterViewController.h */,
 				AFC7F071170A88A40071E5C2 /* FilterViewController.m */,
 				AFC7F072170A88A40071E5C2 /* FilterViewController.xib */,
+				AFC1DEF717110A8300A0D501 /* FavoritesRootViewController.h */,
+				AFC1DEF817110A8400A0D501 /* FavoritesRootViewController.m */,
+				AFC1DEF917110A8400A0D501 /* FavoritesRootViewController.xib */,
+				AFC1DEFC17110A9100A0D501 /* FavoritesViewController.h */,
+				AFC1DEFD17110A9100A0D501 /* FavoritesViewController.m */,
+				AFC1DEFE17110A9200A0D501 /* FavoritesViewController.xib */,
 				AF98A4D5170BABB600ACF5A9 /* FAQRootViewController.h */,
 				AF98A4D6170BABB600ACF5A9 /* FAQRootViewController.m */,
 				AF98A4D7170BABB600ACF5A9 /* FAQRootViewController.xib */,
@@ -537,6 +553,8 @@
 				FD7CA946170F753D007B5279 /* logo_pink.png in Resources */,
 				FD7CA948170F75B2007B5279 /* logo_pink_shadow2.png in Resources */,
 				FD7CA94A170F7605007B5279 /* logo_blue_shadow.png in Resources */,
+				AFC1DEFB17110A8500A0D501 /* FavoritesRootViewController.xib in Resources */,
+				AFC1DF0017110A9200A0D501 /* FavoritesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +586,8 @@
 				AF681D89170BB488001FFAE7 /* GDataXMLElement-Extras.m in Sources */,
 				AF681D8A170BB488001FFAE7 /* GDataXMLNode.m in Sources */,
 				AFDCA001170BC1BB00E88C4E /* SVProgressHUD.m in Sources */,
+				AFC1DEFA17110A8500A0D501 /* FavoritesRootViewController.m in Sources */,
+				AFC1DEFF17110A9200A0D501 /* FavoritesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,8 +25,9 @@
      [NSDictionary dictionaryWithObjectsAndKeys:
       [UIFont fontWithName:@"Avenir-Heavy" size:20.0], UITextAttributeFont, nil]];
     
-    [[UISegmentedControl appearance] setBackgroundImage:[[UIImage imageNamed:@"segment_normal.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [[UISegmentedControl appearance] setBackgroundImage:[[UIImage imageNamed:@"segment_selected.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+    //Customize Segmented Controls
+//    [[UISegmentedControl appearance] setBackgroundImage:[[UIImage imageNamed:@"segment_normal.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    [[UISegmentedControl appearance] setBackgroundImage:[[UIImage imageNamed:@"segment_selected.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
     
     LoadViewController *viewController = [[LoadViewController alloc] initWithNibName:@"LoadViewController" bundle:nil];
     [viewController.view setFrame:self.window.frame];

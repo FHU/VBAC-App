@@ -10,7 +10,6 @@
 #import "PPRevealSideViewController.h"
 #import "MenuViewController.h"
 #import "HospitalsViewController.h"
-#import "FilterViewController.h"
 
 @interface HospitalsRootViewController : UIViewController <UISearchBarDelegate, HospitalsDelegate>
 
@@ -18,14 +17,15 @@
 @property (strong, nonatomic) MenuViewController *menuViewController;
 @property (strong, nonatomic) IBOutlet UINavigationController *navigationController;
 @property (strong, nonatomic) IBOutlet HospitalsViewController *hospitalsViewController;
-@property (strong, nonatomic) FilterViewController *filterViewController;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *rightBarButtonItem;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *viewSegmentedControl;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property BOOL loadWithNearby;
 
 - (id)initWithHospitals:(NSArray *)hospitals Menu:(MenuViewController *)menu NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 - (IBAction)openMenu:(id)sender;
 - (IBAction)changeViewType:(id)sender;
 - (void)beginEditing;
+- (void)performSearchNearby;
 
 @end

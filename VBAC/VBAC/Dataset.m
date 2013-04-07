@@ -52,49 +52,56 @@
         NSString *year;
         BOOL isFavorite = NO;
         
+        //Name
         NSArray *names = [hospital elementsForName:@"name"];
         if (names.count > 0) {
             GDataXMLElement *element = (GDataXMLElement *)[names objectAtIndex:0];
             name = element.stringValue;
         }
         
+        //State
         NSArray *states = [hospital elementsForName:@"state"];
         if (states.count > 0) {
             GDataXMLElement *element = (GDataXMLElement *)[states objectAtIndex:0];
             state = element.stringValue;
         }
+        
+        //Location
         NSArray *locations = [hospital elementsForName:@"location"];
         if (locations.count > 0) {
             GDataXMLElement *element = (GDataXMLElement *)[locations objectAtIndex:0];
             location = element.stringValue;
         }
         
+        //VBACNumber
         NSArray *vbacNumbers = [hospital elementsForName:@"vbacNumber"];
         if (vbacNumbers.count > 0) {
             GDataXMLElement *element = (GDataXMLElement *)[vbacNumbers objectAtIndex:0];
             vbacNumber = element.stringValue.doubleValue;
         }
         
+        //VBACRate
         NSArray *vbacRates = [hospital elementsForName:@"vbacRate"];
         if (vbacRates.count > 0) {
             GDataXMLElement *element = (GDataXMLElement *)[vbacRates objectAtIndex:0];
             vbacRate = element.stringValue.doubleValue;
         }
         
+        //Year
         NSArray *years = [hospital elementsForName:@"year"];
         if (years.count > 0) {
             GDataXMLElement *element = (GDataXMLElement *)[years objectAtIndex:0];
             year = element.stringValue;
         }
         
+        //isFavorite
         NSArray *favorites = [hospital elementsForName:@"isFavorite"];
         if (favorites.count > 0) {
             GDataXMLElement *element = (GDataXMLElement *)[favorites objectAtIndex:0];
             isFavorite = element.stringValue.boolValue;
         }
         
-        
-        //Create Speaker object
+        //Create Hospital object
         Hospital *h = [[Hospital alloc] initWithTitle:name State:state Location:location Number:vbacNumber Rate:vbacRate Year:year isFavorite:isFavorite];
         
         //Add to array

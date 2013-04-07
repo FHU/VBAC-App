@@ -49,4 +49,57 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)resetFilter:(id)sender {
+    [_sortOptionSegmentedControl setSelectedSegmentIndex:0];
+    [_rateOptionSegmentedControl setSelectedSegmentIndex:UISegmentedControlNoSegment];
+    [_distanceOptionSegmentedControl setSelectedSegmentIndex:UISegmentedControlNoSegment];
+    
+    [_delegate resetFilter];
+}
+
+- (IBAction)filter:(id)sender {
+    int sortOption = _sortOptionSegmentedControl.selectedSegmentIndex;
+    double rate = 0.0;
+    double distance = 999999999;
+    
+    switch (_rateOptionSegmentedControl.selectedSegmentIndex) {
+        case 0:
+            rate = 10;
+            break;
+        case 1:
+            rate = 20;
+            break;
+        case 2:
+            rate = 30;
+            break;
+        case 3:
+            rate = 50;
+            break;
+        default:
+            break;
+    }
+    
+    switch (_distanceOptionSegmentedControl.selectedSegmentIndex) {
+        case 0:
+            distance = 10;
+            break;
+        case 1:
+            distance = 25;
+            break;
+        case 2:
+            distance = 50;
+            break;
+        case 3:
+            distance = 75;
+            break;
+        default:
+            break;
+    }
+    
+    //Filter
+    [_delegate filterWithSortOption:sortOption Rate:rate Distance:distance];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
