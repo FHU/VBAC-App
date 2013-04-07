@@ -44,6 +44,8 @@
 		AFC1DEFB17110A8500A0D501 /* FavoritesRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC1DEF917110A8400A0D501 /* FavoritesRootViewController.xib */; };
 		AFC1DEFF17110A9200A0D501 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC1DEFD17110A9100A0D501 /* FavoritesViewController.m */; };
 		AFC1DF0017110A9200A0D501 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC1DEFE17110A9200A0D501 /* FavoritesViewController.xib */; };
+		AFC5F1D317111DEB00FF8146 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC5F1D117111DEB00FF8146 /* icon.png */; };
+		AFC5F1D417111DEB00FF8146 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC5F1D217111DEB00FF8146 /* icon@2x.png */; };
 		AFC7F06E170A87530071E5C2 /* filter.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC7F06C170A87530071E5C2 /* filter.png */; };
 		AFC7F06F170A87530071E5C2 /* filter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC7F06D170A87530071E5C2 /* filter@2x.png */; };
 		AFC7F073170A88A40071E5C2 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC7F071170A88A40071E5C2 /* FilterViewController.m */; };
@@ -147,6 +149,8 @@
 		AFC1DEFC17110A9100A0D501 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
 		AFC1DEFD17110A9100A0D501 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		AFC1DEFE17110A9200A0D501 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		AFC5F1D117111DEB00FF8146 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
+		AFC5F1D217111DEB00FF8146 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		AFC7F06C170A87530071E5C2 /* filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter.png; sourceTree = "<group>"; };
 		AFC7F06D170A87530071E5C2 /* filter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filter@2x.png"; sourceTree = "<group>"; };
 		AFC7F070170A88A40071E5C2 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
@@ -245,9 +249,19 @@
 			path = GDataXML;
 			sourceTree = "<group>";
 		};
+		AFC5F1D517111DF500FF8146 /* app icon */ = {
+			isa = PBXGroup;
+			children = (
+				AFC5F1D117111DEB00FF8146 /* icon.png */,
+				AFC5F1D217111DEB00FF8146 /* icon@2x.png */,
+			);
+			name = "app icon";
+			sourceTree = "<group>";
+		};
 		AFC9255B16F3CB17003D7AE6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AFC5F1D517111DF500FF8146 /* app icon */,
 				FD7CA949170F7604007B5279 /* logo_blue_shadow.png */,
 				FD7CA947170F75B2007B5279 /* logo_pink_shadow2.png */,
 				FD7CA943170F753D007B5279 /* logo_pink_shadow.png */,
@@ -555,6 +569,8 @@
 				FD7CA94A170F7605007B5279 /* logo_blue_shadow.png in Resources */,
 				AFC1DEFB17110A8500A0D501 /* FavoritesRootViewController.xib in Resources */,
 				AFC1DF0017110A9200A0D501 /* FavoritesViewController.xib in Resources */,
+				AFC5F1D317111DEB00FF8146 /* icon.png in Resources */,
+				AFC5F1D417111DEB00FF8146 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

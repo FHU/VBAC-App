@@ -36,10 +36,6 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:back];
     self.navigationItem.title = @"Hospital Details";
     
-    UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo_blue_shadow"] ];
-    self.navigationItem.titleView = titleView;
-
-    
     _hospitalNameLabel.text = _hospital.title;
 }
 

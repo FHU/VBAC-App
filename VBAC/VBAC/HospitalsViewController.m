@@ -76,7 +76,6 @@
     [_scrollView setHidden:NO];
     
     _scrollViewContent = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width * _hospitals.count, self.view.frame.size.height)];
-    [_scrollViewContent setBackgroundColor:[UIColor blackColor]];
     
     int count = 0;
     double position = self.view.frame.size.width;
