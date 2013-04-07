@@ -27,6 +27,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    /*NSString * path = @"https://dl.dropbox.com/u/28409250/Contest%20FAQ/index.html"; */
+    
+    NSString * path = @"https://dl.dropbox.com/u/28409250/Richard%27s%20Suggestion/index.html";
+    
+    [_FAQWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString: path]]];
 }
 
 - (void)didReceiveMemoryWarning
