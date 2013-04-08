@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *addressLabel;
 @property (strong, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (strong, nonatomic) IBOutlet UIButton *unfavoriteButton;
+@property (weak, nonatomic) IBOutlet UIWebView *graphWebView;
 
 - (id)initWithHospital:(Hospital *)hospital NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 - (IBAction)toggleFavorites:(id)sender;

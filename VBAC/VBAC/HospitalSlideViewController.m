@@ -38,6 +38,10 @@
     [_panelView.layer setCornerRadius:10.0];
         
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
+    
+    NSString *url = @"https://dl.dropbox.com/u/28409250/Contest%20Combo%20Graph/index.html";
+    
+    [self.graphWebView loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
 - (void)didReceiveMemoryWarning
