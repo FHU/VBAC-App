@@ -42,6 +42,9 @@
     NSString *url = @"https://dl.dropbox.com/u/28409250/Contest%20Combo%20Graph/index.html";
     
     [self.graphWebView loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+    
+    
+    [self updateGraph];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,6 +54,19 @@
 }
 
 #pragma mark - Custom methods
+
+-(void)updateGraph{
+    NSString *htmlFilePath = [[NSBundle mainBundle] pathForResource:@"graph" ofType:@"html"];
+    NSMutableString *htmlFileString = [NSMutableString stringWithContentsOfFile:htmlFilePath encoding:NSUTF8StringEncoding error:NULL];
+    
+    [htmlFileString replaceOccurrencesOfString:@"#year" withString:@"2010" options:NSCaseInsensitiveSearch range: NSMakeRange(0, [htmlFileString length])];
+    
+    NSString *vbacRateString = [NSString stringWithFormat:@"%f", self.hospital.rate];
+    [htmlFileString replaceOccurrencesOfString:@"#VBACrate" withString:vbacRateString options:NSCaseInsensitiveSearch range: NSMakeRange(0, [htmlFileString length])];
+        
+    [self.graphWebView loadHTMLString:htmlFileString baseURL:NULL];
+
+}
 
 - (IBAction)toggleFavorites:(id)sender {
     if (_hospital.isFavorite)
