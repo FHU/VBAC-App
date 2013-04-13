@@ -39,10 +39,11 @@
         
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
-    NSString *url = @"https://dl.dropbox.com/u/28409250/Contest%20Combo%20Graph/index.html";
+    //NSString *url = @"https://dl.dropbox.com/u/28409250/Contest%20Combo%20Graph/index.html";
+    //[self.graphWebView loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
     
-    [self.graphWebView loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
-    
+    _graphWebView.scrollView.scrollEnabled = NO;
+    _graphWebView.scrollView.bounces = NO;
     
     [self updateGraph];
 }
@@ -63,6 +64,8 @@
     
     NSString *vbacRateString = [NSString stringWithFormat:@"%0.1f", self.hospital.rate];
     [htmlFileString replaceOccurrencesOfString:@"#VBACrate" withString:vbacRateString options:NSCaseInsensitiveSearch range: NSMakeRange(0, [htmlFileString length])];
+    
+    //TO DO: Display national average from same year as Hospital's data.
         
     [self.graphWebView loadHTMLString:htmlFileString baseURL:NULL];
 
