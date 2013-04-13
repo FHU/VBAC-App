@@ -59,9 +59,9 @@
     NSString *htmlFilePath = [[NSBundle mainBundle] pathForResource:@"graph" ofType:@"html"];
     NSMutableString *htmlFileString = [NSMutableString stringWithContentsOfFile:htmlFilePath encoding:NSUTF8StringEncoding error:NULL];
     
-    [htmlFileString replaceOccurrencesOfString:@"#year" withString:@"2010" options:NSCaseInsensitiveSearch range: NSMakeRange(0, [htmlFileString length])];
+    [htmlFileString replaceOccurrencesOfString:@"#year" withString: self.hospital.year options:NSCaseInsensitiveSearch range: NSMakeRange(0, [htmlFileString length])];
     
-    NSString *vbacRateString = [NSString stringWithFormat:@"%f", self.hospital.rate];
+    NSString *vbacRateString = [NSString stringWithFormat:@"%0.1f", self.hospital.rate];
     [htmlFileString replaceOccurrencesOfString:@"#VBACrate" withString:vbacRateString options:NSCaseInsensitiveSearch range: NSMakeRange(0, [htmlFileString length])];
         
     [self.graphWebView loadHTMLString:htmlFileString baseURL:NULL];
