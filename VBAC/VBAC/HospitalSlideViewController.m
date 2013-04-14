@@ -66,6 +66,21 @@
 
 #pragma mark - Custom methods
 
+-(void)updateGraph{
+    NSString *htmlFilePath = [[NSBundle mainBundle] pathForResource:@"graph" ofType:@"html"];
+    NSMutableString *htmlFileString = [NSMutableString stringWithContentsOfFile:htmlFilePath encoding:NSUTF8StringEncoding error:NULL];
+    
+    [htmlFileString replaceOccurrencesOfString:@"#year" withString: self.hospital.year options:NSCaseInsensitiveSearch range: NSMakeRange(0, [htmlFileString length])];
+    
+    NSString *vbacRateString = [NSString stringWithFormat:@"%0.1f", self.hospital.rate];
+    [htmlFileString replaceOccurrencesOfString:@"#VBACrate" withString:vbacRateString options:NSCaseInsensitiveSearch range: NSMakeRange(0, [htmlFileString length])];
+    
+    //TO DO: Display national average from same year as Hospital's data.
+        
+    [self.graphWebView loadHTMLString:htmlFileString baseURL:NULL];
+
+}
+
 - (IBAction)toggleFavorites:(id)sender {
     if (_hospital.isFavorite)
         _hospital.isFavorite = NO;
