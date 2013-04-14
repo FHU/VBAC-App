@@ -31,17 +31,31 @@
     // Do any additional setup after loading the view from its nib.
     
     _titleLabel.text = _hospital.title;
-    _addressLabel.text = @"620 Skyline Dr.\nJackson, TN 38301\n";
-    
+    /*
+    if ([_hospital.address rangeOfString:@","].location == NSNotFound) {
+        NSLog(@"No comma in address");
+    } else {
+        NSString *nameFromAddress = [[_hospital.address componentsSeparatedByString:@","] objectAtIndex:0];
+        NSString *address1 = [[_hospital.address componentsSeparatedByString:@","] objectAtIndex:1];
+        NSString *city = [[_hospital.address componentsSeparatedByString:@","] objectAtIndex:2];
+        NSString *state = [[_hospital.address componentsSeparatedByString:@","] objectAtIndex:3];
+        
+        NSLog(@"%@", nameFromAddress);
+        NSLog(@"%@", address1);
+        NSLog(@"%@", city);
+        NSLog(@"%@", state);
+    }
+//    _addressLabel.text = _hospital.address;
+    */
     [self swapImage];
     
     [_panelView.layer setCornerRadius:10.0];
         
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
-    
-    NSString *url = @"https://dl.dropbox.com/u/28409250/Contest%20Combo%20Graph/index.html";
-    
-    [self.graphWebView loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+}
+
+- (void)viewDidAppear:(BOOL)animated {    
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://dl.dropbox.com/u/28409250/Contest%20Combo%20Graph/index.html"]]];
 }
 
 - (void)didReceiveMemoryWarning

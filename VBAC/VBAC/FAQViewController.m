@@ -28,26 +28,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    NSString * path = @"https://dl.dropbox.com/u/28409250/Contest%20FAQ/index.html";
+    [_FAQWebView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
-    //NSString * path = @"https://dl.dropbox.com/u/28409250/Richard%27s%20Suggestion/index.html";
+    NSString *path = @"https://dl.dropbox.com/u/28409250/Contest%20FAQ/index.html";
     
-    [_FAQWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString: path]]];
-}
-
--(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
-    if ( inType == UIWebViewNavigationTypeLinkClicked ) {
-        [[UIApplication sharedApplication] openURL:[inRequest URL]];
-        return NO;
-    }
-    
-    return YES;
+    [_FAQWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:path]]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UIWebViewDelegate
+
+- (BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+    if (inType == UIWebViewNavigationTypeLinkClicked) {
+        [[UIApplication sharedApplication] openURL:[inRequest URL]];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end

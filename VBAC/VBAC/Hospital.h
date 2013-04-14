@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *subtitle;
 @property (strong, nonatomic) NSString *state;
+@property (strong, nonatomic) NSString *address;
 @property (strong, nonatomic) NSString *location;
 @property (strong, nonatomic) NSString *year;
 @property double number;
@@ -22,7 +23,7 @@
 @property (readonly, nonatomic) CLLocationCoordinate2D coordinate;
 @property BOOL isFavorite;
 
-- (id)initWithTitle:(NSString *)title State:(NSString *)state Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year isFavorite:(BOOL)isFavorite;
+- (id)initWithTitle:(NSString *)title State:(NSString *)state Address:(NSString *)address Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year isFavorite:(BOOL)isFavorite;
 - (NSString *)getRate;
 - (double)distanceFromLocation:(MKUserLocation *)location;
 

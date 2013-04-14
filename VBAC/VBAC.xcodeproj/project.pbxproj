@@ -21,6 +21,10 @@
 		AF39436716F76E1A004EF6DD /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = AF39436616F76E1A004EF6DD /* home.png */; };
 		AF39436E16F77166004EF6DD /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = AF39436C16F77166004EF6DD /* search.png */; };
 		AF39436F16F77166004EF6DD /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF39436D16F77166004EF6DD /* search@2x.png */; };
+		AF5B153D171B6E0E00E313CC /* filterbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5B153C171B6E0E00E313CC /* filterbutton@2x.png */; };
+		AF5B153F171B6E6100E313CC /* filterbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5B153E171B6E6100E313CC /* filterbutton.png */; };
+		AF5B1542171B6F8300E313CC /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5B1540171B6F8300E313CC /* reset.png */; };
+		AF5B1543171B6F8300E313CC /* reset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5B1541171B6F8300E313CC /* reset@2x.png */; };
 		AF5EFA86170788E300C54360 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5EFA84170788E300C54360 /* DetailViewController.m */; };
 		AF5EFA87170788E300C54360 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF5EFA85170788E300C54360 /* DetailViewController.xib */; };
 		AF5EFA8A17078B4A00C54360 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5EFA8817078B4A00C54360 /* back.png */; };
@@ -66,6 +70,7 @@
 		AFC9257E16F422A2003D7AE6 /* HomeRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC9257C16F422A2003D7AE6 /* HomeRootViewController.xib */; };
 		AFC9258216F4233C003D7AE6 /* HospitalsRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9258016F4233B003D7AE6 /* HospitalsRootViewController.m */; };
 		AFC9258316F4233C003D7AE6 /* HospitalsRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC9258116F4233B003D7AE6 /* HospitalsRootViewController.xib */; };
+		AFD3EAF6171A56AC004E1E4B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3EAF5171A56AC004E1E4B /* CoreLocation.framework */; };
 		AFDC9FFA170BB9CF00E88C4E /* vbac.xml in Resources */ = {isa = PBXBuildFile; fileRef = AFDC9FF9170BB9CF00E88C4E /* vbac.xml */; };
 		AFDCA000170BC1BB00E88C4E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFDC9FFD170BC1BB00E88C4E /* SVProgressHUD.bundle */; };
 		AFDCA001170BC1BB00E88C4E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDC9FFF170BC1BB00E88C4E /* SVProgressHUD.m */; };
@@ -117,6 +122,10 @@
 		AF39436616F76E1A004EF6DD /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		AF39436C16F77166004EF6DD /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		AF39436D16F77166004EF6DD /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		AF5B153C171B6E0E00E313CC /* filterbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filterbutton@2x.png"; sourceTree = "<group>"; };
+		AF5B153E171B6E6100E313CC /* filterbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filterbutton.png; sourceTree = "<group>"; };
+		AF5B1540171B6F8300E313CC /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
+		AF5B1541171B6F8300E313CC /* reset@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reset@2x.png"; sourceTree = "<group>"; };
 		AF5EFA83170788E200C54360 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		AF5EFA84170788E300C54360 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		AF5EFA85170788E300C54360 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -176,6 +185,7 @@
 		AFC9257F16F4233B003D7AE6 /* HospitalsRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalsRootViewController.h; sourceTree = "<group>"; };
 		AFC9258016F4233B003D7AE6 /* HospitalsRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalsRootViewController.m; sourceTree = "<group>"; };
 		AFC9258116F4233B003D7AE6 /* HospitalsRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalsRootViewController.xib; sourceTree = "<group>"; };
+		AFD3EAF5171A56AC004E1E4B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AFDC9FF9170BB9CF00E88C4E /* vbac.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = vbac.xml; sourceTree = "<group>"; };
 		AFDC9FFD170BC1BB00E88C4E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		AFDC9FFE170BC1BB00E88C4E /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
@@ -226,6 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD3EAF6171A56AC004E1E4B /* CoreLocation.framework in Frameworks */,
 				AF681D8C170BB4C0001FFAE7 /* libxml2.2.dylib in Frameworks */,
 				AF0F402616F4D97400A9B534 /* QuartzCore.framework in Frameworks */,
 				AFC9256E16F3D0C3003D7AE6 /* MapKit.framework in Frameworks */,
@@ -281,6 +292,8 @@
 				AFC8BC84170F312C0049797B /* favorite@2x.png */,
 				AFC7F06C170A87530071E5C2 /* filter.png */,
 				AFC7F06D170A87530071E5C2 /* filter@2x.png */,
+				AF5B153E171B6E6100E313CC /* filterbutton.png */,
+				AF5B153C171B6E0E00E313CC /* filterbutton@2x.png */,
 				AF98A4C8170BAA9100ACF5A9 /* findhospital.png */,
 				AF98A4C9170BAA9100ACF5A9 /* findhospital@2x.png */,
 				AFF23122170674350043EB8D /* heart.png */,
@@ -295,6 +308,8 @@
 				AFF2312E17068CC00043EB8D /* mother.jpg */,
 				AF0F402916F4EEB600A9B534 /* overlay.png */,
 				AF0F402A16F4EEB600A9B534 /* overlay@2x.png */,
+				AF5B1540171B6F8300E313CC /* reset.png */,
+				AF5B1541171B6F8300E313CC /* reset@2x.png */,
 				AF39436C16F77166004EF6DD /* search.png */,
 				AF39436D16F77166004EF6DD /* search@2x.png */,
 				AF0F402D16F510D900A9B534 /* segment_normal@2x.png */,
@@ -349,6 +364,7 @@
 		AFDEEEE916F3B05D002435F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFD3EAF5171A56AC004E1E4B /* CoreLocation.framework */,
 				AF681D8B170BB4C0001FFAE7 /* libxml2.2.dylib */,
 				AF0F402516F4D97400A9B534 /* QuartzCore.framework */,
 				AFC9256D16F3D0C3003D7AE6 /* MapKit.framework */,
@@ -571,6 +587,10 @@
 				AFC1DF0017110A9200A0D501 /* FavoritesViewController.xib in Resources */,
 				AFC5F1D317111DEB00FF8146 /* icon.png in Resources */,
 				AFC5F1D417111DEB00FF8146 /* icon@2x.png in Resources */,
+				AF5B153D171B6E0E00E313CC /* filterbutton@2x.png in Resources */,
+				AF5B153F171B6E6100E313CC /* filterbutton.png in Resources */,
+				AF5B1542171B6F8300E313CC /* reset.png in Resources */,
+				AF5B1543171B6F8300E313CC /* reset@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

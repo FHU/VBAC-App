@@ -46,6 +46,7 @@
         //Create variables to fill in
         NSString *name;
         NSString *state;
+        NSString *address;
         NSString *location;
         double vbacNumber = 0.0;
         double vbacRate = 0.0;
@@ -64,6 +65,13 @@
         if (states.count > 0) {
             GDataXMLElement *element = (GDataXMLElement *)[states objectAtIndex:0];
             state = element.stringValue;
+        }
+        
+        //Address
+        NSArray *addresses = [hospital elementsForName:@"address"];
+        if (addresses.count > 0) {
+            GDataXMLElement *element = (GDataXMLElement *)[addresses objectAtIndex:0];
+            address = element.stringValue;
         }
         
         //Location
@@ -102,7 +110,7 @@
         }
         
         //Create Hospital object
-        Hospital *h = [[Hospital alloc] initWithTitle:name State:state Location:location Number:vbacNumber Rate:vbacRate Year:year isFavorite:isFavorite];
+        Hospital *h = [[Hospital alloc] initWithTitle:name State:state Address:address Location:location Number:vbacNumber Rate:vbacRate Year:year isFavorite:isFavorite];
         
         //Add to array
         [hospitals addObject:h];
@@ -117,6 +125,7 @@
     for (Hospital *h in hospitals) {
         GDataXMLElement *hospital = [GDataXMLNode elementWithName:@"hospital"];
         GDataXMLElement *name = [GDataXMLNode elementWithName:@"name" stringValue:h.title];
+        GDataXMLElement *address = [GDataXMLNode elementWithName:@"address" stringValue:h.address];
         GDataXMLElement *state = [GDataXMLNode elementWithName:@"state" stringValue:h.state];
         GDataXMLElement *location = [GDataXMLNode elementWithName:@"location" stringValue:h.location];
         GDataXMLElement *vbacNumber = [GDataXMLNode elementWithName:@"vbacNumber" stringValue:[NSString stringWithFormat:@"%f", h.number]];
@@ -128,6 +137,7 @@
         
         [hospital addChild:name];
         [hospital addChild:state];
+        [hospital addChild:address];
         [hospital addChild:location];
         [hospital addChild:vbacNumber];
         [hospital addChild:vbacRate];

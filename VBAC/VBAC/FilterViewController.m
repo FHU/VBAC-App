@@ -52,7 +52,7 @@
 - (IBAction)resetFilter:(id)sender {
     [_sortOptionSegmentedControl setSelectedSegmentIndex:0];
     [_rateOptionSegmentedControl setSelectedSegmentIndex:UISegmentedControlNoSegment];
-    [_distanceOptionSegmentedControl setSelectedSegmentIndex:UISegmentedControlNoSegment];
+    [_distanceOptionSegmentedControl setSelectedSegmentIndex:2];
     
     [_delegate resetFilter];
 }
@@ -60,17 +60,17 @@
 - (IBAction)filter:(id)sender {
     int sortOption = _sortOptionSegmentedControl.selectedSegmentIndex;
     double rate = 0.0;
-    double distance = 999999999;
+    double distance = -1;
     
     switch (_rateOptionSegmentedControl.selectedSegmentIndex) {
         case 0:
             rate = 10;
             break;
         case 1:
-            rate = 20;
+            rate = 15;
             break;
         case 2:
-            rate = 30;
+            rate = 25;
             break;
         case 3:
             rate = 50;
@@ -90,7 +90,7 @@
             distance = 50;
             break;
         case 3:
-            distance = 75;
+            distance = 100;
             break;
         default:
             break;

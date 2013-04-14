@@ -9,6 +9,7 @@
 #import "HospitalsViewController.h"
 #import "HospitalSlideViewController.h"
 #import "Hospital.h"
+#import "SVProgressHUD.h"
 
 @interface HospitalsViewController ()
 
@@ -30,22 +31,36 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    _foundLocation = NO;
+    _isFiltered = NO;
+    
     _searchResults = [[NSMutableArray alloc] init];
-    
-    if (_loadWithNearby)
-        [self performSearchNearby];
-    
+    _filteredResults = [[NSMutableArray alloc] init];
+        
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
-    [self loadTableView];    
+    [self loadTableView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+//    if (_foundLocation)
+//        [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+//    if (_foundLocation)
+//        [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+//    else {
+//        [SVProgressHUD show];
+//        [self performSelector:@selector(performSearchNearby) withObject:nil afterDelay:5.0];
+//    }
+    
+    if (!_foundLocation) {
+        [SVProgressHUD show];
+        [self performSelector:@selector(performSearchNearby) withObject:nil afterDelay:5.0];
+    } else {
+        [_tableView reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,7 +83,8 @@
     [_tableView reloadData];
     
     //Scroll to the "first" cell
-    [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    if (_foundLocation)
+        [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
 - (void)loadScrollView {
@@ -125,13 +141,25 @@
     
     //Add all hospitals within 50 miles
     for (Hospital *h in _hospitals) {
-        if ([h distanceFromLocation:_userLocation] <= 50.0) {
+        double distance = [h distanceFromLocation:_mapView.userLocation];
+        if (distance <= 50.0 && distance != 0) {
             [_searchResults addObject:h];
         }
     }
     
     if (_searchResults.count == 0)
         NSLog(@"No nearby hospitals on record");
+    else {
+        //Sort by distance
+        [_searchResults sortUsingComparator: ^(Hospital *h1, Hospital *h2) {
+            if ([h1 distanceFromLocation:_mapView.userLocation] < [h2 distanceFromLocation:_mapView.userLocation]) {
+                return (NSComparisonResult)NSOrderedAscending;
+            } else if ([h1 distanceFromLocation:_mapView.userLocation] > [h2 distanceFromLocation:_mapView.userLocation]) {
+                return (NSComparisonResult)NSOrderedDescending;
+            }
+            return (NSComparisonResult)NSOrderedSame;
+        }];
+    }
     
     //Reload tableView
     [_tableView reloadData];
@@ -162,46 +190,80 @@
 #pragma mark - FilterDelegate
 
 - (void)resetFilter {
+    _isFiltered = NO;
     
+    [_tableView reloadData];
 }
 
 - (void)filterWithSortOption:(int)option Rate:(double)rate Distance:(double)distance {
-    NSMutableArray *filteredSearchResults = [[NSMutableArray alloc] init];
+    //Start by removing everything from the array
+    [_filteredResults removeAllObjects];
     
     //Add hospitals that match specified rate and distance
     for (Hospital *h in _searchResults) {
         if (h.rate >= rate)
-            if ([h distanceFromLocation:_userLocation] <= distance)
-                [filteredSearchResults addObject:h];
+            if ([h distanceFromLocation:_mapView.userLocation] <= distance)
+                [_filteredResults addObject:h];
     }
     
     //Sorting options
     switch (option) {
-        case 0:
-            //Sort by distance
+        case 0: {
+            //Sort by distance, shortest distance first
+            [_filteredResults sortUsingComparator: ^(Hospital *h1, Hospital *h2) {
+                if ([h1 distanceFromLocation:_mapView.userLocation] < [h2 distanceFromLocation:_mapView.userLocation]) {
+                    return (NSComparisonResult)NSOrderedAscending;
+                } else if ([h1 distanceFromLocation:_mapView.userLocation] > [h2 distanceFromLocation:_mapView.userLocation]) {
+                    return (NSComparisonResult)NSOrderedDescending;
+                }
+                return (NSComparisonResult)NSOrderedSame;
+            }];
             break;
-        case 1:
-            //Sort by rate
+        }
+        case 1: {
+            //Sort by rate, highest rate first
+            [_filteredResults sortUsingComparator: ^(Hospital *h1, Hospital *h2) {
+                if (h1.rate > h2.rate) {
+                    return (NSComparisonResult)NSOrderedAscending;
+                } else if (h1.rate < h2.rate) {
+                    return (NSComparisonResult)NSOrderedDescending;
+                }
+                return (NSComparisonResult)NSOrderedSame;
+            }];
             break;
-        case 2:
-            //Sort by title
+        }
+        case 2: {
+            //Sort by title, alphabetical
+            NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES];
+            [_filteredResults sortUsingDescriptors:[NSArray arrayWithObject:sort]];
             break;
+        }
         default:
             break;
     }
     
+    [_tableView reloadData];
+    
     //Use the filteredSearchResults array for the tableView
+    _isFiltered = YES;
 }
 
 #pragma mark - MKMapViewDelegate
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 15000, 15000);
+    double miles = 50;
+    double meters = miles * 1609.34;
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, meters, meters);
     [mapView setRegion:[mapView regionThatFits:region] animated:YES];
     
-    //Save user location for filtering purposes
-    _userLocation = userLocation;
+    //On first location
+    if (!_foundLocation)
+        [SVProgressHUD show];
+        
+    [_tableView reloadData];
+    _foundLocation = YES;
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
@@ -239,66 +301,19 @@
     }
 }
 
-/*
-- (void)geocode {
-    
-    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
-    
-    NSString *addressString = [NSString stringWithFormat:@"%@ %@ %@ %@",
-                               _address.text,
-                               _city.text,
-                               _state.text,
-                               _zip.text];
-    
-    [geocoder geocodeAddressString:addressString
-                 completionHandler:^(NSArray *placemarks, NSError *error) {
-                     
-                     if (error) {
-                         NSLog(@"Geocode failed with error: %@", error);
-                         return;
-                     }
-                     
-                     if (placemarks && placemarks.count > 0)
-                     {
-                         CLPlacemark *placemark = placemarks[0];
-                         
-                         CLLocation *location = placemark.location;
-                         _coords = location.coordinate;
-                         _coords = location.coordinate;
-                         
-                         [self showMap];
-                     }
-                 }];
-}
-
-
-- (void)showMap
-{
-    NSDictionary *address = @{
-                              (NSString *)kABPersonAddressStreetKey: _address.text,
-                              (NSString *)kABPersonAddressCityKey: _city.text,
-                              (NSString *)kABPersonAddressStateKey: _state.text,
-                              (NSString *)kABPersonAddressZIPKey: _zip.text
-                              };
-    
-    MKPlacemark *place = [[MKPlacemark alloc]
-                          initWithCoordinate:_coords
-                          addressDictionary:address];
-    
-    MKMapItem *mapItem = [[MKMapItem alloc]initWithPlacemark:place];
-    
-    NSDictionary *options = @{
-                              MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving
-                              };
-    
-    [mapItem openInMapsWithLaunchOptions:options];
-}
-*/
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    //Add 1 to account for the filter cell at position 0
+    if (_isFiltered)
+        return _filteredResults.count + 1;
+    else
+        return _searchResults.count + 1;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -306,12 +321,13 @@
         cell.backgroundColor = [UIColor clearColor];
     else
         cell.backgroundColor = [UIColor whiteColor];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    //Add 1 to account for the filter cell at position 0
-    return _hospitals.count + 1;
+    
+    if (indexPath.row == ((NSIndexPath *)tableView.indexPathsForVisibleRows.lastObject).row){
+        if (indexPath.row > 1) {
+            //End of loading
+            [SVProgressHUD dismiss];            
+        }
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -339,9 +355,16 @@
     else {
         [cell.filterButton removeFromSuperview];
         
-        Hospital *h = [_hospitals objectAtIndex:indexPath.row - 1]; //Subtract 1 to account for the filter cell
+        Hospital *h;
+        
+        if (_isFiltered)
+            h = [_filteredResults objectAtIndex:indexPath.row - 1]; //Subtract 1 to account for the filter cell
+        else
+            h = [_searchResults objectAtIndex:indexPath.row - 1];
+        
         cell.hospitalLabel.text = h.title;
-        cell.distanceLabel.text = [NSString stringWithFormat:@"%.2f miles away", [h distanceFromLocation:_userLocation]];
+        
+        cell.distanceLabel.text = [NSString stringWithFormat:@"%.2f miles away", [h distanceFromLocation:_mapView.userLocation]];
         cell.percentLabel.text = h.getRate;
     }
     

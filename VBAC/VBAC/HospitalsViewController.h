@@ -26,6 +26,7 @@
 @property (assign, nonatomic) id<HospitalsDelegate> delegate;
 @property (strong, nonatomic) NSArray *hospitals;
 @property (strong, nonatomic) NSMutableArray *searchResults;
+@property (strong, nonatomic) NSMutableArray *filteredResults;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -34,8 +35,9 @@
 @property (strong, nonatomic) UIView *scrollViewContent;
 @property (strong, nonatomic) IBOutlet HospitalCell *hospitalCell;
 @property (strong, nonatomic) NSMutableArray *hospitalSlides;
-@property (strong, nonatomic) MKUserLocation *userLocation;
 @property BOOL loadWithNearby;
+@property BOOL foundLocation;
+@property BOOL isFiltered;
 
 - (void)loadTableView;
 - (void)loadScrollView;

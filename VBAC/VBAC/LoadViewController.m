@@ -35,17 +35,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [SVProgressHUD show];
     
-    //Load data
-    _hospitals = [Dataset loadHospitalData];
-    
-    for (int count = 0; count < _hospitals.count; count++) {
-        NSLog(@"Hospital %i", count + 1);
-    }
-    
-    [SVProgressHUD dismiss];
-    
-    //Go home
-    [self goToHome];
+    [self performSelector:@selector(loadData) withObject:nil afterDelay:1.0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,6 +45,22 @@
 }
 
 #pragma mark - Custom methods
+
+- (void)loadData {
+    if (!_hospitals) {
+        //Load data
+        _hospitals = [Dataset loadHospitalData];
+        
+        for (int count = 0; count < _hospitals.count; count++) {
+            NSLog(@"Hospital %i", count + 1);
+        }
+        
+        [SVProgressHUD dismiss];
+        
+        //Go home
+        [self goToHome];
+    }
+}
 
 - (void)goToHome {
     MenuViewController *menu = [[MenuViewController alloc] initWithHospitals:_hospitals NibName:@"MenuViewController" bundle:nil];

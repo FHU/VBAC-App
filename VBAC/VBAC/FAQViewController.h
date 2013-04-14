@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FAQViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIWebView *FAQWebView;
+
+@property (strong, nonatomic) IBOutlet UIWebView *FAQWebView;
 
 @end

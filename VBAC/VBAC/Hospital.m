@@ -7,15 +7,17 @@
 //
 
 #import "Hospital.h"
+#import <CoreLocation/CoreLocation.h>
 
 @implementation Hospital
 @synthesize title = _title, state = _state, location = _location, number = _number, rate = _rate, year = _year, isFavorite = _isFavorite;
 
-- (id)initWithTitle:(NSString *)title State:(NSString *)state Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year isFavorite:(BOOL)isFavorite {
+- (id)initWithTitle:(NSString *)title State:(NSString *)state Address:(NSString *)address Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year isFavorite:(BOOL)isFavorite {
     self = [super init];
     if (self) {
         _title = title;
         _state = state;
+        _address = address;
         _location = location;
         _number = number;
         _rate = rate;
@@ -26,8 +28,8 @@
         if ([_title isEqualToString:@""])
             _title = @"Untitled";
         
-        _coordinate.latitude = 35.4422038579111;
-        _coordinate.longitude = -88.6394388183273;
+        _coordinate.latitude = [[[location componentsSeparatedByString:@", "] objectAtIndex:0] doubleValue];
+        _coordinate.longitude = [[[location componentsSeparatedByString:@", "] objectAtIndex:1] doubleValue];
     }
     return self;
 }
@@ -36,12 +38,15 @@
     return [NSString stringWithFormat:@"%.0f%%", _rate];
 }
 
-- (double)distanceFromLocation:(MKUserLocation *)location {
-    double distance = 0.0;
-    
+- (double)distanceFromLocation:(MKUserLocation *)location {    
     //Compare locations
+    CLLocation *userLocation = [[CLLocation alloc] initWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude];
+    CLLocation *hospitalLocation = [[CLLocation alloc] initWithLatitude:_coordinate.latitude longitude:_coordinate.longitude];
     
-    return distance;
+    CLLocationDistance distance = [hospitalLocation distanceFromLocation:userLocation]; //Meters
+    double miles = distance * 0.000621371;  //1 meter = 0.000621371 miles
+    
+    return miles;
 }
 
 @end

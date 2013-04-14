@@ -12,6 +12,10 @@
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) Hospital *hospital;
-@property (weak, nonatomic) IBOutlet UILabel *hospitalNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *addressLabel;
+@property (strong, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (strong, nonatomic) IBOutlet UIButton *unfavoriteButton;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end
