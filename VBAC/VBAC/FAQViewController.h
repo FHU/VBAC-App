@@ -10,6 +10,6 @@
 
 @interface FAQViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIWebView *FAQWebView;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end

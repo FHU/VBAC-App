@@ -28,11 +28,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [_FAQWebView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
+    [_webView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
-    NSString *path = @"https://dl.dropbox.com/u/28409250/Contest%20FAQ/index.html";
-    
-    [_FAQWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:path]]];
+    //Load the FAQ page
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"]isDirectory:NO]]];
 }
 
 - (void)didReceiveMemoryWarning

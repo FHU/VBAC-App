@@ -36,25 +36,14 @@
     
     _searchResults = [[NSMutableArray alloc] init];
     _filteredResults = [[NSMutableArray alloc] init];
-        
+    _hospitalSlides = [[NSMutableArray alloc] init];
+    
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
     [self loadTableView];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-//    if (_foundLocation)
-//        [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-//    if (_foundLocation)
-//        [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
-//    else {
-//        [SVProgressHUD show];
-//        [self performSelector:@selector(performSearchNearby) withObject:nil afterDelay:5.0];
-//    }
-    
+- (void)viewDidAppear:(BOOL)animated {    
     if (!_foundLocation) {
         [SVProgressHUD show];
         [self performSelector:@selector(performSearchNearby) withObject:nil afterDelay:5.0];
@@ -93,12 +82,13 @@
     
     _scrollViewContent = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width * _hospitals.count, self.view.frame.size.height)];
     
+    //Start by removing all slides
+    [_hospitalSlides removeAllObjects];
+    
     int count = 0;
     double position = self.view.frame.size.width;
     
-    _hospitalSlides = [[NSMutableArray alloc] init];
-    
-    for (Hospital *h in _hospitals) {
+    for (Hospital *h in _searchResults) {
         //Create a slide
         HospitalSlideViewController *slide = [[HospitalSlideViewController alloc] initWithHospital:h NibName:@"HospitalSlideViewController" bundle:nil];
         
