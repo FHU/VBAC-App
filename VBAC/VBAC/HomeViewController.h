@@ -21,5 +21,6 @@
 
 - (IBAction)openHospitals:(id)sender;
 - (IBAction)openFAQ:(id)sender;
+- (IBAction)bobcatSTRIKE:(id)sender;
 
 @end

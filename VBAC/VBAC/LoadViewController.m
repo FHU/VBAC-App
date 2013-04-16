@@ -30,6 +30,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //Set background image for iPhone 5
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        if ([[UIScreen mainScreen] bounds].size.height > 480) {
+            _imageView.image = [UIImage imageNamed:@"Default-568h@2x.png"];
+        }
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {

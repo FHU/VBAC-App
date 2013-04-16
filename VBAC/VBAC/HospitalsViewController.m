@@ -32,7 +32,6 @@
     // Do any additional setup after loading the view from its nib.
     
     _foundLocation = NO;
-    _isFiltered = NO;
     
     _searchResults = [[NSMutableArray alloc] init];
     _filteredResults = [[NSMutableArray alloc] init];
@@ -45,11 +44,19 @@
 
 - (void)viewDidAppear:(BOOL)animated {    
     if (!_foundLocation) {
-        [SVProgressHUD show];
-        [self performSelector:@selector(performSearchNearby) withObject:nil afterDelay:5.0];
+        if (_loadWithNearby) {
+            [SVProgressHUD show];
+            [self performSelector:@selector(performSearchNearby) withObject:nil afterDelay:5.0];
+        }
     } else {
         [_tableView reloadData];
+        if (_filteredResults.count != 0)
+            [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
     }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [SVProgressHUD dismiss];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,30 +72,36 @@
     [_scrollView setHidden:YES];
     
     //Add annotations to map view
-    for (Hospital *h in _hospitals) {
+    [_mapView removeAnnotations:_mapView.annotations];
+    
+    for (Hospital *h in _searchResults) {
         [_mapView addAnnotation:h];
     }
-        
+    
     [_tableView reloadData];
     
     //Scroll to the "first" cell
     if (_foundLocation)
-        [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+        if (_filteredResults.count != 0)
+            [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
 - (void)loadScrollView {
     //Show the scroll view
     [_scrollView setHidden:NO];
     
-    _scrollViewContent = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width * _hospitals.count, self.view.frame.size.height)];
+    int numberOfSlides = _filteredResults.count;
+    
+    _scrollViewContent = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width * numberOfSlides, self.view.frame.size.height)];
     
     //Start by removing all slides
     [_hospitalSlides removeAllObjects];
     
-    int count = 0;
     double position = self.view.frame.size.width;
     
-    for (Hospital *h in _searchResults) {
+    for (int count = 0; count < numberOfSlides; count++) {
+        Hospital *h = [_filteredResults objectAtIndex:count];
+        
         //Create a slide
         HospitalSlideViewController *slide = [[HospitalSlideViewController alloc] initWithHospital:h NibName:@"HospitalSlideViewController" bundle:nil];
         
@@ -98,22 +111,20 @@
         
         //Add the slide to the scrollView
         [_scrollViewContent addSubview:slide.view];
-        [_hospitalSlides addObject:slide];
-        
-        count++;
+        [_hospitalSlides addObject:slide];        
     }
     
     if (_hospitalSlides.count == 0) {
-        return;
+        [_noneScrollViewLabel setHidden:NO];
     } else {
-        [_noHospitalsLabel removeFromSuperview];
+        [_noneScrollViewLabel setHidden:YES];
     }
     
     //Set up scroll view using auto layout
     _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
-    [_scrollView setContentSize:CGSizeMake(_scrollViewContent.frame.size.width, _scrollView.frame.size.height)];
+    [_scrollView setContentSize:CGSizeMake(_scrollViewContent.frame.size.width, _scrollViewContent.frame.size.height)];
     
-    [_scrollView addSubview:_scrollViewContent];    
+    [_scrollView addSubview:_scrollViewContent];
 }
 
 - (IBAction)openFilter:(id)sender {
@@ -129,30 +140,16 @@
     //Start by removing everything from the array
     [_searchResults removeAllObjects];
     
-    //Add all hospitals within 50 miles
+    //Add all hospitals within 100 miles
     for (Hospital *h in _hospitals) {
         double distance = [h distanceFromLocation:_mapView.userLocation];
-        if (distance <= 50.0 && distance != 0) {
+        if (distance <= 100.0 && distance != 0) {
             [_searchResults addObject:h];
         }
     }
     
-    if (_searchResults.count == 0)
-        NSLog(@"No nearby hospitals on record");
-    else {
-        //Sort by distance
-        [_searchResults sortUsingComparator: ^(Hospital *h1, Hospital *h2) {
-            if ([h1 distanceFromLocation:_mapView.userLocation] < [h2 distanceFromLocation:_mapView.userLocation]) {
-                return (NSComparisonResult)NSOrderedAscending;
-            } else if ([h1 distanceFromLocation:_mapView.userLocation] > [h2 distanceFromLocation:_mapView.userLocation]) {
-                return (NSComparisonResult)NSOrderedDescending;
-            }
-            return (NSComparisonResult)NSOrderedSame;
-        }];
-    }
-    
-    //Reload tableView
-    [_tableView reloadData];
+    //Filter all hospitals within 50 miles
+    [self filterWithSortOption:0 Rate:0 Distance:50];
 }
 
 - (void)performSearchWithText:(NSString *)text {
@@ -166,34 +163,28 @@
         _searchResults = [[_hospitals filteredArrayUsingPredicate:pred] mutableCopy];
     }
     
-    if (_searchResults.count == 0)
-        NSLog(@"No hospitals were found matching the search \"%@\" ", text);
-    
-    for (Hospital *h in _searchResults) {
-        NSLog(@"%@", h.title);
-    }
-    
-    //Reload tableView
-    [_tableView reloadData];
+    [self filterWithSortOption:0 Rate:0 Distance:999999999];
 }
 
 #pragma mark - FilterDelegate
 
 - (void)resetFilter {
-    _isFiltered = NO;
-    
-    [_tableView reloadData];
+    [self filterWithSortOption:0 Rate:0 Distance:999999999];
 }
 
 - (void)filterWithSortOption:(int)option Rate:(double)rate Distance:(double)distance {
-    //Start by removing everything from the array
+    //Start by removing everything from the array and removing map annotations
     [_filteredResults removeAllObjects];
+    [_mapView removeAnnotations:_mapView.annotations];
     
     //Add hospitals that match specified rate and distance
     for (Hospital *h in _searchResults) {
-        if (h.rate >= rate)
-            if ([h distanceFromLocation:_mapView.userLocation] <= distance)
+        if (h.rate >= rate) {
+            if ([h distanceFromLocation:_mapView.userLocation] <= distance) {
                 [_filteredResults addObject:h];
+                [_mapView addAnnotation:h];
+            }
+        }
     }
     
     //Sorting options
@@ -234,26 +225,60 @@
     
     [_tableView reloadData];
     
-    //Use the filteredSearchResults array for the tableView
-    _isFiltered = YES;
+    if (_filteredResults.count == 0) {
+        [_noneTableViewLabel setHidden:NO];
+        [SVProgressHUD dismiss];
+    } else {
+        [self zoomToFitAnnotations];
+        [_noneTableViewLabel setHidden:YES];
+        [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    }
+}
+
+- (void)zoomToFitAnnotations {
+    //http://stackoverflow.com/questions/4169459/whats-the-best-way-to-zoom-out-and-fit-all-annotations-in-mapkit
+    
+    CLLocationCoordinate2D topLeftCoord;
+    topLeftCoord.latitude = -90;
+    topLeftCoord.longitude = 180;
+    
+    CLLocationCoordinate2D bottomRightCoord;
+    bottomRightCoord.latitude = 90;
+    bottomRightCoord.longitude = -180;
+    
+    for (Hospital *h in _mapView.annotations)
+    {
+        topLeftCoord.longitude = fmin(topLeftCoord.longitude, h.coordinate.longitude);
+        topLeftCoord.latitude = fmax(topLeftCoord.latitude, h.coordinate.latitude);
+        
+        bottomRightCoord.longitude = fmax(bottomRightCoord.longitude, h.coordinate.longitude);
+        bottomRightCoord.latitude = fmin(bottomRightCoord.latitude, h.coordinate.latitude);
+    }
+    
+    MKCoordinateRegion region;
+    region.center.latitude = topLeftCoord.latitude - (topLeftCoord.latitude - bottomRightCoord.latitude) * 0.5;
+    region.center.longitude = topLeftCoord.longitude + (bottomRightCoord.longitude - topLeftCoord.longitude) * 0.5;
+    region.span.latitudeDelta = fabs(topLeftCoord.latitude - bottomRightCoord.latitude) * 1.1; // Add a little extra space on the sides
+    region.span.longitudeDelta = fabs(bottomRightCoord.longitude - topLeftCoord.longitude) * 1.1; // Add a little extra space on the sides
+    
+    region = [_mapView regionThatFits:region];
+    [_mapView setRegion:region animated:YES];
 }
 
 #pragma mark - MKMapViewDelegate
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    double miles = 50;
-    double meters = miles * 1609.34;
-    
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, meters, meters);
-    [mapView setRegion:[mapView regionThatFits:region] animated:YES];
-    
-    //On first location
-    if (!_foundLocation)
-        [SVProgressHUD show];
+    if (!_foundLocation) {
+        double miles = 50;
+        double meters = miles * 1609.34;
         
-    [_tableView reloadData];
-    _foundLocation = YES;
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, meters, meters);
+        [mapView setRegion:[mapView regionThatFits:region] animated:YES];
+            
+        [_tableView reloadData];
+        _foundLocation = YES;
+    }
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
@@ -278,8 +303,18 @@
     if (![view.annotation isKindOfClass:[MKUserLocation class]]) {
         Hospital *h = (Hospital *)view.annotation;
         
-        //Offset coordinate for portrait view
-        CLLocationCoordinate2D offset = h.coordinate;
+        //Find index of selected hospital
+        int index = 0;
+        
+        for (int count = 0; count < _filteredResults.count; count++) {
+            Hospital *h2 = [_filteredResults objectAtIndex:count];
+            if ([h.title isEqualToString:h2.title])
+                index = count;
+        }
+        
+        //Scroll to the selected hospital
+        if (index != 0)
+            [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index+1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
     }
 }
 
@@ -300,10 +335,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //Add 1 to account for the filter cell at position 0
-    if (_isFiltered)
-        return _filteredResults.count + 1;
-    else
-        return _searchResults.count + 1;
+    return _filteredResults.count + 1;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -345,15 +377,9 @@
     else {
         [cell.filterButton removeFromSuperview];
         
-        Hospital *h;
-        
-        if (_isFiltered)
-            h = [_filteredResults objectAtIndex:indexPath.row - 1]; //Subtract 1 to account for the filter cell
-        else
-            h = [_searchResults objectAtIndex:indexPath.row - 1];
+        Hospital *h = [_filteredResults objectAtIndex:indexPath.row - 1]; //Subtract 1 to account for the filter cell
         
         cell.hospitalLabel.text = h.title;
-        
         cell.distanceLabel.text = [NSString stringWithFormat:@"%.2f miles away", [h distanceFromLocation:_mapView.userLocation]];
         cell.percentLabel.text = h.getRate;
     }
@@ -366,7 +392,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //Subtract 1 to account for the filter cell
-    Hospital *h = [_hospitals objectAtIndex:indexPath.row - 1];
+    Hospital *h = [_filteredResults objectAtIndex:indexPath.row - 1];
     
     //Tell delegate to push the detail view
     [_delegate pushDetailForHospital:h];

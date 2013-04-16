@@ -14,5 +14,6 @@
 
 @property (strong, nonatomic) Dataset *dataset;
 @property (strong, nonatomic) NSArray *hospitals;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

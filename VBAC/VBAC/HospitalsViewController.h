@@ -30,14 +30,14 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (strong, nonatomic) IBOutlet UILabel *noHospitalsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *noneScrollViewLabel;
+@property (strong, nonatomic) IBOutlet UILabel *noneTableViewLabel;
 @property (strong, nonatomic) FilterViewController *filterViewController;
 @property (strong, nonatomic) UIView *scrollViewContent;
 @property (strong, nonatomic) IBOutlet HospitalCell *hospitalCell;
 @property (strong, nonatomic) NSMutableArray *hospitalSlides;
 @property BOOL loadWithNearby;
 @property BOOL foundLocation;
-@property BOOL isFiltered;
 
 - (void)loadTableView;
 - (void)loadScrollView;

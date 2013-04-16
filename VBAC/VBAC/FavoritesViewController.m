@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    _hospitalSlides = [[NSMutableArray alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -50,20 +52,25 @@
             [slides addObject:h];
     }
     
+    //If there are no favorites, return
     if (slides.count == 0) {
         return;
     } else {
         [_noHospitalsLabel removeFromSuperview];
     }
     
-    _scrollViewContent = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width * slides.count, self.view.frame.size.height)];
+    int numberOfSlides = slides.count;
     
-    int count = 0;
+    _scrollViewContent = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width * numberOfSlides, self.view.frame.size.height)];
+    
+    //Start by removing all slides
+    [_hospitalSlides removeAllObjects];
+    
     double position = self.view.frame.size.width;
     
-    _hospitalSlides = [[NSMutableArray alloc] init];
-    
-    for (Hospital *h in slides) {
+    for (int count = 0; count < numberOfSlides; count++) {
+        Hospital *h = [slides objectAtIndex:count];
+        
         //Create a slide
         HospitalSlideViewController *slide = [[HospitalSlideViewController alloc] initWithHospital:h NibName:@"HospitalSlideViewController" bundle:nil];
         
@@ -73,14 +80,12 @@
         
         //Add the slide to the scrollView
         [_scrollViewContent addSubview:slide.view];
-        [_hospitalSlides addObject:slide];
-        
-        count++;
+        [_hospitalSlides addObject:slide];        
     }
     
     //Set up scroll view using auto layout
     _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
-    [_scrollView setContentSize:CGSizeMake(_scrollViewContent.frame.size.width, _scrollView.frame.size.height)];
+    [_scrollView setContentSize:CGSizeMake(_scrollViewContent.frame.size.width, _scrollViewContent.frame.size.height)];
     
     [_scrollView addSubview:_scrollViewContent];
 }

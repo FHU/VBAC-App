@@ -31,6 +31,7 @@
     // Do any additional setup after loading the view from its nib.
     
     _titleLabel.text = _hospital.title;
+    _rateLabel.text = _hospital.getRate;
     /*
     if ([_hospital.address rangeOfString:@","].location == NSNotFound) {
         NSLog(@"No comma in address");
@@ -47,15 +48,17 @@
     }
 //    _addressLabel.text = _hospital.address;
     */
+    [_webView.scrollView setScrollEnabled:NO];
+    
     [self swapImage];
+    [self updateGraph];
     
     [_panelView.layer setCornerRadius:10.0];
         
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
 }
 
-- (void)viewDidAppear:(BOOL)animated {    
-//    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://dl.dropbox.com/u/28409250/Contest%20Combo%20Graph/index.html"]]];
+- (void)viewDidAppear:(BOOL)animated {
     [self updateGraph];
 }
 
@@ -68,6 +71,8 @@
 #pragma mark - Custom methods
 
 - (void)updateGraph {
+    [_activityIndicator startAnimating];
+    
     NSString *htmlFilePath = [[NSBundle mainBundle] pathForResource:@"graph" ofType:@"html"];
     NSMutableString *htmlFileString = [NSMutableString stringWithContentsOfFile:htmlFilePath encoding:NSUTF8StringEncoding error:NULL];
     
@@ -97,6 +102,12 @@
         [_unfavoriteButton setHidden:NO];
     else
         [_unfavoriteButton setHidden:YES];
+}
+
+#pragma mark - UIWebViewDelegate
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [_activityIndicator stopAnimating];
 }
 
 @end

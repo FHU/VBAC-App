@@ -45,4 +45,8 @@
     [_delegate openFAQ];
 }
 
+- (IBAction)bobcatSTRIKE:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.fhu.edu/blogs/cs/"]];
+}
+
 @end
