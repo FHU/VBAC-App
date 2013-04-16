@@ -8,6 +8,7 @@
 
 #import "HospitalSlideViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import <Social/Social.h>
 
 @interface HospitalSlideViewController ()
 
@@ -95,6 +96,51 @@
     [self swapImage];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SAVE_HOSPITAL_DATA" object:nil];
+}
+
+- (IBAction)sendTweet:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        
+        NSString *tweetString = @"#VBACfinder";
+        NSURL *link = [NSURL URLWithString:@"http://www.fhu.edu"];
+        
+        [tweetSheet setInitialText:tweetString];
+        //        [tweetSheet addURL:link];
+        
+        [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry"
+                                                            message:@"You can't send a tweet. Make sure your device has an internet connection and you have a Twitter account set up."
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+- (IBAction)shareFacebook:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewController *fbSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        
+        NSString *fbString = @"";
+        NSURL *link = [NSURL URLWithString:@"http://www.fhu.edu"];
+        
+        [fbSheet setInitialText:fbString];
+        //        [fbSheet addURL:link];
+        
+        [fbSheet setInitialText:fbString];
+        [self presentViewController:fbSheet animated:YES completion:nil];
+    }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry"
+                                                            message:@"You can't share on Facebook. Make sure your device has an internet connection and you have a Facebook account set up."
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
 }
 
 - (void)swapImage {
