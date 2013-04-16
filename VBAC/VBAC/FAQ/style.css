@@ -9,8 +9,6 @@ body{
 width: 100%;
 font-size: 14px;
 font-family: "Avenir Next";
-background-image: url(background.png);
-background-repeat: repeat;
 }
 
 li.question_title{
@@ -34,11 +32,11 @@ height: 44px;
 display: block;
 margin: 0 auto;
 padding-top: 10px;
-color: white;
+color: #2B2565;
 }
 
 a:visited{
-color: white;
+color: #2B2565;
 }
 
 
