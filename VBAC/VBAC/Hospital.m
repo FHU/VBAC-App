@@ -30,8 +30,8 @@
         if ([_title isEqualToString:@""])
             _title = @"Untitled";
         
-        _coordinate.latitude = [[[location componentsSeparatedByString:@", "] objectAtIndex:0] doubleValue];
-        _coordinate.longitude = [[[location componentsSeparatedByString:@", "] objectAtIndex:1] doubleValue];
+        _coordinate.latitude = [[[location componentsSeparatedByString:@","] objectAtIndex:0] doubleValue];
+        _coordinate.longitude = [[[location componentsSeparatedByString:@","] objectAtIndex:1] doubleValue];
     }
     return self;
 }

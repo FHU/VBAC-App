@@ -40,7 +40,7 @@
     
     //Create arrays to hold parsed data
     NSMutableArray *hospitals = [[NSMutableArray alloc] init];
-    
+        
     //Hospitals
     for (GDataXMLElement *hospital in hospitalsXML) {
         //Create variables to fill in
