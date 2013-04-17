@@ -33,22 +33,8 @@
     
     _titleLabel.text = _hospital.title;
     _rateLabel.text = _hospital.getRate;
-    /*
-    if ([_hospital.address rangeOfString:@","].location == NSNotFound) {
-        NSLog(@"No comma in address");
-    } else {
-        NSString *nameFromAddress = [[_hospital.address componentsSeparatedByString:@","] objectAtIndex:0];
-        NSString *address1 = [[_hospital.address componentsSeparatedByString:@","] objectAtIndex:1];
-        NSString *city = [[_hospital.address componentsSeparatedByString:@","] objectAtIndex:2];
-        NSString *state = [[_hospital.address componentsSeparatedByString:@","] objectAtIndex:3];
-        
-        NSLog(@"%@", nameFromAddress);
-        NSLog(@"%@", address1);
-        NSLog(@"%@", city);
-        NSLog(@"%@", state);
-    }
-//    _addressLabel.text = _hospital.address;
-    */
+    _addressLabel.text = [NSString stringWithFormat:@"%@\n%@, %@ %@", _hospital.street, _hospital.city, _hospital.state, _hospital.zip];
+    
     [_webView.scrollView setScrollEnabled:NO];
     
     [self swapImage];
