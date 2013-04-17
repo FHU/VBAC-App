@@ -158,7 +158,7 @@
     
     //Add all hospitals that match the search
     if (text.length > 0) {
-        NSPredicate *pred = [NSPredicate predicateWithFormat:@"title contains[cd] %@", text];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"title contains[cd] %@ || city contains[cd] %@ || state == %@ || zip==%@", text, text, text, text];
         
         _searchResults = [[_hospitals filteredArrayUsingPredicate:pred] mutableCopy];
     }
