@@ -10,14 +10,16 @@
 #import <CoreLocation/CoreLocation.h>
 
 @implementation Hospital
-@synthesize title = _title, state = _state, location = _location, number = _number, rate = _rate, year = _year, isFavorite = _isFavorite;
+@synthesize title = _title, street = _street, city = _city, state = _state, zip = _zip, location = _location, number = _number, rate = _rate, year = _year, isFavorite = _isFavorite;
 
-- (id)initWithTitle:(NSString *)title State:(NSString *)state Address:(NSString *)address Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year isFavorite:(BOOL)isFavorite {
+- (id)initWithTitle:(NSString *)title Street:(NSString *)street City:(NSString *)city State:(NSString *)state Zip:(NSString *)zip Location:(NSString *)location Number:(double)number Rate:(double)rate Year:(NSString *)year isFavorite:(BOOL)isFavorite {
     self = [super init];
     if (self) {
         _title = title;
+        _street = street;
+        _city = city;
         _state = state;
-        _address = address;
+        _zip = zip;
         _location = location;
         _number = number;
         _rate = rate;

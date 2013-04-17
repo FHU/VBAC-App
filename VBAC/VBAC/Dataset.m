@@ -45,8 +45,10 @@
     for (GDataXMLElement *hospital in hospitalsXML) {
         //Create variables to fill in
         NSString *name;
+        NSString *street;
+        NSString *city;
         NSString *state;
-        NSString *address;
+        NSString *zip;
         NSString *location;
         double vbacNumber = 0.0;
         double vbacRate = 0.0;
@@ -60,6 +62,20 @@
             name = element.stringValue;
         }
         
+        //Street
+        NSArray *streets = [hospital elementsForName:@"street"];
+        if (streets.count > 0) {
+            GDataXMLElement *element = (GDataXMLElement *)[streets objectAtIndex:0];
+            street = element.stringValue;
+        }
+        
+        //City
+        NSArray *cities = [hospital elementsForName:@"city"];
+        if (cities.count > 0) {
+            GDataXMLElement *element = (GDataXMLElement *)[cities objectAtIndex:0];
+            city = element.stringValue;
+        }
+        
         //State
         NSArray *states = [hospital elementsForName:@"state"];
         if (states.count > 0) {
@@ -67,11 +83,11 @@
             state = element.stringValue;
         }
         
-        //Address
-        NSArray *addresses = [hospital elementsForName:@"address"];
-        if (addresses.count > 0) {
-            GDataXMLElement *element = (GDataXMLElement *)[addresses objectAtIndex:0];
-            address = element.stringValue;
+        //Zip
+        NSArray *zips = [hospital elementsForName:@"zip"];
+        if (zips.count > 0) {
+            GDataXMLElement *element = (GDataXMLElement *)[zips objectAtIndex:0];
+            zip = element.stringValue;
         }
         
         //Location
@@ -110,7 +126,7 @@
         }
         
         //Create Hospital object
-        Hospital *h = [[Hospital alloc] initWithTitle:name State:state Address:address Location:location Number:vbacNumber Rate:vbacRate Year:year isFavorite:isFavorite];
+        Hospital *h = [[Hospital alloc] initWithTitle:name Street:street City:city State:state Zip:zip Location:location Number:vbacNumber Rate:vbacRate Year:year isFavorite:isFavorite];
         
         //Add to array
         [hospitals addObject:h];
@@ -125,8 +141,10 @@
     for (Hospital *h in hospitals) {
         GDataXMLElement *hospital = [GDataXMLNode elementWithName:@"hospital"];
         GDataXMLElement *name = [GDataXMLNode elementWithName:@"name" stringValue:h.title];
-        GDataXMLElement *address = [GDataXMLNode elementWithName:@"address" stringValue:h.address];
+        GDataXMLElement *street = [GDataXMLNode elementWithName:@"street" stringValue:h.street];
+        GDataXMLElement *city = [GDataXMLNode elementWithName:@"city" stringValue:h.city];
         GDataXMLElement *state = [GDataXMLNode elementWithName:@"state" stringValue:h.state];
+        GDataXMLElement *zip = [GDataXMLNode elementWithName:@"zip" stringValue:h.zip];
         GDataXMLElement *location = [GDataXMLNode elementWithName:@"location" stringValue:h.location];
         GDataXMLElement *vbacNumber = [GDataXMLNode elementWithName:@"vbacNumber" stringValue:[NSString stringWithFormat:@"%f", h.number]];
         GDataXMLElement *vbacRate = [GDataXMLNode elementWithName:@"vbacRate" stringValue:[NSString stringWithFormat:@"%f", h.rate]];
@@ -136,8 +154,10 @@
         GDataXMLElement *isFavorite = [GDataXMLNode elementWithName:@"isFavorite" stringValue:booleanValue];
         
         [hospital addChild:name];
+        [hospital addChild:street];
+        [hospital addChild:city];
         [hospital addChild:state];
-        [hospital addChild:address];
+        [hospital addChild:zip];
         [hospital addChild:location];
         [hospital addChild:vbacNumber];
         [hospital addChild:vbacRate];

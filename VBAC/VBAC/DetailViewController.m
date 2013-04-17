@@ -44,6 +44,7 @@
     
     _titleLabel.text = _hospital.title;
     _rateLabel.text = _hospital.getRate;
+    _addressLabel.text = [NSString stringWithFormat:@"%@\n%@, %@ %@", _hospital.street, _hospital.city, _hospital.state, _hospital.zip];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
