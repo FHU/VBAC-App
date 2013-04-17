@@ -36,7 +36,7 @@
 	</hospital>
 	<hospital>
 		<name>Baptist Medical Center - Princeton</name>
-		<street></street>
+		<street>701 Princeton Ave SW</street>
 		<city>Birmingham</city>
 		<state>AL</state>
 		<zip>35211</zip>
@@ -69,11 +69,11 @@
 	</hospital>
 	<hospital>
 		<name>Bryan W. Whitfield Memorial Hospital</name>
-		<street></street>
+		<street>105 Highway 80 East</street>
 		<city>Demopolis</city>
 		<state>AL</state>
 		<zip>36732</zip>
-		<location>32.5034697, -87.8633469</location>
+		<location>32.503663, -87.836383</location>
 		<vbacNumber>1</vbacNumber>
 		<vbacRate>2.5</vbacRate>
 		<year>2010</year>
@@ -113,11 +113,11 @@
 	</hospital>
 	<hospital>
 		<name>Crenshaw Community Hospital</name>
-		<street></street>
+		<street>Roy Beall Dr</street>
 		<city>Luverne</city>
 		<state>AL</state>
 		<zip>36049</zip>
-		<location>31.6938961, -86.2644250</location>
+		<location>31.694222, -86.264457</location>
 		<vbacNumber>2</vbacNumber>
 		<vbacRate>9.1</vbacRate>
 		<year>2010</year>
@@ -1509,12 +1509,12 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Foothill Presbyterian Hospital –JM</name>
-        <street></street>
-        <city></city>
+        <name>Foothill Presbyterian Hospital – JM</name>
+        <street>250 South Grand Avenue</street>
+        <city>Glendora</city>
         <state>CA</state>
-        <zip></zip>
-        <location>36.7782610, -119.4179324</location>
+        <zip>91741</zip>
+        <location>34.1328850, -117.8712070</location>
         <vbacNumber>2</vbacNumber>
         <vbacRate>0.01</vbacRate>
         <year>2011</year>
@@ -1532,11 +1532,11 @@
     </hospital>
     <hospital>
         <name>Glendale Adventist Medical Center – WT</name>
-        <street></street>
-        <city></city>
+        <street>2560 Colorado Blvd</street>
+        <city>Los Angeles</city>
         <state>CA</state>
-        <zip></zip>
-        <location>36.7782610, -119.4179324</location>
+        <zip>90041</zip>
+        <location>34.1412330, -118.2224140</location>
         <vbacNumber>24</vbacNumber>
         <vbacRate>0.046</vbacRate>
         <year>2011</year>
@@ -1601,7 +1601,7 @@
         <street>100 West California Blvd</street>
         <city>Pasadena</city>
         <state>CA</state>
-        <zip>California 91105</zip>
+        <zip>91105</zip>
         <location>34.1336180, -118.1529380</location>
         <vbacNumber>17</vbacNumber>
         <vbacRate>0.03</vbacRate>
@@ -1609,11 +1609,11 @@
     </hospital>
     <hospital>
         <name>Kaiser Foundation Hospital – Baldwin Park</name>
-        <street></street>
-        <city></city>
+        <street>1011 Baldwin Park Blvd</street>
+        <city>Baldwin Park</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>34.0852868, -117.9608978</location>
+        <zip>91706</zip>
+        <location>34.0653770, -117.9858840</location>
         <vbacNumber>92</vbacNumber>
         <vbacRate>0.207</vbacRate>
         <year>2011</year>
@@ -1631,11 +1631,11 @@
     </hospital>
     <hospital>
         <name>Kaiser Foundation Hospital – Harbor City</name>
-        <street></street>
-        <city>Los Angeles</city>
+        <street>' 9400 Rosecrans Avenue</street>
+        <city>' Bellflower</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>33.7906551, -118.2965084</location>
+        <zip>90706</zip>
+        <location>33.9026280, -118.1329200</location>
         <vbacNumber>49</vbacNumber>
         <vbacRate>0.177</vbacRate>
         <year>2011</year>
@@ -1675,11 +1675,11 @@
     </hospital>
     <hospital>
         <name>Kaiser Foundation Hospital – Woodland Hills</name>
-        <street></street>
-        <city></city>
+        <street>5601 De Soto Avenue</street>
+        <city>Woodland Hills</city>
         <state>CA</state>
-        <zip>UT</zip>
-        <location>40.0149770, -111.6498270</location>
+        <zip>91367</zip>
+        <location>34.1709930, -118.5897410</location>
         <vbacNumber>34</vbacNumber>
         <vbacRate>0.15</vbacRate>
         <year>2011</year>
@@ -1708,11 +1708,11 @@
     </hospital>
     <hospital>
         <name>Los Angeles County/Olive View – UCLA MC</name>
-        <street></street>
-        <city></city>
+        <street>14445 Olive View Drive</street>
+        <city>Sylmar</city>
         <state>CA</state>
-        <zip></zip>
-        <location>36.7782610, -119.4179324</location>
+        <zip>91342</zip>
+        <location>33.7036917, -118.9449037</location>
         <vbacNumber>31</vbacNumber>
         <vbacRate>0.171</vbacRate>
         <year>2011</year>
@@ -1741,11 +1741,11 @@
     </hospital>
     <hospital>
         <name>Methodist Hospital of Southern California</name>
-        <street></street>
-        <city></city>
+        <street>300 West Huntington Drive</street>
+        <city>Arcadia</city>
         <state>CA</state>
-        <zip>MI 49255</zip>
-        <location>41.7964383, -84.8832941</location>
+        <zip>91007</zip>
+        <location>34.1340220, -118.0421510</location>
         <vbacNumber>16</vbacNumber>
         <vbacRate>0.058</vbacRate>
         <year>2011</year>
@@ -1774,11 +1774,11 @@
     </hospital>
     <hospital>
         <name>Pacific Alliance Medical Center, Inc.</name>
-        <street></street>
-        <city></city>
+        <street>711 West College Street</street>
+        <city>Los Angeles</city>
         <state>CA</state>
-        <zip>95521</zip>
-        <location>40.8886100, -124.0866700</location>
+        <zip>90012</zip>
+        <location>34.0657950, -118.2412380</location>
         <vbacNumber>1</vbacNumber>
         <vbacRate>0.002</vbacRate>
         <year>2011</year>
@@ -1840,22 +1840,22 @@
     </hospital>
     <hospital>
         <name>Providence Little Company of Mary MC-San Pedro</name>
-        <street></street>
-        <city>Los Angeles</city>
+        <street>1300 West 7th Street</street>
+        <city>San Pedro</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>33.7360619, -118.2922461</location>
+        <zip>90732</zip>
+        <location>33.7379817, -118.3052487</location>
         <vbacNumber>2</vbacNumber>
         <vbacRate>0.019</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
         <name>Providence Little Company of Mary MC-Torrance</name>
-        <street></street>
-        <city></city>
+        <street>4101 Torrance Blvd</street>
+        <city>Torrance</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>33.8358492, -118.3406288</location>
+        <zip>90503</zip>
+        <location>33.8377187, -118.3578292</location>
         <vbacNumber>3</vbacNumber>
         <vbacRate>0.009</vbacRate>
         <year>2011</year>
@@ -1895,11 +1895,11 @@
     </hospital>
     <hospital>
         <name>Saint Francis Medical Center</name>
-        <street></street>
-        <city>Grand Island</city>
+        <street>3630 East Imperial Highway</street>
+        <city>Lynwood</city>
         <state>CA</state>
-        <zip>NE 68802</zip>
-        <location>40.9250120, -98.3725630</location>
+        <zip>90262</zip>
+        <location>33.9298440, -118.2031080</location>
         <vbacNumber>76</vbacNumber>
         <vbacRate>0.067</vbacRate>
         <year>2011</year>
@@ -1997,7 +1997,7 @@
         <street>7300 Medical Center Drive</street>
         <city>West Hills</city>
         <state>CA</state>
-        <zip>California 91307</zip>
+        <zip>91307</zip>
         <location>34.2028519, -118.6298025</location>
         <vbacNumber>1</vbacNumber>
         <vbacRate>0.007</vbacRate>
@@ -2026,17 +2026,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>MADERA</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>36.9613356, -120.0607176</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Madera Community Hospital</name>
         <street>1250 East Almond Avenue</street>
         <city>Madera</city>
@@ -2048,17 +2037,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>MARIN</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>38.0834030, -122.7633036</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Marin General Hospital</name>
         <street>250 Bon Air Road</street>
         <city>Greenbrae</city>
@@ -2067,17 +2045,6 @@
         <location>37.9474790, -122.5367660</location>
         <vbacNumber>53</vbacNumber>
         <vbacRate>26.1</vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>MENDOCINO</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>39.3076744, -123.7994591</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
@@ -2103,17 +2070,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>MERCED</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>37.3021632, -120.4829677</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Memorial Hospital Los Banos</name>
         <street>520 West I Street</street>
         <city>Los Banos</city>
@@ -2136,34 +2092,12 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>MONO</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>37.9218608, -118.9528645</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Mammoth Hospital</name>
         <street>85 Sierra Park Road</street>
         <city>Mammoth Lakes</city>
         <state>CA</state>
         <zip>93546</zip>
         <location>37.6439954, -118.9638691</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>MONTEREY</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>36.6002378, -121.8946761</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
         <year>2011</year>
@@ -2213,17 +2147,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>NAPA</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>38.2975381, -122.2868650</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Queen of the Valley Hospital – Napa</name>
         <street></street>
         <city>Napa</city>
@@ -2246,17 +2169,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>NEVADA</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>39.1346666, -121.1710389</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Sierra Nevada Memorial Hospital</name>
         <street>155 Glasson Way</street>
         <city>Grass Valley</city>
@@ -2276,17 +2188,6 @@
         <location>39.3258160, -120.2009439</location>
         <vbacNumber>1</vbacNumber>
         <vbacRate>2.5</vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>ORANGE</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>33.7877944, -117.8531119</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
@@ -2466,23 +2367,12 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>PLACER</name>
-        <street></street>
-        <city></city>
+        <name>Kaiser Foundation Hospital – Roseville</name>
+        <street>2025 Morse Avenue</street>
+        <city>Sacramento</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>39.0915751, -120.8039474</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>Kaiser Foundation Hospital – Roseville**</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip></zip>
-        <location>36.7782610, -119.4179324</location>
+        <zip>95825</zip>
+        <location>38.6000004, -121.3943621</location>
         <vbacNumber>187</vbacNumber>
         <vbacRate>26.6</vbacRate>
         <year>2011</year>
@@ -2510,34 +2400,12 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>PLUMAS</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>39.9926832, -120.8039474</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Plumas District Hospital</name>
         <street></street>
         <city>Quincy</city>
         <state>CA</state>
         <zip>95971</zip>
         <location>39.9404470, -120.9593990</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>RIVERSIDE</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>33.9533487, -117.3961564</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
         <year>2011</year>
@@ -2588,11 +2456,11 @@
     </hospital>
     <hospital>
         <name>Kaiser Foundation Hospital – Moreno Valley</name>
-        <street></street>
-        <city></city>
+        <street>10800 Magnolia Avenue</street>
+        <city>Riverside</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>33.9424658, -117.2296717</location>
+        <zip>92505</zip>
+        <location>33.9075175, -117.4687913</location>
         <vbacNumber>6</vbacNumber>
         <vbacRate>3.2</vbacRate>
         <year>2011</year>
@@ -2646,7 +2514,7 @@
         <street>4445 Magnolia Avenue</street>
         <city>Riverside</city>
         <state>CA</state>
-        <zip>California 92501</zip>
+        <zip>92501</zip>
         <location>33.9765915, -117.3818448</location>
         <vbacNumber>4</vbacNumber>
         <vbacRate>0.6</vbacRate>
@@ -2683,17 +2551,6 @@
         <location>33.5587610, -117.1832900</location>
         <vbacNumber>7</vbacNumber>
         <vbacRate>1.1</vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>SACRAMENTO</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>38.5815719, -121.4943996</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
@@ -2774,34 +2631,12 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>SAN BENITO</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>95043</zip>
-        <location>36.5097222, -121.0819444</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Hazel Hawkins Memorial Hospital</name>
         <street>911 Sunset Drive</street>
         <city>Hollister</city>
         <state>CA</state>
         <zip>95023</zip>
         <location>36.8350033, -121.3863736</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>SAN BERNARDINO</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>34.1083449, -117.2897652</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
         <year>2011</year>
@@ -2918,11 +2753,11 @@
     </hospital>
     <hospital>
         <name>Saint Mary Regional Medical Center</name>
-        <street></street>
-        <city></city>
+        <street>18300 Outer Highway 18 North</street>
+        <city>Apple Valley</city>
         <state>CA</state>
-        <zip></zip>
-        <location>36.7782610, -119.4179324</location>
+        <zip>92307</zip>
+        <location>34.5418850, -117.2655580</location>
         <vbacNumber>9</vbacNumber>
         <vbacRate>2.8</vbacRate>
         <year>2011</year>
@@ -2947,17 +2782,6 @@
         <location>34.5278898, -117.2936963</location>
         <vbacNumber>3</vbacNumber>
         <vbacRate>0.9</vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>SAN DIEGO</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>32.7153292, -117.1572551</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
@@ -3104,17 +2928,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>SAN FRANCISCO</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>37.7749295, -122.4194155</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>California Pacific Medical Center – Pacific Campus</name>
         <street>2333 Buchanan Street</street>
         <city>San Francisco</city>
@@ -3167,17 +2980,6 @@
         <location>37.7624856, -122.4609584</location>
         <vbacNumber>65</vbacNumber>
         <vbacRate>35.7</vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>SAN JOAQUIN</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>93660</zip>
-        <location>36.6066162, -120.1890447</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
@@ -3258,17 +3060,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>SAN LUIS OBISPO</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>35.2827524, -120.6596156</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>French Hospital Medical Center</name>
         <street>1911 Johnson Avenue</street>
         <city>San Luis Obispo</city>
@@ -3302,23 +3093,12 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>SAN MATEO</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>37.5629917, -122.3255254</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Kaiser Foundation Hospital – Redwood City</name>
-        <street></street>
-        <city></city>
+        <street>1 Kaiser Plaza</street>
+        <city>Oakland</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>37.4852152, -122.2363548</location>
+        <zip>94612</zip>
+        <location>37.8100501, -122.2643788</location>
         <vbacNumber>44</vbacNumber>
         <vbacRate>30.3</vbacRate>
         <year>2011</year>
@@ -3357,17 +3137,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>SANTA BARBARA</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>34.4208305, -119.6981901</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Lompoc Valley Medical Center</name>
         <street></street>
         <city>Lompoc</city>
@@ -3398,17 +3167,6 @@
         <location>34.4295082, -119.7233299</location>
         <vbacNumber>3</vbacNumber>
         <vbacRate>0.9</vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>SANTA CLARA</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>37.3541079, -121.9552356</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
@@ -3446,22 +3204,22 @@
     </hospital>
     <hospital>
         <name>Kaiser Foundation Hospital – Santa Clara</name>
-        <street></street>
-        <city></city>
+        <street>710 Lawrence Expressway</street>
+        <city>Santa Clara</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>37.3541079, -121.9552356</location>
+        <zip>95051</zip>
+        <location>37.3363589, -121.9985712</location>
         <vbacNumber>122</vbacNumber>
         <vbacRate>19.9</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
         <name>Lucile Salter Packard Children’s Hospital at Stanford</name>
-        <street></street>
-        <city></city>
+        <street>725 Welch Road</street>
+        <city>Palo Alto</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>37.4241060, -122.1660756</location>
+        <zip>94304</zip>
+        <location>37.4363575, -122.1750478</location>
         <vbacNumber>100</vbacNumber>
         <vbacRate>15.6</vbacRate>
         <year>2011</year>
@@ -3522,17 +3280,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>SANTA CRUZ</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>36.9741171, -122.0307963</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Dominican Hospital – Santa Cruz/Soquel</name>
         <street>1555 Soquel Drive</street>
         <city>Santa Cruz</city>
@@ -3566,17 +3313,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>SHASTA</name>
-        <street></street>
-        <city>Shasta National Forest</city>
-        <state>CA</state>
-        <zip>California</zip>
-        <location>41.4108058, -122.1945763</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Mayers Memorial Hospital</name>
         <street>43563</street>
         <city>Fall River Mills</city>
@@ -3596,17 +3332,6 @@
         <location>40.5718200, -122.3952520</location>
         <vbacNumber>3</vbacNumber>
         <vbacRate>1</vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>SISKIYOU</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>41.7743261, -122.5770126</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
@@ -3632,23 +3357,12 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>SOLANO</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip></zip>
-        <location>16.5265690, 121.1800000</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Kaiser Foundation Hospital – Rehabilitation Center Vallejo</name>
-        <street></street>
-        <city></city>
+        <street>975 Sereno Drive</street>
+        <city>Vallejo</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>38.1040864, -122.2566367</location>
+        <zip>94589</zip>
+        <location>38.1285190, -122.2470408</location>
         <vbacNumber>56</vbacNumber>
         <vbacRate>18.4</vbacRate>
         <year>2011</year>
@@ -3676,17 +3390,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>SONOMA</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>95476</zip>
-        <location>38.2918590, -122.4580356</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Kaiser Foundation Hospital – Santa Rosa</name>
         <street>401 Bicentennial Way</street>
         <city>Santa Rosa</city>
@@ -3710,11 +3413,11 @@
     </hospital>
     <hospital>
         <name>Santa Rosa Memorial Hospital – Montgomery</name>
-        <street></street>
+        <street>1165 Montgomery Drive</street>
         <city>Santa Rosa</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>38.4441915, -122.6965775</location>
+        <zip>95405</zip>
+        <location>38.4436899, -122.7013790</location>
         <vbacNumber>44</vbacNumber>
         <vbacRate>20.7</vbacRate>
         <year>2011</year>
@@ -3742,17 +3445,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>STANISLAUS</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>37.5090711, -120.9876321</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Doctors Medical Center</name>
         <street>1441 Florida Avenue</street>
         <city>Modesto</city>
@@ -3765,46 +3457,35 @@
     </hospital>
     <hospital>
         <name>Emanuel Medical Center, Inc.</name>
-        <street></street>
-        <city></city>
+        <street>825 Delbon Avenue</street>
+        <city>Turlock</city>
         <state>CA</state>
-        <zip></zip>
-        <location>36.7782610, -119.4179324</location>
+        <zip>95382</zip>
+        <location>37.5116390, -120.8379960</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
         <name>Memorial Hospital Medical Center – Modesto</name>
-        <street></street>
-        <city></city>
+        <street>1700 Coffee Road</street>
+        <city>Modesto</city>
         <state>CA</state>
-        <zip>CA</zip>
-        <location>37.6390972, -120.9968782</location>
+        <zip>95355</zip>
+        <location>37.6686710. -120.9733860</location>
         <vbacNumber>2</vbacNumber>
         <vbacRate>0.6</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
         <name>Oak Valley District Hospital</name>
-        <street></street>
-        <city></city>
+        <street>350 South Oak Avenue</street>
+        <city>Oakdale</city>
         <state>CA</state>
-        <zip></zip>
-        <location>36.7782610, -119.4179324</location>
+        <zip>95361</zip>
+        <location>37.7570780, -120.8610900</location>
         <vbacNumber>1</vbacNumber>
         <vbacRate>2.1</vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>TEHAMA</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>40.0271015, -122.1233228</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
@@ -3814,17 +3495,6 @@
         <state>CA</state>
         <zip>96080</zip>
         <location>40.1484537, -122.2196519</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>TULARE</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>93274</zip>
-        <location>36.2077288, -119.3473379</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
         <year>2011</year>
@@ -3863,34 +3533,12 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>TUOLUMNE</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>95379</zip>
-        <location>37.9627027, -120.2412999</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Sonora Regional Medical Center – Greenley</name>
         <street>1000 Greenley Road</street>
         <city>Sonora</city>
         <state>CA</state>
         <zip>95370</zip>
         <location>37.9777980, -120.3714970</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>VENTURA</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>34.2746405, -119.2290053</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
         <year>2011</year>
@@ -3941,24 +3589,13 @@
     </hospital>
     <hospital>
         <name>Simi Valley Hospital and Healthcare Services – Sycamore</name>
-        <street></street>
-        <city></city>
+        <street>2975 Sycamore Drive</street>
+        <city>Simi Valley</city>
         <state>CA</state>
-        <zip>95957</zip>
-        <location>39.1338889, -121.9419444</location>
+        <zip>93065</zip>
+        <location>34.2891959, -118.7448370</location>
         <vbacNumber>1</vbacNumber>
         <vbacRate>1</vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
-        <name>YOLO</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>38.7646021, -121.9017954</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
@@ -3984,17 +3621,6 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>YUBA</name>
-        <street></street>
-        <city></city>
-        <state>CA</state>
-        <zip>CA</zip>
-        <location>39.2547027, -121.3998995</location>
-        <vbacNumber></vbacNumber>
-        <vbacRate></vbacRate>
-        <year>2011</year>
-    </hospital>
-    <hospital>
         <name>Rideout Memorial Hospital</name>
         <street>726 4th Street</street>
         <city>Marysville</city>
@@ -4009,8 +3635,8 @@
         <name>Bridgeport Hospital</name>
         <street>267 Grant Street</street>
         <city>Bridgeport</city>
-        <state>CT</state>
-        <zip>CT 06610</zip>
+        <state>Connecticut</state>
+        <zip>06610</zip>
         <location>41.1893994, -73.1664916</location>
         <vbacNumber></vbacNumber>
         <vbacRate>3.3</vbacRate>
@@ -4020,8 +3646,8 @@
         <name>Bristol Hospital</name>
         <street></street>
         <city>Bristol</city>
-        <state>CT</state>
-        <zip>CT 06010</zip>
+        <state>Connecticut</state>
+        <zip>06010</zip>
         <location>41.6759444, -72.9362222</location>
         <vbacNumber></vbacNumber>
         <vbacRate>7.1</vbacRate>
@@ -4031,8 +3657,8 @@
         <name>Charlotte Hungerford Hospital</name>
         <street>540 Litchfield Street</street>
         <city>Torrington</city>
-        <state>CT</state>
-        <zip>CT 06790</zip>
+        <state>Connecticut</state>
+        <zip>06790</zip>
         <location>41.7921433, -73.1338541</location>
         <vbacNumber></vbacNumber>
         <vbacRate>0.0</vbacRate>
@@ -4042,8 +3668,8 @@
         <name>Danbury Hospital</name>
         <street>24 Hospital Avenue</street>
         <city>Danbury</city>
-        <state>CT</state>
-        <zip>CT 06810</zip>
+        <state>Connecticut</state>
+        <zip>06810</zip>
         <location>41.4055555, -73.4447222</location>
         <vbacNumber></vbacNumber>
         <vbacRate>9.1</vbacRate>
@@ -4053,8 +3679,8 @@
         <name>Day Kimball Hospital</name>
         <street>320 Pomfret Street</street>
         <city>Putnam</city>
-        <state>CT</state>
-        <zip>CT 06260</zip>
+        <state>Connecticut</state>
+        <zip>06260</zip>
         <location>41.9065433, -71.9141986</location>
         <vbacNumber></vbacNumber>
         <vbacRate>0.0</vbacRate>
@@ -4064,8 +3690,8 @@
         <name>Greenwich Hospital</name>
         <street>Perryridge Road</street>
         <city>Greenwich</city>
-        <state>CT</state>
-        <zip>CT 06830</zip>
+        <state>Connecticut</state>
+        <zip>06830</zip>
         <location>41.0343556, -73.6302525</location>
         <vbacNumber></vbacNumber>
         <vbacRate>7.2</vbacRate>
@@ -4075,8 +3701,8 @@
         <name>Griffin Hospital</name>
         <street>130 Division Street</street>
         <city>Derby</city>
-        <state>CT</state>
-        <zip>CT 06418</zip>
+        <state>Connecticut</state>
+        <zip>06418</zip>
         <location>41.3357710, -73.0891530</location>
         <vbacNumber></vbacNumber>
         <vbacRate>9.4</vbacRate>
@@ -4086,8 +3712,8 @@
         <name>Hartford Hospital</name>
         <street>80 Seymour Street</street>
         <city>Hartford</city>
-        <state>CT</state>
-        <zip>CT 06102</zip>
+        <state>Connecticut</state>
+        <zip>06102</zip>
         <location>41.7544392, -72.6794186</location>
         <vbacNumber></vbacNumber>
         <vbacRate>4.3</vbacRate>
@@ -4097,8 +3723,8 @@
         <name>Hospital of St. Raphael</name>
         <street>1450 Chapel Street</street>
         <city>New Haven</city>
-        <state>CT</state>
-        <zip>CT 06511</zip>
+        <state>Connecticut</state>
+        <zip>06511</zip>
         <location>41.3103811, -72.9427347</location>
         <vbacNumber></vbacNumber>
         <vbacRate>2.0</vbacRate>
@@ -4106,11 +3732,11 @@
     </hospital>
     <hospital>
         <name>John Dempsey Hospital (UCONN)</name>
-        <street></street>
-        <city></city>
-        <state>CT</state>
-        <zip></zip>
-        <location>41.6032207, -73.0877490</location>
+        <street>263 Farmington Avenue</street>
+        <city>Farmington</city>
+        <state>Connecticut</state>
+        <zip>06030</zip>
+        <location>41.7334899, -72.7971384</location>
         <vbacNumber></vbacNumber>
         <vbacRate>5.5</vbacRate>
         <year>2007</year>
@@ -4119,8 +3745,8 @@
         <name>Johnson Memorial Hospital</name>
         <street>201 Chestnut Hill Road</street>
         <city>Stafford Springs</city>
-        <state>CT</state>
-        <zip>CT 06076</zip>
+        <state>Connecticut</state>
+        <zip>06076</zip>
         <location>41.9793559, -72.3911927</location>
         <vbacNumber></vbacNumber>
         <vbacRate>7.1</vbacRate>
@@ -4128,11 +3754,11 @@
     </hospital>
     <hospital>
         <name>Lawrence and Memorial Hospital</name>
-        <street></street>
-        <city></city>
-        <state>CT</state>
-        <zip>KS</zip>
-        <location>38.9716689, -95.2352501</location>
+        <street>365 Montauk Avenue</street>
+        <city>New London</city>
+        <state>Connecticut</state>
+        <zip>06320</zip>
+        <location>42.7070354, -71.1631137</location>
         <vbacNumber></vbacNumber>
         <vbacRate>14.3</vbacRate>
         <year>2007</year>
@@ -4141,8 +3767,8 @@
         <name>Manchester Memorial Hospital</name>
         <street>71 Haynes Street</street>
         <city>Manchester</city>
-        <state>CT</state>
-        <zip>CT 06040</zip>
+        <state>Connecticut</state>
+        <zip>06040</zip>
         <location>41.7818510, -72.5259090</location>
         <vbacNumber></vbacNumber>
         <vbacRate>2.3</vbacRate>
@@ -4150,11 +3776,11 @@
     </hospital>
     <hospital>
         <name>Middlesex Memorial Hospital</name>
-        <street></street>
-        <city></city>
-        <state>CT</state>
-        <zip></zip>
-        <location>41.6032207, -73.0877490</location>
+        <street>28 Crescent Street</street>
+        <city>Middletown</city>
+        <state>Connecticut</state>
+        <zip>06457</zip>
+        <location>41.5547865, -72.6481254</location>
         <vbacNumber></vbacNumber>
         <vbacRate>15.1</vbacRate>
         <year>2007</year>
@@ -4163,8 +3789,8 @@
         <name>Midstate Medical Center</name>
         <street>435 Lewis Avenue</street>
         <city>Meriden</city>
-        <state>CT</state>
-        <zip>CT 06451</zip>
+        <state>Connecticut</state>
+        <zip>06451</zip>
         <location>41.5503829, -72.8035469</location>
         <vbacNumber></vbacNumber>
         <vbacRate>1.3</vbacRate>
@@ -4174,8 +3800,8 @@
         <name>Milford Hospital</name>
         <street>300 Seaside Avenue</street>
         <city>Milford</city>
-        <state>CT</state>
-        <zip>CT 06460</zip>
+        <state>Connecticut</state>
+        <zip>06460</zip>
         <location>41.2166918, -73.0652463</location>
         <vbacNumber></vbacNumber>
         <vbacRate>2.5</vbacRate>
@@ -4185,8 +3811,8 @@
         <name>New Milford Hospital</name>
         <street>300 Seaside Avenue</street>
         <city>Milford</city>
-        <state>CT</state>
-        <zip>CT 06460</zip>
+        <state>Connecticut</state>
+        <zip>06460</zip>
         <location>41.2166918, -73.0652463</location>
         <vbacNumber></vbacNumber>
         <vbacRate>6.9</vbacRate>
@@ -4196,8 +3822,8 @@
         <name>Norwalk Hospital</name>
         <street>34 Maple Street</street>
         <city>Norwalk</city>
-        <state>CT</state>
-        <zip>CT 06850</zip>
+        <state>Connecticut</state>
+        <zip>06850</zip>
         <location>41.1115140, -73.4222150</location>
         <vbacNumber></vbacNumber>
         <vbacRate>7.0</vbacRate>
@@ -4207,8 +3833,8 @@
         <name>Rockville General Hospital</name>
         <street>31 Union Street</street>
         <city>Vernon</city>
-        <state>CT</state>
-        <zip>CT 06066</zip>
+        <state>Connecticut</state>
+        <zip>06066</zip>
         <location>41.8668779, -72.4509969</location>
         <vbacNumber></vbacNumber>
         <vbacRate>4.8</vbacRate>
@@ -4218,8 +3844,8 @@
         <name>Saint Francis Hospital</name>
         <street>114 Woodland Street</street>
         <city>Hartford</city>
-        <state>CT</state>
-        <zip>CT 06105</zip>
+        <state>Connecticut</state>
+        <zip>06105</zip>
         <location>41.7738297, -72.6996742</location>
         <vbacNumber></vbacNumber>
         <vbacRate>14.6</vbacRate>
@@ -4229,8 +3855,8 @@
         <name>Saint Mary's Hospital</name>
         <street>56 Franklin Street</street>
         <city>Waterbury</city>
-        <state>CT</state>
-        <zip>CT 06706</zip>
+        <state>Connecticut</state>
+        <zip>06706</zip>
         <location>41.5504476, -73.0363949</location>
         <vbacNumber></vbacNumber>
         <vbacRate>5.3</vbacRate>
@@ -4240,8 +3866,8 @@
         <name>Saint Vincent Medical Center</name>
         <street>2800 Main Street</street>
         <city>Bridgeport</city>
-        <state>CT</state>
-        <zip>CT 06606</zip>
+        <state>Connecticut</state>
+        <zip>06606</zip>
         <location>41.2005126, -73.2027439</location>
         <vbacNumber></vbacNumber>
         <vbacRate>5.3</vbacRate>
@@ -4251,8 +3877,8 @@
         <name>Sharon Hospital</name>
         <street></street>
         <city>Sharon</city>
-        <state>CT</state>
-        <zip>CT 06069</zip>
+        <state>Connecticut</state>
+        <zip>06069</zip>
         <location>41.8812030, -73.4809570</location>
         <vbacNumber></vbacNumber>
         <vbacRate>7.4</vbacRate>
@@ -4262,8 +3888,8 @@
         <name>Stamford Hospital</name>
         <street>32 Strawberry Hill Court</street>
         <city>Stamford</city>
-        <state>CT</state>
-        <zip>Connecticut 06902</zip>
+        <state>Connecticut</state>
+        <zip>06902</zip>
         <location>41.0645473, -73.5346294</location>
         <vbacNumber></vbacNumber>
         <vbacRate>0.0</vbacRate>
@@ -4273,8 +3899,8 @@
         <name>The Hospital of Central CT</name>
         <street>100 Grand Street</street>
         <city>New Britain</city>
-        <state>CT</state>
-        <zip>CT 06052</zip>
+        <state>Connecticut</state>
+        <zip>06052</zip>
         <location>41.6612890, -72.7869210</location>
         <vbacNumber></vbacNumber>
         <vbacRate>7.0</vbacRate>
@@ -4284,8 +3910,8 @@
         <name>Waterbury Hospital</name>
         <street>64 Robbins Street</street>
         <city>Waterbury</city>
-        <state>CT</state>
-        <zip>CT 06708</zip>
+        <state>Connecticut</state>
+        <zip>06708</zip>
         <location>41.5593696, -73.0587249</location>
         <vbacNumber></vbacNumber>
         <vbacRate>10.6</vbacRate>
@@ -4295,8 +3921,8 @@
         <name>William W. Backus Hospital</name>
         <street>326 Washington Street</street>
         <city>Norwich</city>
-        <state>CT</state>
-        <zip>CT 06360</zip>
+        <state>Connecticut</state>
+        <zip>06360</zip>
         <location>41.5430080, -72.0879851</location>
         <vbacNumber></vbacNumber>
         <vbacRate>9.2</vbacRate>
@@ -4304,11 +3930,11 @@
     </hospital>
     <hospital>
         <name>Windham Community Memorial</name>
-        <street></street>
-        <city></city>
-        <state>CT</state>
-        <zip>NH</zip>
-        <location>42.7929010, -71.3111773</location>
+        <street>112 Mansfield Avenue</street>
+        <city>Willimantic</city>
+        <state>Connecticut</state>
+        <zip>06226</zip>
+        <location>41.7162224, -72.2239934</location>
         <vbacNumber></vbacNumber>
         <vbacRate>4.0</vbacRate>
         <year>2007</year>
@@ -4317,8 +3943,8 @@
         <name>Yale New Haven Hospital</name>
         <street>20 York Street</street>
         <city>New Haven</city>
-        <state>CT</state>
-        <zip>CT 06510</zip>
+        <state>Connecticut</state>
+        <zip>06510</zip>
         <location>41.3040036, -72.9350223</location>
         <vbacNumber></vbacNumber>
         <vbacRate>10.0</vbacRate>
@@ -4326,11 +3952,11 @@
     </hospital>
     <hospital>
         <name>Alegent Hlth Mercy Hsp-C Blffs</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>800 Mercy Drive</street>
+        <city>Council Bluffs</city>
         <state>IA</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>51503</zip>
+        <location>41.2688560, -95.8392330</location>
         <vbacNumber>6</vbacNumber>
         <vbacRate>9.1</vbacRate>
         <year>2011</year>
@@ -4557,11 +4183,11 @@
     </hospital>
     <hospital>
         <name>Guttenberg Municipal Hospital</name>
-        <street></street>
-        <city></city>
+        <street>200 Main Street</street>
+        <city>Guttenberg</city>
         <state>IA</state>
-        <zip></zip>
-        <location>41.8780025, -93.0977020</location>
+        <zip>52052</zip>
+        <location>42.7855126, -91.0999299</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.0</vbacRate>
         <year>2011</year>
@@ -4656,11 +4282,11 @@
     </hospital>
     <hospital>
         <name>Knoxville Hospital and Clinics</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>1600 North Lincoln Street</street>
+        <city>Knoxville</city>
         <state>IA</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>50138</zip>
+        <location>41.3323587, -93.1095619</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.0</vbacRate>
         <year>2011</year>
@@ -4799,7 +4425,7 @@
     </hospital>
     <hospital>
         <name>Mercy Medical Center - Dubuque</name>
-        <street>IA 52001</street>
+        <street>52001</street>
         <city>Dubuque</city>
         <state>IA</state>
         <zip>52001</zip>
@@ -4898,11 +4524,11 @@
     </hospital>
     <hospital>
         <name>Osceola Community Hospital, Inc</name>
-        <street></street>
-        <city></city>
+        <street>600 9th Avenue</street>
+        <city>Sibley</city>
         <state>IA</state>
-        <zip></zip>
-        <location>41.8780025, -93.0977020</location>
+        <zip>51249</zip>
+        <location>43.4024331, -95.7417143</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.0</vbacRate>
         <year>2011</year>
@@ -4934,7 +4560,7 @@
         <street>3201 1st Street</street>
         <city>Emmetsburg</city>
         <state>IA</state>
-        <zip>Iowa 50536</zip>
+        <zip>50536</zip>
         <location>43.1192679, -94.6913978</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.0</vbacRate>
@@ -5041,11 +4667,11 @@
     </hospital>
     <hospital>
         <name>St. Luke's Health System, Inc</name>
-        <street></street>
-        <city></city>
+        <street>2720 Stone Park Blvd</street>
+        <city>Sioux City</city>
         <state>IA</state>
-        <zip></zip>
-        <location>41.8780025, -93.0977020</location>
+        <zip>51104</zip>
+        <location>42.5184617, -96.4058125</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
         <year>2011</year>
@@ -5217,11 +4843,11 @@
     </hospital>
     <hospital>
         <name>Baystate Franklin Medical Center</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>164 High Street</street>
+        <city>Greenfield</city>
         <state>MA</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>01301</zip>
+        <location>42.5958400, -72.5925479</location>
         <vbacNumber>15</vbacNumber>
         <vbacRate>29.4</vbacRate>
         <year>2010</year>
@@ -5338,22 +4964,22 @@
     </hospital>
     <hospital>
         <name>Caritas Good Samaritan Medical Center</name>
-        <street></street>
-        <city></city>
+        <street>235 North Pearl Street</street>
+        <city>Brockton</city>
         <state>MA</state>
-        <zip></zip>
-        <location>42.4072107, -71.3824374</location>
+        <zip>02301</zip>
+        <location>42.0986446, -71.0660666</location>
         <vbacNumber>8</vbacNumber>
         <vbacRate>5.1</vbacRate>
         <year>2010</year>
     </hospital>
     <hospital>
         <name>Caritas Holy Family Hospital And Medical Center</name>
-        <street></street>
-        <city></city>
+        <street>70 East Street</street>
+        <city>Methuen</city>
         <state>MA</state>
-        <zip></zip>
-        <location>42.4072107, -71.3824374</location>
+        <zip>01844</zip>
+        <location>42.7284610, -71.1683010</location>
         <vbacNumber>1</vbacNumber>
         <vbacRate>8</vbacRate>
         <year>2010</year>
@@ -5371,11 +4997,11 @@
     </hospital>
     <hospital>
         <name>Caritas St. Elizabeth's Medical Center of Boston</name>
-        <street></street>
-        <city></city>
+        <street>736 Cambridge Street</street>
+        <city>Brighton</city>
         <state>MA</state>
-        <zip>MA</zip>
-        <location>42.3584308, -71.0597732</location>
+        <zip>02135</zip>
+        <location>42.3489582, -71.1476809</location>
         <vbacNumber>20</vbacNumber>
         <vbacRate>12</vbacRate>
         <year>2010</year>
@@ -5459,11 +5085,11 @@
     </hospital>
     <hospital>
         <name>Heywood Memorial Hospital</name>
-        <street></street>
-        <city></city>
+        <street>242 Green Street</street>
+        <city>Gardner</city>
         <state>MA</state>
-        <zip></zip>
-        <location>42.4072107, -71.3824374</location>
+        <zip>01440</zip>
+        <location>42.5865990, -71.9867800</location>
         <vbacNumber>8</vbacNumber>
         <vbacRate>14.5</vbacRate>
         <year>2010</year>
@@ -5558,11 +5184,11 @@
     </hospital>
     <hospital>
         <name>Metrowest Medical Center-Framingham Union Campus</name>
-        <street></street>
-        <city></city>
+        <street>115 Lincoln Street</street>
+        <city>Framingham</city>
         <state>MA</state>
-        <zip></zip>
-        <location>42.4072107, -71.3824374</location>
+        <zip>01702</zip>
+        <location>42.2838510, -71.4189621</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0</vbacRate>
         <year>2010</year>
@@ -5635,33 +5261,33 @@
     </hospital>
     <hospital>
         <name>North Shore Medical Center - Salem Hospital</name>
-        <street></street>
-        <city></city>
+        <street>81 Highland Avenue</street>
+        <city>Salem</city>
         <state>MA</state>
-        <zip></zip>
-        <location>42.4072107, -71.3824374</location>
+        <zip>01970</zip>
+        <location>42.5107760, -70.9071170</location>
         <vbacNumber>14</vbacNumber>
         <vbacRate>7</vbacRate>
         <year>2010</year>
     </hospital>
     <hospital>
         <name>Saint Vincent Hospital</name>
-        <street></street>
-        <city>Santa Fe</city>
+        <street>123 Summer Street</street>
+        <city>Worcester</city>
         <state>MA</state>
-        <zip>NM 87505</zip>
-        <location>35.6594758, -105.9455766</location>
+        <zip>01608</zip>
+        <location>42.2656611, -71.7969882</location>
         <vbacNumber>34</vbacNumber>
         <vbacRate>12.3</vbacRate>
         <year>2010</year>
     </hospital>
     <hospital>
         <name>South Shore Hospital</name>
-        <street></street>
-        <city></city>
+        <street>55 Fogg Road</street>
+        <city>Weymouth</city>
         <state>MA</state>
-        <zip>Coro</zip>
-        <location>11.4103937, -69.6818617</location>
+        <zip>02190</zip>
+        <location>42.1777930, -70.9526280</location>
         <vbacNumber>68</vbacNumber>
         <vbacRate>8.9</vbacRate>
         <year>2010</year>
@@ -5877,11 +5503,11 @@
     </hospital>
     <hospital>
         <name>Holy Name University Medical Center</name>
-        <street></street>
-        <city></city>
+        <street>690 Teaneck Road</street>
+        <city>Teaneck</city>
         <state>NJ</state>
-        <zip></zip>
-        <location>40.0583238, -74.4056612</location>
+        <zip>07666</zip>
+        <location>40.8813512, -74.0092539</location>
         <vbacNumber>24</vbacNumber>
         <vbacRate>8.4</vbacRate>
         <year>2011</year>
@@ -5899,11 +5525,11 @@
     </hospital>
     <hospital>
         <name>Jersey City Medical Center (Liberty HealthCare System, Inc.)</name>
-        <street></street>
-        <city></city>
+        <street>355 Grand Street</street>
+        <city>Jersey City</city>
         <state>NJ</state>
-        <zip></zip>
-        <location>40.0583238, -74.4056612</location>
+        <zip>07302</zip>
+        <location>40.7152804, -74.0514767</location>
         <vbacNumber>17</vbacNumber>
         <vbacRate>5.5</vbacRate>
         <year>2011</year>
@@ -5954,17 +5580,17 @@
     </hospital>
     <hospital>
         <name>Meadowlands Hospital Medical Center (Liberty HealthCare System, Inc.) </name>
-        <street></street>
-        <city></city>
+        <street>55 Meadowlands Parkway</street>
+        <city>Secaucus</city>
         <state>NJ</state>
-        <zip></zip>
-        <location>40.0583238, -74.4056612</location>
+        <zip>07094</zip>
+        <location>40.7862109, -74.0756828</location>
         <vbacNumber>1</vbacNumber>
         <vbacRate>0.9</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Memorial Hosp</name>
+        <name>Memorial Hospital</name>
         <street></street>
         <city>Mannington Township</city>
         <state>NJ</state>
@@ -6020,11 +5646,11 @@
     </hospital>
     <hospital>
         <name>Ocean Medical Center (Meridian Health Center)</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>425 Jack Martin Blvd</street>
+        <city>Brick</city>
         <state>NJ</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>08724</zip>
+        <location>40.0783159, -74.1300856</location>
         <vbacNumber>7</vbacNumber>
         <vbacRate>5.9</vbacRate>
         <year>2011</year>
@@ -6086,11 +5712,11 @@
     </hospital>
     <hospital>
         <name>Riverview Medical Center (Meridian Health)</name>
-        <street></street>
-        <city></city>
+        <street>1 Riverview Plaza</street>
+        <city>Red Bank</city>
         <state>NJ</state>
-        <zip></zip>
-        <location>40.0583238, -74.4056612</location>
+        <zip>07701</zip>
+        <location>40.3531301, -74.0648239</location>
         <vbacNumber>11</vbacNumber>
         <vbacRate>3.7</vbacRate>
         <year>2011</year>
@@ -6108,13 +5734,13 @@
     </hospital>
     <hospital>
         <name>RWJ University Hospital at Hamilton</name>
-        <street></street>
-        <city></city>
+        <street>1 Hamilton Health Place</street>
+        <city>Hamilton Township</city>
         <state>NJ</state>
-        <zip>NJ</zip>
-        <location>40.2115109, -74.6796651</location>
+        <zip>08690</zip>
+        <location>40.2157539, -74.6727340</location>
         <vbacNumber>20</vbacNumber>
-        <vbacRate>9.4</vbacRate>
+        <vbacRate>9.4%</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
@@ -6155,7 +5781,7 @@
         <street>1505 West Sherman Avenue</street>
         <city>Vineland</city>
         <state>NJ</state>
-        <zip>New Jersey 08360</zip>
+        <zip>08360</zip>
         <location>39.4449413, -75.0596545</location>
         <vbacNumber>13</vbacNumber>
         <vbacRate>3.6</vbacRate>
@@ -6163,11 +5789,11 @@
     </hospital>
     <hospital>
         <name>Southern Ocean Medical Center (Meridian Health)</name>
-        <street></street>
-        <city></city>
+        <street>1140 New Jersey 72</street>
+        <city>Manahawkin</city>
         <state>NJ</state>
-        <zip></zip>
-        <location>40.0583238, -74.4056612</location>
+        <zip>08050</zip>
+        <location>39.7177063, -74.2817048</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.0</vbacRate>
         <year>2011</year>
@@ -6243,7 +5869,7 @@
         <street>Williamson Street</street>
         <city>Elizabeth</city>
         <state>NJ</state>
-        <zip>New Jersey 07202</zip>
+        <zip>07202</zip>
         <location>40.6585730, -74.2144146</location>
         <vbacNumber>79</vbacNumber>
         <vbacRate>18.4</vbacRate>
@@ -6251,11 +5877,11 @@
     </hospital>
     <hospital>
         <name>University of Medicine and Dentistry of New Jersey ‐ University Hospital</name>
-        <street>370 West 9th Avenue</street>
-        <city>Columbus</city>
+        <street>150 Bergen Street</street>
+        <city>Newark</city>
         <state>NJ</state>
-        <zip>OH 43210</zip>
-        <location>39.9930548, -83.0168279</location>
+        <zip>07103</zip>
+        <location>40.74164423029150, -74.19111256970848</location>
         <vbacNumber>95</vbacNumber>
         <vbacRate>26.5</vbacRate>
         <year>2011</year>
@@ -6295,11 +5921,11 @@
     </hospital>
     <hospital>
         <name>Virtua-West Jersey Hospital - Voorhees</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>100 Bowman Drive</street>
+        <city>Voorhees Township</city>
         <state>NJ</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>08043</zip>
+        <location>39.84405138029151, -74.92658031970851</location>
         <vbacNumber>72</vbacNumber>
         <vbacRate>7.0</vbacRate>
         <year>2011</year>
@@ -6316,7 +5942,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Ashe Memorial Hosp</name>
+        <name>Ashe Memorial Hospital</name>
         <street>200 Hospital Avenue</street>
         <city>Jefferson</city>
         <state>NC</state>
@@ -6327,8 +5953,8 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Charles A Cannon Jr. Memorial Hosp</name>
-        <street>Jr Memorial Hospital</street>
+        <name>Charles A Cannon Jr. Memorial Hospital</name>
+        <street></street>
         <city>Linville</city>
         <state>NC</state>
         <zip>28646</zip>
@@ -6338,18 +5964,18 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Vidant Pungo District Hosp</name>
-        <street></street>
-        <city></city>
+        <name>Vidant Pungo District Hospital</name>
+        <street>202 Water Street</street>
+        <city>Belhaven</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>27810</zip>
+        <location>35.53805570, -76.62280090</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Vidant Beaufort Hosp</name>
+        <name>Vidant Beaufort Hospital</name>
         <street>628 East 12th Street</street>
         <city>Washington</city>
         <state>NC</state>
@@ -6360,18 +5986,18 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Bladen County Hosp</name>
-        <street></street>
+        <name>Bladen County Hospital</name>
+        <street>501 South Poplar Street</street>
         <city>Elizabethtown</city>
         <state>NC</state>
         <zip>28337</zip>
-        <location>34.6196144, -78.6252908</location>
+        <location>34.6224199, -78.6081300</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Brunswick Community Hosp</name>
+        <name>Brunswick Community Hospital</name>
         <street>603 Ocean Highway East</street>
         <city>Bolivia</city>
         <state>NC</state>
@@ -6383,11 +6009,11 @@
     </hospital>
     <hospital>
         <name>Mission Hospitals Inc</name>
-        <street></street>
-        <city></city>
+        <street>509 Biltmore Avenue</street>
+        <city>Asheville</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>28801</zip>
+        <location>35.57793198029150, -82.54787301970852</location>
         <vbacNumber>65</vbacNumber>
         <vbacRate>1.7</vbacRate>
         <year>2011</year>
@@ -6415,18 +6041,18 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Caldwell Memorial Hosp Inc</name>
-        <street></street>
-        <city></city>
+        <name>Caldwell Memorial Hospital Inc</name>
+        <street>321 Mulberry Street Southwest</street>
+        <city>Lenoir</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>28645</zip>
+        <location>35.9105830, -81.5351230</location>
         <vbacNumber>4</vbacNumber>
         <vbacRate>0.8</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Carteret General Hosp</name>
+        <name>Carteret General Hospital</name>
         <street>3500 Arendell Street</street>
         <city>Morehead City</city>
         <state>NC</state>
@@ -6471,11 +6097,11 @@
     </hospital>
     <hospital>
         <name>Murphy Med Ctr Inc</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>3990 E. US Hwy 64 Alt</street>
+        <city>Murphy</city>
         <state>NC</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>28906</zip>
+        <location>35.07714030, -83.97260960</location>
         <vbacNumber>3</vbacNumber>
         <vbacRate>2</vbacRate>
         <year>2011</year>
@@ -6504,11 +6130,11 @@
     </hospital>
     <hospital>
         <name>Columbus County Hospital Inc</name>
-        <street></street>
-        <city></city>
+        <street>500 Jefferson Street</street>
+        <city>Whiteville</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>28472</zip>
+        <location>34.337470, -78.6942540</location>
         <vbacNumber>4</vbacNumber>
         <vbacRate>0.9</vbacRate>
         <year>2011</year>
@@ -6529,7 +6155,7 @@
         <street>2817 Reilly Road</street>
         <city>Fort Bragg</city>
         <state>NC</state>
-        <zip>North Carolina 28307</zip>
+        <zip>28307</zip>
         <location>35.1461911, -79.0008424</location>
         <vbacNumber>53</vbacNumber>
         <vbacRate>1.6</vbacRate>
@@ -6558,7 +6184,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Lexington Memorial Hosp</name>
+        <name>Lexington Memorial Hospital</name>
         <street>250 Hospital Drive</street>
         <city>Lexington</city>
         <state>NC</state>
@@ -6592,17 +6218,17 @@
     </hospital>
     <hospital>
         <name>Duke University Med Ctr</name>
-        <street></street>
+        <street>103H Seeley Mudd Bldg</street>
         <city>Durham</city>
         <state>NC</state>
-        <zip>27708</zip>
-        <location>35.9989654, -78.9341042</location>
+        <zip>27710</zip>
+        <location>36.0058168, -78.9380668</location>
         <vbacNumber>58</vbacNumber>
         <vbacRate>2</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Durham Regional Hosp</name>
+        <name>Durham Regional Hospital</name>
         <street>1901 Hillandale Road</street>
         <city>Durham</city>
         <state>NC</state>
@@ -6635,7 +6261,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>North Carolina Baptist Hosp</name>
+        <name>North Carolina Baptist Hospital</name>
         <street>Wake Forest University</street>
         <city>Winston Salem</city>
         <state>NC</state>
@@ -6646,7 +6272,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Forsyth Memorial Hosp</name>
+        <name>Forsyth Memorial Hospital</name>
         <street>3333 Silas Creek Parkway</street>
         <city>Winston Salem</city>
         <state>NC</state>
@@ -6657,7 +6283,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Gaston Memorial Hosp</name>
+        <name>Gaston Memorial Hospital</name>
         <street>2525 Court Drive</street>
         <city>Gastonia</city>
         <state>NC</state>
@@ -6679,7 +6305,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>High Point Regional Hosp</name>
+        <name>High Point Regional Hospital</name>
         <street>601 North Elm Street</street>
         <city>High Point</city>
         <state>NC</state>
@@ -6690,7 +6316,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Womens Hosp Of Greensboro</name>
+        <name>Womens Hospital Of Greensboro</name>
         <street>801 Green Valley Road</street>
         <city>Greensboro</city>
         <state>NC</state>
@@ -6702,17 +6328,17 @@
     </hospital>
     <hospital>
         <name>Halifax Regional Med Ctr Inc</name>
-        <street></street>
-        <city></city>
+        <street>250 Smith Church Road</street>
+        <city>Roanoke Rapids</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>27870</zip>
+        <location>36.4329540, -77.647290</location>
         <vbacNumber>5</vbacNumber>
         <vbacRate>0.8</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Betsy Johnson Regional Hosp</name>
+        <name>Betsy Johnson Regional Hospital</name>
         <street>800 Tilghman Drive</street>
         <city>Dunn</city>
         <state>NC</state>
@@ -6734,7 +6360,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Park Ridge Hosp</name>
+        <name>Park Ridge Hospital</name>
         <street>100 Hospital Drive</street>
         <city>Hendersonville</city>
         <state>NC</state>
@@ -6745,7 +6371,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Margaret R Pardee Memorial Hosp</name>
+        <name>Margaret R Pardee Memorial Hospital</name>
         <street>800 North Justice Street</street>
         <city>Hendersonville</city>
         <state>NC</state>
@@ -6756,7 +6382,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Vidant Roanoke-Chowan Hosp</name>
+        <name>Vidant Roanoke-Chowan Hospital</name>
         <street>500 South Academy Street</street>
         <city>Ahoskie</city>
         <state>NC</state>
@@ -6779,11 +6405,11 @@
     </hospital>
     <hospital>
         <name>Iredell Memorial Hospital Inc</name>
-        <street></street>
-        <city></city>
+        <street>557 Brookdale Drive</street>
+        <city>Statesville</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>28677</zip>
+        <location>35.7998580, -80.878630</location>
         <vbacNumber>6</vbacNumber>
         <vbacRate>0.7</vbacRate>
         <year>2011</year>
@@ -6801,28 +6427,28 @@
     </hospital>
     <hospital>
         <name>Natural Beginnings Iredell</name>
-        <street></street>
-        <city></city>
+        <street>170 Medical Park Road</street>
+        <city>Mooresville</city>
         <state>NC</state>
-        <zip>NC</zip>
-        <location>35.8310501, -80.8986502</location>
+        <zip>28117</zip>
+        <location>35.5510830, -80.8514390</location>
         <vbacNumber>3</vbacNumber>
         <vbacRate>25</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
         <name>Harris Regional Hospital Inc</name>
-        <street></street>
-        <city></city>
+        <street>68 Hospital Road</street>
+        <city>Sylva</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>28779</zip>
+        <location>35.3859510, -83.20292599999999</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Johnston Memorial Hosp</name>
+        <name>Johnston Memorial Hospital</name>
         <street></street>
         <city>Smithfield</city>
         <state>NC</state>
@@ -6833,7 +6459,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Central Carolina Hosp</name>
+        <name>Central Carolina Hospital</name>
         <street>1135 Carthage Street</street>
         <city>Sanford</city>
         <state>NC</state>
@@ -6845,28 +6471,28 @@
     </hospital>
     <hospital>
         <name>Lenoir Memorial Hospital Inc</name>
-        <street></street>
-        <city></city>
+        <street>100 Airport Road</street>
+        <city>Kinston</city>
         <state>NC</state>
-        <zip>NC</zip>
-        <location>35.9140196, -81.5389849</location>
+        <zip>28501</zip>
+        <location>35.2905270, -77.58307099999999</location>
         <vbacNumber>1</vbacNumber>
         <vbacRate>0.2</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
         <name>Lincoln Med Ctr</name>
-        <street></street>
-        <city>Lincoln</city>
+        <street>200 Gamble Drive</street>
+        <city>Lincolnton</city>
         <state>NC</state>
-        <zip>Nebraska 68508</zip>
-        <location>40.8189409, -96.7027760</location>
+        <zip>28092</zip>
+        <location>35.4701060, -81.23593300000002</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>The Mcdowell Hosp</name>
+        <name>The Mcdowell Hospital</name>
         <street></street>
         <city>Marion</city>
         <state>NC</state>
@@ -6878,11 +6504,11 @@
     </hospital>
     <hospital>
         <name>Highlands-Cashiers Hospital Inc</name>
-        <street></street>
-        <city></city>
+        <street>190 Hospital Drive</street>
+        <city>Highlands</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>28741</zip>
+        <location>35.0858860, -83.18726699999999</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0</vbacRate>
         <year>2011</year>
@@ -6899,7 +6525,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Martin General Hosp</name>
+        <name>Martin General Hospital</name>
         <street>310 South McCaskey Road</street>
         <city>Williamston</city>
         <state>NC</state>
@@ -6943,7 +6569,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Presbyterian Hosp</name>
+        <name>Presbyterian Hospital</name>
         <street>200 Hawthorne Lane</street>
         <city>Charlotte</city>
         <state>NC</state>
@@ -6965,7 +6591,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Presbyterian Hosp - Matthews</name>
+        <name>Presbyterian Hospital - Matthews</name>
         <street>1500 Matthews Township Parkway</street>
         <city>Matthews</city>
         <state>NC</state>
@@ -6976,18 +6602,18 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Spruce Pine Community Hosp</name>
-        <street></street>
-        <city>Albuquerque</city>
+        <name>Spruce Pine Community Hospital</name>
+        <street>125 Hospital Drive</street>
+        <city>Spruce Pine</city>
         <state>NC</state>
-        <zip>NM 87106</zip>
-        <location>35.0794735, -106.6282972</location>
+        <zip>28777</zip>
+        <location>35.9109670, -82.06308899999999</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Firsthealth Moore Regional Hosp</name>
+        <name>Firsthealth Moore Regional Hospital</name>
         <street></street>
         <city>Pinehurst</city>
         <state>NC</state>
@@ -6998,7 +6624,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Nash General Hosp</name>
+        <name>Nash General Hospital</name>
         <street>2460 Curtis Ellis Drive</street>
         <city>Rocky Mount</city>
         <state>NC</state>
@@ -7020,7 +6646,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Onslow Memorial Hosp</name>
+        <name>Onslow Memorial Hospital</name>
         <street>317 Western Blvd</street>
         <city>Jacksonville</city>
         <state>NC</state>
@@ -7042,7 +6668,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>University Of North Carolina Hosp</name>
+        <name>University Of North Carolina Hospital</name>
         <street>2200 Hillsborough Street</street>
         <city>Raleigh</city>
         <state>NC</state>
@@ -7064,7 +6690,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Albemarle Hosp</name>
+        <name>Albemarle Hospital</name>
         <street></street>
         <city>Elizabeth City</city>
         <state>NC</state>
@@ -7097,7 +6723,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Firth Health Richmond Memorial Hosp</name>
+        <name>Firth Health Richmond Memorial Hospital</name>
         <street></street>
         <city>Rockingham</city>
         <state>NC</state>
@@ -7119,7 +6745,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Morehead Memorial Hosp</name>
+        <name>Morehead Memorial Hospital</name>
         <street>117 East Kings Highway</street>
         <city>Eden</city>
         <state>NC</state>
@@ -7141,12 +6767,12 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Rutherford Hosp Inc</name>
-        <street></street>
-        <city></city>
+        <name>Rutherford Hospital Inc</name>
+        <street>288 South Ridgecrest Street</street>
+        <city>Rutherfordton</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>28139</zip>
+        <location>35.3625130, -81.96691799999999</location>
         <vbacNumber>5</vbacNumber>
         <vbacRate>0.9</vbacRate>
         <year>2011</year>
@@ -7163,7 +6789,7 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Scotland Memorial Hosp</name>
+        <name>Scotland Memorial Hospital</name>
         <street>500 Launchwood Drive</street>
         <city>Laurinburg</city>
         <state>NC</state>
@@ -7174,18 +6800,18 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Stanly Memorial Hosp</name>
-        <street></street>
-        <city></city>
+        <name>Stanly Memorial Hospital</name>
+        <street>301 Yadkin Street</street>
+        <city>Albemarle</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>28001</zip>
+        <location>35.3645660, -80.1944980</location>
         <vbacNumber>10</vbacNumber>
         <vbacRate>1.5</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Hugh Chatham Memorial Hosp</name>
+        <name>Hugh Chatham Memorial Hospital</name>
         <street>180 Parkwood Drive</street>
         <city>Elkin</city>
         <state>NC</state>
@@ -7207,51 +6833,51 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Transylvania Community Hosp Inc</name>
-        <street></street>
-        <city></city>
+        <name>Transylvania Community Hospital Inc</name>
+        <street>90 Hospital Drive</street>
+        <city>Hendersonville</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>28792</zip>
+        <location>35.39106040, -82.48739549999999</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
         <name>Union Regional Med Ctr</name>
-        <street>University of North Carolina Wilmington</street>
-        <city>Wilmington</city>
+        <street>600 Hospital Drive</street>
+        <city>Monroe</city>
         <state>NC</state>
-        <zip>28403</zip>
-        <location>34.2249925, -77.8749019</location>
+        <zip>28112</zip>
+        <location>34.97381570, -80.52250309999999</location>
         <vbacNumber>14</vbacNumber>
         <vbacRate>1.2</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
         <name>Maria Parham Hospital Med Ctr</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>566 Ruin Creek Road</street>
+        <city>Henderson</city>
         <state>NC</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>27536</zip>
+        <location>36.33313800000001, -78.44918799999999</location>
         <vbacNumber>4</vbacNumber>
         <vbacRate>0.5</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
         <name>Wake Med - Western Wake Med Ctr</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>1900 Kildaire Farm Road</street>
+        <city>Cary</city>
         <state>NC</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>27518</zip>
+        <location>35.7407470, -78.7817180</location>
         <vbacNumber>39</vbacNumber>
         <vbacRate>1.6</vbacRate>
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Rex Hosp</name>
+        <name>Rex Hospital</name>
         <street>4420 Lake Boone Trail</street>
         <city>Raleigh</city>
         <state>NC</state>
@@ -7273,12 +6899,12 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Washington County Hosp Inc</name>
-        <street></street>
-        <city></city>
+        <name>Washington County Hospital Inc</name>
+        <street>958 U.S. 64</street>
+        <city>Plymouth</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>27962</zip>
+        <location>35.863715,-76.729816</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0</vbacRate>
         <year>2011</year>
@@ -7295,12 +6921,12 @@
         <year>2011</year>
     </hospital>
     <hospital>
-        <name>Wayne Memorial Hosp Inc</name>
-        <street></street>
-        <city></city>
+        <name>Wayne Memorial Hospital Inc</name>
+        <street>2700 Wayne Memorial Drive</street>
+        <city>Goldsboro</city>
         <state>NC</state>
-        <zip></zip>
-        <location>35.7595731, -79.0192997</location>
+        <zip>27534</zip>
+        <location>35.39772390, -77.95250290</location>
         <vbacNumber>16</vbacNumber>
         <vbacRate>1.1</vbacRate>
         <year>2011</year>
@@ -7373,22 +6999,22 @@
     </hospital>
     <hospital>
         <name>Baptist St Anthonys Health System-Baptist Campus</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>1600 Wallace Blvd</street>
+        <city>Amarillo</city>
         <state>TX</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>79106</zip>
+        <location>35.196023, -101.919513</location>
         <vbacNumber>39</vbacNumber>
         <vbacRate>10.99</vbacRate>
         <year>2010</year>
     </hospital>
     <hospital>
         <name>Baylor All Saints Medical Center-Fort Worth</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>1400 Eighth Avenue</street>
+        <city>Fort Worth</city>
         <state>TX</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>76104</zip>
+        <location>32.7306680, -97.3454650</location>
         <vbacNumber>30</vbacNumber>
         <vbacRate>3.31</vbacRate>
         <year>2010</year>
@@ -8209,11 +7835,11 @@
     </hospital>
     <hospital>
         <name>Kings Daughters Hospital</name>
-        <street></street>
-        <city></city>
+        <street>1901 Southwest H K Dodgen Loop</street>
+        <city>Temple</city>
         <state>TX</state>
-        <zip></zip>
-        <location>31.9685988, -99.9018131</location>
+        <zip>76502</zip>
+        <location>31.21177,-97.397921</location>
         <vbacNumber>3</vbacNumber>
         <vbacRate>4.55</vbacRate>
         <year>2010</year>
@@ -8363,11 +7989,11 @@
     </hospital>
     <hospital>
         <name>Medical Center Hospital</name>
-        <street></street>
-        <city>Tyler</city>
+        <street>West 4th Street</street>
+        <city>Odessa</city>
         <state>TX</state>
-        <zip>75710</zip>
-        <location>32.3351490, -95.3016180</location>
+        <zip>79761</zip>
+        <location>31.8450738, -102.3737284</location>
         <vbacNumber>19</vbacNumber>
         <vbacRate>12.67</vbacRate>
         <year>2010</year>
@@ -8429,11 +8055,11 @@
     </hospital>
     <hospital>
         <name>Memorial Hermann Baptist Orange Hospital</name>
-        <street></street>
-        <city></city>
+        <street>608 Strickland Drive</street>
+        <city>Orange</city>
         <state>TX</state>
-        <zip></zip>
-        <location>31.9685988, -99.9018131</location>
+        <zip>77630</zip>
+        <location>30.100427, -93.767057</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
         <year>2010</year>
@@ -8443,7 +8069,7 @@
         <street>16538 Air Center Blvd #200</street>
         <city>Houston</city>
         <state>TX</state>
-        <zip>Texas 77032</zip>
+        <zip>77032</zip>
         <location>29.9601230, -95.3698840</location>
         <vbacNumber>37</vbacNumber>
         <vbacRate>4.91</vbacRate>
@@ -8539,11 +8165,11 @@
     </hospital>
     <hospital>
         <name>Memorial Hospital</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>Pasadena Blvd</street>
+        <city>Pasadena</city>
         <state>TX</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>77502</zip>
+        <location>29.689745, -95.201032</location>
         <vbacNumber>2</vbacNumber>
         <vbacRate>5.56</vbacRate>
         <year>2010</year>
@@ -8616,7 +8242,7 @@
     </hospital>
     <hospital>
         <name>Methodist Mansfield Medical Center</name>
-        <street></street>
+        <street>2700 East Broad Street</street>
         <city>Mansfield</city>
         <state>TX</state>
         <zip>76063</zip>
@@ -8693,11 +8319,11 @@
     </hospital>
     <hospital>
         <name>Midland Memorial Hospital</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>4214 Andrews Highway</street>
+        <city>Midland</city>
         <state>TX</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>79703</zip>
+        <location>31.995623, -102.099291</location>
         <vbacNumber>7</vbacNumber>
         <vbacRate>3.66</vbacRate>
         <year>2010</year>
@@ -8891,11 +8517,11 @@
     </hospital>
     <hospital>
         <name>Paris Regional Medical Center South Campus</name>
-        <street></street>
-        <city></city>
+        <street>865 Deshong Drive</street>
+        <city>Paris</city>
         <state>TX</state>
-        <zip></zip>
-        <location>31.9685988, -99.9018131</location>
+        <zip>75460</zip>
+        <location>33.688015,-95.547794</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
         <year>2010</year>
@@ -9023,22 +8649,22 @@
     </hospital>
     <hospital>
         <name>Scott and White Hospital - Round Rock</name>
-        <street></street>
-        <city></city>
+        <street>300 University Blvd</street>
+        <city>Round Rock</city>
         <state>TX</state>
-        <zip>IA</zip>
-        <location>41.6393199, -90.6393702</location>
+        <zip>78665</zip>
+        <location>30.5634420, -97.6845480</location>
         <vbacNumber>6</vbacNumber>
         <vbacRate>7.79</vbacRate>
         <year>2010</year>
     </hospital>
     <hospital>
         <name>Scott and White Memorial Hospital</name>
-        <street></street>
-        <city></city>
+        <street>425 University Blvd</street>
+        <city>Round Rock</city>
         <state>TX</state>
-        <zip>IA</zip>
-        <location>41.6393199, -90.6393702</location>
+        <zip>78665</zip>
+        <location>30.5609994, -97.6818577</location>
         <vbacNumber>78</vbacNumber>
         <vbacRate>20.37</vbacRate>
         <year>2010</year>
@@ -9133,11 +8759,11 @@
     </hospital>
     <hospital>
         <name>South Austin Hospital</name>
-        <street></street>
-        <city>145 Studley Road</city>
+        <street>901 West Ben White Blvd</street>
+        <city>Austin</city>
         <state>TX</state>
-        <zip>Heidelberg VIC 3084</zip>
-        <location>-37.7575490, 145.0595450</location>
+        <zip>78704</zip>
+        <location>30.2272271, -97.7743689</location>
         <vbacNumber>4</vbacNumber>
         <vbacRate>1.72</vbacRate>
         <year>2010</year>
@@ -9356,7 +8982,7 @@
         <street>1105 Central Expressway North #100</street>
         <city>Allen</city>
         <state>TX</state>
-        <zip>Texas 75013</zip>
+        <zip>75013</zip>
         <location>33.1162836, -96.6742532</location>
         <vbacNumber>6</vbacNumber>
         <vbacRate>2.96</vbacRate>
@@ -9496,11 +9122,11 @@
     </hospital>
     <hospital>
         <name>UT Medical Branch Hospital</name>
-        <street></street>
-        <city></city>
+        <street>301 University Blvd</street>
+        <city>Galveston</city>
         <state>TX</state>
-        <zip></zip>
-        <location>31.9685988, -99.9018131</location>
+        <zip>77555</zip>
+        <location>29.311648, -94.777299</location>
         <vbacNumber>108</vbacNumber>
         <vbacRate>9.37</vbacRate>
         <year>2010</year>
@@ -9518,11 +9144,11 @@
     </hospital>
     <hospital>
         <name>UTMB Austin Womens Hospital</name>
-        <street></street>
-        <city></city>
+        <street>601 East 15th Street</street>
+        <city>Austin</city>
         <state>TX</state>
-        <zip></zip>
-        <location>31.9685988, -99.9018131</location>
+        <zip>78701</zip>
+        <location>30.27436, -97.733927</location>
         <vbacNumber>70</vbacNumber>
         <vbacRate>27.13</vbacRate>
         <year>2010</year>
@@ -9804,11 +9430,11 @@
     </hospital>
     <hospital>
         <name>Brooks Memorial Hospital (Dunkirk)</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>529 Central Avenue</street>
+        <city>Dunkirk</city>
         <state>NY</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>14048</zip>
+        <location>42.4801890, -79.3342337</location>
         <vbacNumber>1</vbacNumber>
         <vbacRate>0.90</vbacRate>
         <year>2011</year>
@@ -10222,11 +9848,11 @@
     </hospital>
     <hospital>
         <name>Lincoln Medical and Mental Health Center (Bronx)</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>234 East 149th Street</street>
+        <city>New York</city>
         <state>NY</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>10451</zip>
+        <location>40.817718, -73.924021</location>
         <vbacNumber>79</vbacNumber>
         <vbacRate>23.60</vbacRate>
         <year>2011</year>
@@ -10299,10 +9925,10 @@
     </hospital>
     <hospital>
         <name>Memorial Hospital of Wm F and Gertrude F Jones aka Jones Memorial Hospital (Wellsville)</name>
-        <street>600 South White Horse Pike</street>
-        <city>Hammonton</city>
+        <street>191 North Main Street</street>
+        <city>Wellsville</city>
         <state>NY</state>
-        <zip>08037</zip>
+        <zip>14895</zip>
         <location>39.6322886, -74.7725510</location>
         <vbacNumber>1</vbacNumber>
         <vbacRate>2.00</vbacRate>
@@ -10508,11 +10134,11 @@
     </hospital>
     <hospital>
         <name>Nicholas H Noyes Memorial Hospital (Dansville)</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>111 Clara Barton Street</street>
+        <city>Dansville</city>
         <state>NY</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>14437</zip>
+        <location>42.55306, -77.697567</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
         <year>2011</year>
@@ -10761,11 +10387,11 @@
     </hospital>
     <hospital>
         <name>Seton Health System - St. Marys Campus (Troy)</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>1300 Massachusetts Ave</street>
+        <city>Troy</city>
         <state>NY</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>12180</zip>
+        <location>42.742689, -73.676511</location>
         <vbacNumber>20</vbacNumber>
         <vbacRate>27.80</vbacRate>
         <year>2011</year>
@@ -11149,7 +10775,7 @@
         <street>E 106th Street North</street>
         <city>Owasso</city>
         <state>OK</state>
-        <zip>OK 74055</zip>
+        <zip>74055</zip>
         <location>36.3059170, -95.8519040</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11160,7 +10786,7 @@
         <street>1202 North Muskogee Place</street>
         <city>Claremore</city>
         <state>OK</state>
-        <zip>OK 74017</zip>
+        <zip>74017</zip>
         <location>36.3225544, -95.6047316</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11171,7 +10797,7 @@
         <street>735 North Foreman Street</street>
         <city>Vinita</city>
         <state>OK</state>
-        <zip>OK 74301</zip>
+        <zip>74301</zip>
         <location>36.6531914, -95.1558098</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11182,7 +10808,7 @@
         <street>1027 East Cherry Street</street>
         <city>Cushing</city>
         <state>OK</state>
-        <zip>OK 74023</zip>
+        <zip>74023</zip>
         <location>35.9783868, -96.7570943</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11193,7 +10819,7 @@
         <street></street>
         <city>Duncan</city>
         <state>OK</state>
-        <zip>OK 73533</zip>
+        <zip>73533</zip>
         <location>34.5211908, -97.9722577</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11204,7 +10830,7 @@
         <street></street>
         <city>Poteau</city>
         <state>OK</state>
-        <zip>OK 74953</zip>
+        <zip>74953</zip>
         <location>35.0434055, -94.6125961</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11215,7 +10841,7 @@
         <street></street>
         <city>Chickasha</city>
         <state>OK</state>
-        <zip>OK 73018</zip>
+        <zip>73018</zip>
         <location>35.0489598, -97.9613296</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11223,11 +10849,11 @@
     </hospital>
     <hospital>
         <name>Great Plains Regional Medical Center</name>
-        <street></street>
-        <city></city>
+        <street>1801 West 3rd Street</street>
+        <city>Elk City</city>
         <state>OK</state>
-        <zip></zip>
-        <location>35.0077519, -97.0928770</location>
+        <zip>73644</zip>
+        <location>35.411882, -99.425492</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
         <year>2010</year>
@@ -11237,7 +10863,7 @@
         <street></street>
         <city>Buffalo</city>
         <state>OK</state>
-        <zip>OK 73834</zip>
+        <zip>73834</zip>
         <location>36.8418799, -99.6298536</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11248,7 +10874,7 @@
         <street>South Utica Avenue</street>
         <city>Tulsa</city>
         <state>OK</state>
-        <zip>OK 74104</zip>
+        <zip>74104</zip>
         <location>36.1468720, -95.9684100</location>
         <vbacNumber>43</vbacNumber>
         <vbacRate>8.70</vbacRate>
@@ -11259,7 +10885,7 @@
         <street>600 South Monroe Street</street>
         <city>Enid</city>
         <state>OK</state>
-        <zip>OK 73701</zip>
+        <zip>73701</zip>
         <location>36.3900538, -97.8878077</location>
         <vbacNumber>23</vbacNumber>
         <vbacRate>14.20</vbacRate>
@@ -11267,11 +10893,11 @@
     </hospital>
     <hospital>
         <name>INTEGRIS Canadian Valley Regional Hospital</name>
-        <street></street>
-        <city></city>
+        <street>1201 Health Center Parkway</street>
+        <city>Yukon</city>
         <state>OK</state>
-        <zip></zip>
-        <location>35.0077519, -97.0928770</location>
+        <zip>73099</zip>
+        <location>35.484864, -97.763557</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
         <year>2010</year>
@@ -11281,7 +10907,7 @@
         <street>100 North 30th Street</street>
         <city>Clinton</city>
         <state>OK</state>
-        <zip>OK 73601</zip>
+        <zip>73601</zip>
         <location>35.5147627, -98.9977850</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11292,7 +10918,7 @@
         <street>1001 East 18th Street</street>
         <city>Grove</city>
         <state>OK</state>
-        <zip>OK 74344</zip>
+        <zip>74344</zip>
         <location>36.5814642, -94.7581571</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11303,7 +10929,7 @@
         <street>111 North Bailey Street</street>
         <city>Pryor</city>
         <state>OK</state>
-        <zip>OK 74361</zip>
+        <zip>74361</zip>
         <location>36.3085334, -95.3046962</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11314,7 +10940,7 @@
         <street>4401 South Western Avenue</street>
         <city>Oklahoma City</city>
         <state>OK</state>
-        <zip>OK 73109</zip>
+        <zip>73109</zip>
         <location>35.4216849, -97.5330610</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11325,7 +10951,7 @@
         <street></street>
         <city>Altus</city>
         <state>OK</state>
-        <zip>OK 73521</zip>
+        <zip>73521</zip>
         <location>34.6351582, -99.3179554</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11336,7 +10962,7 @@
         <street>1000 Kingfisher Regional Hospital Dr</street>
         <city>Kingfisher</city>
         <state>OK</state>
-        <zip>OK 73750</zip>
+        <zip>73750</zip>
         <location>35.8102179, -97.9442418</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11347,7 +10973,7 @@
         <street>1101 East Monroe Avenue</street>
         <city>McAlester</city>
         <state>OK</state>
-        <zip>OK 74501</zip>
+        <zip>74501</zip>
         <location>34.9367220, -95.7503890</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11358,7 +10984,7 @@
         <street>1301 East Lincoln Road</street>
         <city>Idabel</city>
         <state>OK</state>
-        <zip>OK 74745</zip>
+        <zip>74745</zip>
         <location>33.8825699, -94.8114526</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11369,7 +10995,7 @@
         <street>1401 West Locust Street</street>
         <city>Stilwell</city>
         <state>OK</state>
-        <zip>OK 74960</zip>
+        <zip>74960</zip>
         <location>35.8090716, -94.6430070</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11380,7 +11006,7 @@
         <street></street>
         <city>Guymon</city>
         <state>OK</state>
-        <zip>OK 73942</zip>
+        <zip>73942</zip>
         <location>36.6913175, -101.4756221</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11391,7 +11017,7 @@
         <street>McAuley Blvd</street>
         <city>Oklahoma City</city>
         <state>OK</state>
-        <zip>OK 73120</zip>
+        <zip>73120</zip>
         <location>35.6061090, -97.5996210</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11402,7 +11028,7 @@
         <street>2115 Parkview Drive</street>
         <city>El Reno</city>
         <state>OK</state>
-        <zip>OK 73036</zip>
+        <zip>73036</zip>
         <location>35.5298806, -97.9805045</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11410,11 +11036,11 @@
     </hospital>
     <hospital>
         <name>Mercy Memorial Health Center, Inc.</name>
-        <street></street>
-        <city></city>
+        <street> 1011 14th Avenue Northwest </street>
+        <city>Ardmore</city>
         <state>OK</state>
-        <zip></zip>
-        <location>35.0077519, -97.0928770</location>
+        <zip>73401</zip>
+        <location>34.1889164, -97.1409857</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
         <year>2010</year>
@@ -11424,7 +11050,7 @@
         <street>2825 Parklawn Drive</street>
         <city>Midwest City</city>
         <state>OK</state>
-        <zip>OK 73110</zip>
+        <zip>73110</zip>
         <location>35.4672120, -97.3937040</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11432,11 +11058,11 @@
     </hospital>
     <hospital>
         <name>Newman Memorial Hospital</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>905 S Main St</street>
+        <city>Shattuck</city>
         <state>OK</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>73858</zip>
+        <location>36.267623, -99.882086</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
         <year>2010</year>
@@ -11446,7 +11072,7 @@
         <street>700 Northeast 13th Street</street>
         <city>Oklahoma City</city>
         <state>OK</state>
-        <zip>OK 73104</zip>
+        <zip>73104</zip>
         <location>35.4812670, -97.5010640</location>
         <vbacNumber>171</vbacNumber>
         <vbacRate>25.20</vbacRate>
@@ -11457,7 +11083,7 @@
         <street>100 Valley Dr</street>
         <city>Pauls Valley</city>
         <state>OK</state>
-        <zip>OK 73075</zip>
+        <zip>73075</zip>
         <location>34.7197534, -97.2146010</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11468,7 +11094,7 @@
         <street>1500 N Green Ave</street>
         <city>Purcell</city>
         <state>OK</state>
-        <zip>OK 73080</zip>
+        <zip>73080</zip>
         <location>35.0288677, -97.3648234</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11479,7 +11105,7 @@
         <street>6161 South Yale Avenue</street>
         <city>Tulsa</city>
         <state>OK</state>
-        <zip>OK 74136</zip>
+        <zip>74136</zip>
         <location>36.0728030, -95.9194180</location>
         <vbacNumber>20</vbacNumber>
         <vbacRate>3.60</vbacRate>
@@ -11490,7 +11116,7 @@
         <street>10501 East 91st Street South</street>
         <city>Tulsa</city>
         <state>OK</state>
-        <zip>OK 74133</zip>
+        <zip>74133</zip>
         <location>36.0328685, -95.8558268</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11501,7 +11127,7 @@
         <street>8801 South 101st East Avenue</street>
         <city>Tulsa</city>
         <state>OK</state>
-        <zip>OK 74133</zip>
+        <zip>74133</zip>
         <location>36.0358997, -95.8651060</location>
         <vbacNumber>16</vbacNumber>
         <vbacRate>5.80</vbacRate>
@@ -11512,7 +11138,7 @@
         <street>1000 North Lee Avenue</street>
         <city>Oklahoma City</city>
         <state>OK</state>
-        <zip>OK 73102</zip>
+        <zip>73102</zip>
         <location>35.4780020, -97.5235220</location>
         <vbacNumber>19</vbacNumber>
         <vbacRate>9.70</vbacRate>
@@ -11523,7 +11149,7 @@
         <street>12451 E 100th Street North</street>
         <city>Owasso</city>
         <state>OK</state>
-        <zip>OK 74055</zip>
+        <zip>74055</zip>
         <location>36.2987155, -95.8350541</location>
         <vbacNumber></vbacNumber>
         <vbacRate></vbacRate>
@@ -11534,7 +11160,7 @@
         <street>305 South 5th Street</street>
         <city>Enid</city>
         <state>OK</state>
-        <zip>OK 73701</zip>
+        <zip>73701</zip>
         <location>36.3938550, -97.8709400</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11545,7 +11171,7 @@
         <street>1400 East Downing Street</street>
         <city>Tahlequah</city>
         <state>OK</state>
-        <zip>OK 74464</zip>
+        <zip>74464</zip>
         <location>35.9140326, -94.9500419</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11556,7 +11182,7 @@
         <street>430 North Monte Vista Street</street>
         <city>Ada</city>
         <state>OK</state>
-        <zip>OK 74820</zip>
+        <zip>74820</zip>
         <location>34.7777334, -96.6346808</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11567,7 +11193,7 @@
         <street>3701 East Main Street</street>
         <city>Weatherford</city>
         <state>OK</state>
-        <zip>OK 73096</zip>
+        <zip>73096</zip>
         <location>35.5389576, -98.6620867</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
@@ -11696,11 +11322,11 @@
     </hospital>
     <hospital>
         <name>Maine Coast Memorial Hospital</name>
-        <street>FLAG 2</street>
-        <city></city>
+        <street>50 Union Street</street>
+        <city>Ellsworth</city>
         <state>ME</state>
-        <zip></zip>
-        <location>, </location>
+        <zip>04605</zip>
+        <location>44.5469699, -68.4169398</location>
         <vbacNumber>5</vbacNumber>
         <vbacRate>17.90</vbacRate>
         <year>2009</year>
@@ -11732,7 +11358,7 @@
         <street>897 West Main Street</street>
         <city>Dover-Foxcroft</city>
         <state>ME</state>
-        <zip>Maine 04426</zip>
+        <zip>04426</zip>
         <location>45.1876713, -69.2377876</location>
         <vbacNumber>0</vbacNumber>
         <vbacRate>0.00</vbacRate>
